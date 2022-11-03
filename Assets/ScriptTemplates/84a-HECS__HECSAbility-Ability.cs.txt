@@ -1,0 +1,16 @@
+﻿using HECSFrameWork;
+using HECSFrameWork.Components;
+using Commands;
+using Components;
+using System;
+
+namespace Abilities
+{
+    [Serializable][Documentation(Doc.NONE, "")]
+    public sealed class #SCRIPTNAME# : AbilityBase
+    {
+        public override void Execute<T>(T owner, T target = default, bool enable = true)
+        {
+        }
+    }
+}
