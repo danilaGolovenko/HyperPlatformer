@@ -2,5 +2,10 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Assets/Scripts/HECS/HECS.Core" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Assets/Scripts/HECS/HECS.Serialize" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Assets/Scripts/HECS/HECS.Strategies" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Assets/Scripts/HECS/HECS.Unity" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Assets/Scripts/HECS/HECS.UnitySerialization" vcs="Git" />
   </component>
 </project>

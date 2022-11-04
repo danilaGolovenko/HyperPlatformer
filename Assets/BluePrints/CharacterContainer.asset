@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5232977491782104139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc090b91d8668b14dad4055f594a7f29, type: 3}
+  m_Name: JumpingComponent
+  m_EditorClassIdentifier: 
+  component:
+    <layerMask>k__BackingField:
+      serializedVersion: 2
+      m_Bits: 2147483648
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,9 +31,15 @@ MonoBehaviour:
   holder:
     components:
     - {fileID: 2238318995737137736}
+    - {fileID: 5080384095537529213}
+    - {fileID: 4640029465714863572}
     - {fileID: 8318574334783028630}
+    - {fileID: 5711636018752210667}
+    - {fileID: -5232977491782104139}
+    - {fileID: 5590763677925530770}
     systems:
     - {fileID: 866779929587457383}
+    - {fileID: 1822405414675436672}
     Parent: {fileID: 11400000}
   containerIndex: 642341842
 --- !u!114 &866779929587457383
@@ -32,6 +54,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9b92b6c7fd90824e969461d567445d1, type: 3}
   m_Name: MovingSystem
   m_EditorClassIdentifier: 
+--- !u!114 &1822405414675436672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f4c7c1a11996c545bfd4ceed73b9958, type: 3}
+  m_Name: JumpingSystem
+  m_EditorClassIdentifier: 
 --- !u!114 &2238318995737137736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,6 +78,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b47a93e091abe1449989e74cb9a31adf, type: 3}
   m_Name: InputListenerTagComponent
   m_EditorClassIdentifier: 
+--- !u!114 &4640029465714863572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adbf045b050eb66469d0e9edf512a97c, type: 3}
+  m_Name: PlayerTagComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &5080384095537529213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a766eb882109bec46b3126c2cd6b0ed0, type: 3}
+  m_Name: JumpForceComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    <jumpForce>k__BackingField: 360
+--- !u!114 &5590763677925530770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd62bbe9c6e6f884cafc8d0360cb4c4a, type: 3}
+  m_Name: UnityTransformComponent
+  m_EditorClassIdentifier: 
+  component:
+    Transform: {fileID: 0}
+--- !u!114 &5711636018752210667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73051331294aa404ba858b44741e3449, type: 3}
+  m_Name: SpeedComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    <Speed>k__BackingField: 3
 --- !u!114 &8318574334783028630
 MonoBehaviour:
   m_ObjectHideFlags: 0
