@@ -63989,11 +63989,6 @@ PrefabInstance:
       propertyPath: m_Simulated
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 50735333045448606, guid: d5a46d2b2e803e14f92736765f3bdb31,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1781503789615130795, guid: d5a46d2b2e803e14f92736765f3bdb31,
         type: 3}
       propertyPath: actorContainer

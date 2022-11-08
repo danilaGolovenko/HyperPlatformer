@@ -1,1 +1,1 @@
-using Components;using System;using System.Collections.Generic;namespace HECSFramework.Unity{	public class SpeedComponentBluePrint : ComponentBluePrintContainer<SpeedComponent>	{	}}
+using Components;using System;using System.Collections.Generic;namespace HECSFramework.Unity{	public class SpeedComponentBluePrint : ComponentBluePrintContainer<SpeedCoeffComponent>	{	}}

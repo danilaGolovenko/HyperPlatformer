@@ -8,7 +8,10 @@ using Components;
 namespace Systems
 {
 	[Serializable][Documentation(Doc.NONE, "")]
-    public sealed class PlatformCatchPlayerSystem : BaseSystem, IReactCommand<Commands.Collision2dCommand>, IReactCommand<Commands.Collision2dExitCommand>
+    public sealed class PlatformCatchPlayerSystem : BaseSystem, IReactCommand<Commands.Collision2dCommand>, IReactCommand<Commands.Collision2dExitCommand> 
+        
+        //ToDo
+        //ГАЛОЧКА SIMULATED В rb
     {
         private ConcurrencyList<IEntity> players;
 
@@ -19,7 +22,7 @@ namespace Systems
 
 
         public void CommandReact(Collision2dCommand command)
-        {
+            {
             
             if (command.Collision.gameObject.TryGetComponent(out Actor actor) && actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)) //gameObject вернул view, не entity
             {

@@ -6,8 +6,9 @@ using UnityEngine;
 namespace Components
 {
     [Serializable][Documentation(Doc.NONE, "")]
-    public sealed class JumpForceComponent : BaseComponent
+    public sealed class SubjectToGravityTagComponent : BaseComponent
     {
-        [field: SerializeReference] public float jumpForce { get; private set; } = 2;
+        [field: SerializeField]
+        public LayerMask groudLayerMask { get; private set; }
     }
 }

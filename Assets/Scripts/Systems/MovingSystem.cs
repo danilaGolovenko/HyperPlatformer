@@ -1,4 +1,5 @@
-﻿using Commands;
+﻿using System;
+using Commands;
 using Components;
 using HECSFramework.Core;
 using HECSFramework.Unity;
@@ -9,23 +10,27 @@ namespace Systems
 {
     public class MovingSystem : BaseSystem, IReactCommand<Commands.InputCommand>, IHaveActor, IReactCommand<Commands.InputEndedCommand>, IFixedUpdatable
     {
-        private Rigidbody2D rb;
+        //ToDo
+        //занулять velocity
+        // private Rigidbody2D rb;
+        private Transform transform;
 
-        [Required] private SpeedComponent speedComponent;
+        [Required] private CurrentSpeedComponent currentSpeed;
+        [Required] private SpeedCoeffComponent speedCoeff;
+
         
         public override void InitSystem()
         {
-            Actor.TryGetComponent(out rb);
+            Actor.TryGetComponent(out transform);
         }
 
         public void CommandReact(InputCommand command)
         {
             if (command.Index == InputIdentifierMap.Move)
             {
-                var value = command.Context.ReadValue<Vector2>();
-                rb.velocity = new Vector2(value.x * speedComponent.Speed, rb.velocity.y);
-
-                // rb.AddForce(new UnityEngine.Vector2(value.x*10, 0), ForceMode2D.Force);
+                var input = command.Context.ReadValue<Vector2>();
+                var newSpeed = new Vector2(input.x*speedCoeff.coefficient, currentSpeed.speed.y);
+                currentSpeed.speed = newSpeed;
             }
         }
 
@@ -34,13 +39,17 @@ namespace Systems
         {
             if (command.Index == InputIdentifierMap.Move)
             {
-                rb.velocity = new Vector2(0, rb.velocity.y);
+                var newSpeed = new Vector2(0, currentSpeed.speed.y);
+                currentSpeed.speed = newSpeed;
             }
         }
 
         public void FixedUpdateLocal()
         {
-            rb.AddForce(new Vector2(0, -9.8f*60*Time.fixedDeltaTime), ForceMode2D.Force);
+            float positionX = transform.position.x + currentSpeed.speed.x * Time.fixedDeltaTime;
+            float positionY = transform.position.y + currentSpeed.speed.y * Time.fixedDeltaTime;
+            Owner.GetUnityTransformComponent().Transform.position = new Vector3(positionX, positionY, 0); 
+            // Debug.Log(currentSpeed.speed);
         }
     }
 }

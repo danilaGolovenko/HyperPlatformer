@@ -6,9 +6,8 @@ using UnityEngine;
 namespace Components
 {
     [Serializable][Documentation(Doc.NONE, "")]
-    public sealed class JumpingComponent : BaseComponent
+    public sealed class JumpStartSpeedComponent : BaseComponent
     {
-        [field: SerializeField]
-        public LayerMask layerMask { get; private set; }
+        [field: SerializeField] public float startSpeed { get; private set; } = 10;
     }
 }
