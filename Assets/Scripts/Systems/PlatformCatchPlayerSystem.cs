@@ -30,10 +30,6 @@ namespace Systems
              {
                  actor.TryGetComponent(out Rigidbody2D rb);
                  catchesListComponent.rbList.Add(rb);
-                 // rb.bodyType = RigidbodyType2D.Kinematic;
-                 // rb.simulated = false;
-                 // var player = command.Collision.gameObject;
-                 // player.transform.SetParent(Owner.GetUnityTransformComponent().Transform);
              }
          }
 

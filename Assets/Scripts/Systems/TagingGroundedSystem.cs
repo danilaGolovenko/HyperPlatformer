@@ -21,26 +21,16 @@ namespace Systems
         {
             Actor.TryGetComponent(out transform);
             rayLength = 100f;
-            distance = 0f;
+            distance = 0.1f;
         }
         
         public IActor Actor { get; set; }
         public void UpdateLocal()
         {
-            // RaycastHit2D hit = Physics2D.Raycast(transform.position + Vector3.up * 0.02f, Vector2.do1fwn, rayLength, subjectToGravityTagComponent.groudLayerMask);
-            // var isCollidedWithGround = Physics2D.BoxCast(transform.position, new Vector3(1f, 1f, 1f), Vector2.down, out RaycastHit hitInfo,
-            //     transform.rotation, subjectToGravityTagComponent.groudLayerMask);
-            RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(0.1f, 0.3f), 0f, Vector2.down, distance,
+            RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(0.1f, 0.3f), 0f, Vector2.down, 0f,
                 subjectToGravityTagComponent.groudLayerMask);
-            // if (hit.collider != null && Math.Abs(transform.position.y - hit.point.y) <= distance)
-            if (hit.collider != null && Mathf.Abs(transform.position.y - hit.point.y) <= 0.1)
+            if (hit.collider != null && Mathf.Abs(transform.position.y - hit.point.y) <= distance)
             {
-                // IActor actor = (IActor)Owner;
-                // actor.TryGetComponent(out Transform transform);
-                // var position = transform.position;
-                // position = new Vector3(position.x, position.y - 0.1f, position.z);
-                // Debug.Log(position);
-                // transform.position = position;
                 if (!Owner.ContainsMask<GroundedTagComponent>())
                 {
                     Owner.AddHecsComponent(new GroundedTagComponent {});
