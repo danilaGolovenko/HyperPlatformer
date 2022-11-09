@@ -63989,6 +63989,21 @@ PrefabInstance:
       propertyPath: m_Simulated
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 50735333045448606, guid: d5a46d2b2e803e14f92736765f3bdb31,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 70340845508230026, guid: d5a46d2b2e803e14f92736765f3bdb31,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.0477688
+      objectReference: {fileID: 0}
+    - target: {fileID: 70340845508230026, guid: d5a46d2b2e803e14f92736765f3bdb31,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.9761156
+      objectReference: {fileID: 0}
     - target: {fileID: 1781503789615130795, guid: d5a46d2b2e803e14f92736765f3bdb31,
         type: 3}
       propertyPath: actorContainer
@@ -68791,10 +68806,10 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914027821}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.32}

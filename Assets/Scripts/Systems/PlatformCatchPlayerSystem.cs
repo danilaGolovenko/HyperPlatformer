@@ -1,60 +1,61 @@
 using System;
+using System.Collections.Generic;
 using Commands;
 using HECSFramework.Unity;
 using HECSFramework.Core;
 using UnityEngine;
 using Components;
+using Gamekit2D;
 
 namespace Systems
 {
 	[Serializable][Documentation(Doc.NONE, "")]
-    public sealed class PlatformCatchPlayerSystem : BaseSystem, IReactCommand<Commands.Collision2dCommand>, IReactCommand<Commands.Collision2dExitCommand> , IReactComponentGlobal<GroundedTagComponent>
-        
-        //ToDo
-        //ГАЛОЧКА SIMULATED В rb
+    public sealed class PlatformCatchPlayerSystem : BaseSystem, IFixedUpdatable, IReactCommand<Collision2dCommand>, IReactCommand<Collision2dExitCommand>, IHaveActor
     {
-        // private ConcurrencyList<IEntity> players;
+        [Required] private CatchesListComponent catchesListComponent;
+        private Rigidbody2D platformRb;
+        private Vector2 oldPosition;
         public override void InitSystem()
         {
-            // players = Owner.World.Filter(HMasks.PlayerTagComponent);
+            Actor.TryGetComponent(out platformRb);
+            Actor.TryGetComponent(out platformRb);
+            oldPosition = platformRb.position;
         }
 
 
-        public void CommandReact(Collision2dCommand command)
+         public void CommandReact(Collision2dCommand command)
+         {
+             Debug.Log("Collision");
+             if (command.Collision.gameObject.TryGetComponent(out Actor actor) && actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)) 
+             {
+                 actor.TryGetComponent(out Rigidbody2D rb);
+                 catchesListComponent.rbList.Add(rb);
+                 // rb.bodyType = RigidbodyType2D.Kinematic;
+                 // rb.simulated = false;
+                 // var player = command.Collision.gameObject;
+                 // player.transform.SetParent(Owner.GetUnityTransformComponent().Transform);
+             }
+         }
+
+         public void CommandReact(Collision2dExitCommand command)
+         {
+             if (command.Collision.gameObject.TryGetComponent(out Actor actor) && actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent))
+             {
+                 actor.TryGetComponent(out Rigidbody2D rb);
+                 catchesListComponent.rbList.Remove(rb);
+             }
+         }
+
+        public void FixedUpdateLocal()
         {
-            if (command.Collision.gameObject.TryGetComponent(out Actor actor) && actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)) //gameObject вернул view, не entity
+            var s = platformRb.position - oldPosition;
+            foreach (var rb in catchesListComponent.rbList)
             {
-                actor.TryGetComponent(out Rigidbody2D rb);
-                rb.bodyType = RigidbodyType2D.Kinematic;
-                // rb.simulated = false;
-                var player = command.Collision.gameObject;
-                player.transform.SetParent(Owner.GetUnityTransformComponent().Transform);
+                rb.MovePosition(rb.position + s);
             }
+            oldPosition = platformRb.position;
         }
 
-        public void CommandReact(Collision2dExitCommand command)
-        {
-            if (command.Collision.gameObject.TryGetComponent(out Actor actor) && actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent))
-            {
-                Debug.Log("Exit");
-            //     actor.TryGetComponent(out Rigidbody2D rb);
-            //     rb.simulated = true;
-            //     var player = command.Collision.gameObject;
-            //     player.transform.SetParent(null);
-            }
-        }
-
-        public void ComponentReactGlobal(GroundedTagComponent component, bool isAdded)
-        {
-            if (!isAdded && component.Owner.TryGetHecsComponent(out PlayerTagComponent playerTag))
-            {
-                IActor actor = (IActor)component.Owner;
-                actor.TryGetComponent(out Rigidbody2D rb);
-                rb.bodyType = RigidbodyType2D.Dynamic;
-                // rb.simulated = true;
-                actor.TryGetComponent(out Transform transform);
-                transform.SetParent(null);
-            }
-        }
+        public IActor Actor { get; set; }
     }
 }

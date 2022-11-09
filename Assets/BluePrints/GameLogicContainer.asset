@@ -28,5 +28,18 @@ MonoBehaviour:
     components: []
     systems:
     - {fileID: -3569346804489630735}
+    - {fileID: 163667382468224473}
     Parent: {fileID: 11400000}
   containerIndex: 503398846
+--- !u!114 &163667382468224473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6247539fa45bb43468dee8a5ab90305e, type: 3}
+  m_Name: GravitySystem
+  m_EditorClassIdentifier: 
