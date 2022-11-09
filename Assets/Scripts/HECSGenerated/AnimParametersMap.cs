@@ -1,0 +1,1 @@
+using UnityEngine;public static class AnimParametersMap{	public static readonly int HorizontalSpeed = -1118621987;}

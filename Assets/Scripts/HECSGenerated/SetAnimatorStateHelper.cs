@@ -1,0 +1,1 @@
+﻿using System;using HECSFramework.Serialize;namespace Commands{	[Serializable]	public struct SetPlayerControllerAnimatorState : ISetAnimatorState	{		public FloatId HorizontalSpeed;		public void SetState(AnimatorState animatorState)		{			animatorState.SetFloat(HorizontalSpeed.Id, HorizontalSpeed.Value);		}	}}
