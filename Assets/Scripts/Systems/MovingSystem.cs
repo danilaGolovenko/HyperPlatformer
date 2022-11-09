@@ -10,9 +10,8 @@ namespace Systems
 {
     public class MovingSystem : BaseSystem, IReactCommand<Commands.InputCommand>, IHaveActor, IReactCommand<Commands.InputEndedCommand>, IFixedUpdatable
     {
-        //ToDo
-        //занулять velocity
-        // private Rigidbody2D rb;
+       
+        private Rigidbody2D rb;
         private Transform transform;
 
         [Required] private CurrentSpeedComponent currentSpeed;
@@ -22,6 +21,7 @@ namespace Systems
         public override void InitSystem()
         {
             Actor.TryGetComponent(out transform);
+            Actor.TryGetComponent(out rb);
         }
 
         public void CommandReact(InputCommand command)
@@ -43,13 +43,13 @@ namespace Systems
                 currentSpeed.speed = newSpeed;
             }
         }
-
+        
         public void FixedUpdateLocal()
         {
+            rb.velocity = Vector2.zero;
             float positionX = transform.position.x + currentSpeed.speed.x * Time.fixedDeltaTime;
             float positionY = transform.position.y + currentSpeed.speed.y * Time.fixedDeltaTime;
-            Owner.GetUnityTransformComponent().Transform.position = new Vector3(positionX, positionY, 0); 
-            // Debug.Log(currentSpeed.speed);
+            Owner.GetUnityTransformComponent().Transform.position = new Vector3(positionX, positionY, 0);
         }
     }
 }

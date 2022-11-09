@@ -63987,7 +63987,7 @@ PrefabInstance:
     - target: {fileID: 50735333045448606, guid: d5a46d2b2e803e14f92736765f3bdb31,
         type: 3}
       propertyPath: m_Simulated
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1781503789615130795, guid: d5a46d2b2e803e14f92736765f3bdb31,
         type: 3}
@@ -68716,30 +68716,35 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 61455244285419906, guid: f9663778c0da693408f8cf4c13bc051a,
+    - target: {fileID: 50789012657176954, guid: f9663778c0da693408f8cf4c13bc051a,
         type: 3}
-      propertyPath: m_Size.x
-      value: 2.6708183
-      objectReference: {fileID: 0}
-    - target: {fileID: 61455244285419906, guid: f9663778c0da693408f8cf4c13bc051a,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.30292076
-      objectReference: {fileID: 0}
-    - target: {fileID: 61455244285419906, guid: f9663778c0da693408f8cf4c13bc051a,
-        type: 3}
-      propertyPath: m_Enabled
+      propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 61455244285419906, guid: f9663778c0da693408f8cf4c13bc051a,
         type: 3}
+      propertyPath: m_Size.x
+      value: 2.7110982
+      objectReference: {fileID: 0}
+    - target: {fileID: 61455244285419906, guid: f9663778c0da693408f8cf4c13bc051a,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.10169041
+      objectReference: {fileID: 0}
+    - target: {fileID: 61455244285419906, guid: f9663778c0da693408f8cf4c13bc051a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61455244285419906, guid: f9663778c0da693408f8cf4c13bc051a,
+        type: 3}
       propertyPath: m_Offset.x
-      value: -0.00023937225
+      value: 0.015424967
       objectReference: {fileID: 0}
     - target: {fileID: 61455244285419906, guid: f9663778c0da693408f8cf4c13bc051a,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.12249324
+      value: 0.27698386
       objectReference: {fileID: 0}
     - target: {fileID: 114206927793940296, guid: f9663778c0da693408f8cf4c13bc051a,
         type: 3}
@@ -68786,7 +68791,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914027821}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -68795,8 +68800,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0.32}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -1.3724298, y: 0.011479259}
-  - {x: 1.3839097, y: 0.011479437}
+  - {x: -1.3093104, y: -0.0044084787}
+  - {x: 1.4152384, y: 0.000067174435}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
