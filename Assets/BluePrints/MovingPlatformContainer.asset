@@ -12,8 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1f0075fa8f12445a20d45bac026731, type: 3}
   m_Name: ToCatchListComponentBluePrint
   m_EditorClassIdentifier: 
+  <IsOverride>k__BackingField: 0
+  <IsColorNeeded>k__BackingField: 0
   component:
+    <IsAlive>k__BackingField: 1
+    <IsRegistered>k__BackingField: 0
     <rbList>k__BackingField: []
+--- !u!114 &-8719493233326131440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb844db7fbe698449ae798c32a99063, type: 3}
+  m_Name: MovingPlatformSystem
+  m_EditorClassIdentifier: 
 --- !u!114 &-5891485694321050430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26,6 +42,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86664811cd9a95740b7a4d3d9a9d8bc6, type: 3}
   m_Name: PlatformCatchPlayerSystem
   m_EditorClassIdentifier: 
+--- !u!114 &-4998372179914370676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37a172f6e687ae14e8329663b14abe64, type: 3}
+  m_Name: CatchesListComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    <rbList>k__BackingField: []
+--- !u!114 &-599571776428970502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f8e1572ab9eae4458b630d22f800f52, type: 3}
+  m_Name: SpeedCoeffComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    <coefficient>k__BackingField: 0.45
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40,8 +84,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holder:
     components:
-    - {fileID: -9076462450671512661}
+    - {fileID: -4998372179914370676}
+    - {fileID: 7528392584471942571}
+    - {fileID: -599571776428970502}
     systems:
     - {fileID: -5891485694321050430}
+    - {fileID: -8719493233326131440}
     Parent: {fileID: 11400000}
   containerIndex: -2023033285
+--- !u!114 &7528392584471942571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31820b8f19ba75f459d3fcab8ce71880, type: 3}
+  m_Name: WayComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    wayMonoComponent: {fileID: 0}
+    listOfPoints: []

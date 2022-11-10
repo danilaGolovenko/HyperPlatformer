@@ -14,13 +14,11 @@ namespace Systems
         
         [Required] private SubjectToGravityTagComponent subjectToGravityTagComponent;
         private Transform transform;
-        private float rayLength;
         private float distance;
         
         public override void InitSystem()
         {
             Actor.TryGetComponent(out transform);
-            rayLength = 100f;
             distance = 0.1f;
         }
         

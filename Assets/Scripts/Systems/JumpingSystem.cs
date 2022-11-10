@@ -9,13 +9,11 @@ namespace Systems
 {
     public class JumpingSystem : BaseSystem, IReactCommand<Commands.InputStartedCommand>, IHaveActor
     {
-        private Rigidbody2D rb;
         [Required] private JumpStartSpeedComponent jumpStartSpeedComponent; 
         [Required] private CurrentSpeedComponent currentSpeedComponent;
 
         public override void InitSystem()
         {
-            Actor.TryGetComponent(out rb);
         }
         public void CommandReact(InputStartedCommand command)
         {

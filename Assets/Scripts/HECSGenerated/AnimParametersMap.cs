@@ -1,1 +1,1 @@
-using UnityEngine;public static class AnimParametersMap{	public static readonly int HorizontalSpeed = -1118621987;}
+using UnityEngine;public static class AnimParametersMap{	public static readonly int HorizontalSpeed = -1118621987;	public static readonly int isJumping = -357477766;	public static readonly int VerticalSpeed = -1148172834;}

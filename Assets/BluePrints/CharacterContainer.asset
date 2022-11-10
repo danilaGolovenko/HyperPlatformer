@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: JumpStartSpeedComponentBluePrint
   m_EditorClassIdentifier: 
   component:
-    <startSpeed>k__BackingField: 7
+    <startSpeed>k__BackingField: 8
 --- !u!114 &866779929587457383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: SpeedCoeffComponentBluePrint
   m_EditorClassIdentifier: 
   component:
-    <coefficient>k__BackingField: 3
+    <coefficient>k__BackingField: 5
 --- !u!114 &3804556153081520006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: CurrentSpeedComponentBluePrint
   m_EditorClassIdentifier: 
   component:
-    speed: {x: 0, y: -1}
+    speed: {x: 0, y: 0}
 --- !u!114 &5590763677925530770
 MonoBehaviour:
   m_ObjectHideFlags: 0

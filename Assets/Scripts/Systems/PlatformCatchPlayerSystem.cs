@@ -1,16 +1,13 @@
 using System;
-using System.Collections.Generic;
 using Commands;
 using HECSFramework.Unity;
 using HECSFramework.Core;
 using UnityEngine;
 using Components;
-using Gamekit2D;
-
 namespace Systems
 {
 	[Serializable][Documentation(Doc.NONE, "")]
-    public sealed class PlatformCatchPlayerSystem : BaseSystem, IFixedUpdatable, IReactCommand<Collision2dCommand>, IReactCommand<Collision2dExitCommand>, IHaveActor
+    public sealed class PlatformCatchPlayerSystem : BaseSystem, IUpdatable, IReactCommand<Collision2dCommand>, IReactCommand<Collision2dExitCommand>, IHaveActor
     {
         [Required] private CatchesListComponent catchesListComponent;
         private Rigidbody2D platformRb;
@@ -25,7 +22,6 @@ namespace Systems
 
          public void CommandReact(Collision2dCommand command)
          {
-             Debug.Log("Collision");
              if (command.Collision.gameObject.TryGetComponent(out Actor actor) && actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)) 
              {
                  actor.TryGetComponent(out Rigidbody2D rb);
@@ -42,11 +38,15 @@ namespace Systems
              }
          }
 
-        public void FixedUpdateLocal()
+        public void UpdateLocal()
         {
+            
+            //todo
+            // триггер, чтобы работал catch при движении платформы вниз
+            // и edge коллайдер, чтобы она могла стоять на платформе
             var s = platformRb.position - oldPosition;
             foreach (var rb in catchesListComponent.rbList)
-            {
+            { 
                 rb.MovePosition(rb.position + s);
             }
             oldPosition = platformRb.position;
