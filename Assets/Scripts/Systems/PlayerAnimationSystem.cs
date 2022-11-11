@@ -8,7 +8,7 @@ using Components;
 namespace Systems
 {
 	[Serializable][Documentation(Doc.NONE, "")]
-    public sealed class PlayerAnimationSystem : BaseSystem, IFixedUpdatable, IHaveActor
+    public sealed class PlayerAnimationSystem : BaseSystem, IFixedUpdatable, IHaveActor, IReactCommand<Commands.InputCommand>, IReactCommand<Commands.InputEndedCommand>
     {
         [Required] private CurrentSpeedComponent currentSpeedComponent;
         [Required] private SpeedCoeffComponent speedCoeffComponent;
@@ -61,6 +61,27 @@ namespace Systems
             UpdateFlipX();
         }
 
+        public void CommandReact(InputCommand command)
+        {
+            if (command.Index == InputIdentifierMap.Hit)
+            {
+                BoolAnimationCommand commandIsAttacking = new BoolAnimationCommand();
+                commandIsAttacking.Index = AnimParametersMap.isAttacking;
+                commandIsAttacking.Value = true;
+                Owner.Command(commandIsAttacking);
+            }
+        }
+
         public IActor Actor { get; set; }
+        public void CommandReact(InputEndedCommand command)
+        {
+            if (command.Index == InputIdentifierMap.Hit)
+            {
+                BoolAnimationCommand commandIsNotAttacking = new BoolAnimationCommand();
+                commandIsNotAttacking.Index = AnimParametersMap.isAttacking;
+                commandIsNotAttacking.Value = false;
+                Owner.Command(commandIsNotAttacking);
+            }
+        }
     }
 }

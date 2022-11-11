@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Name: SpeedCoeffComponentBluePrint
   m_EditorClassIdentifier: 
   component:
-    <coefficient>k__BackingField: 0.45
+    <coefficient>k__BackingField: 0.25
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,10 +7,12 @@ using Components;
 namespace Systems
 {
 	[Serializable][Documentation(Doc.NONE, "")]
-    public sealed class MovingPlatformSystem : BaseSystem, IAfterEntityInit, IFixedUpdatable, IHaveActor
+    public sealed class MovingEnemySystem : BaseSystem, IAfterEntityInit, IFixedUpdatable, IHaveActor
     {
+        [Required] private CurrentSpeedComponent currentSpeed;
         [Required] private WayComponent wayComponent;
         [Required] private SpeedCoeffComponent speedCoeffComponent;
+        private Vector2 dir;
         private Rigidbody2D rb;
         private Vector2 currentPoint;
         private Vector2 goalPoint;
@@ -20,6 +22,7 @@ namespace Systems
         private float tCoeff = 0.0125f;
         public override void InitSystem()
         {
+            Actor.TryGetComponent(out rb);
         }
 
         public void AfterEntityInit()
@@ -34,6 +37,8 @@ namespace Systems
                 else
                     goalPointNumber = 1;
                 goalPoint = wayComponent.listOfPoints[goalPointNumber];
+                dir = (goalPoint - currentPoint).normalized;
+                currentSpeed.speed = speedCoeffComponent.coefficient * dir;
             }
         }
 
@@ -55,6 +60,7 @@ namespace Systems
             else goalPointNumber--;
 
             goalPoint = wayComponent.listOfPoints[goalPointNumber];
+            dir = (goalPoint - currentPoint).normalized;
         }
         
         public void FixedUpdateLocal()
@@ -68,6 +74,7 @@ namespace Systems
             }
             var newPosition = Vector2.Lerp(currentPoint, goalPoint, t);
             rb.position = newPosition;
+            currentSpeed.speed = speedCoeffComponent.coefficient * dir;
         }
 
         public IActor Actor { get; set; }

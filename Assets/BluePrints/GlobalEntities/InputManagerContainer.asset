@@ -32,6 +32,8 @@ MonoBehaviour:
       Identifier: {fileID: 11400000, guid: ad423a15e827e624593a9c4c9ea2ec23, type: 2}
     - ActionName: Jump
       Identifier: {fileID: 11400000, guid: e56f1d7a49f2a664a831df7d415cf6a8, type: 2}
+    - ActionName: Hit
+      Identifier: {fileID: 11400000, guid: a430c5590ab8a484f8b3954d173be3aa, type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

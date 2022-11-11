@@ -9,7 +9,7 @@ using Unity.VisualScripting;
 namespace Systems
 {
 	[Serializable][Documentation(Doc.NONE, "")]
-    public sealed class TagingGroundedSystem : BaseSystem, IUpdatable, IHaveActor
+    public sealed class TagingGroundedSystem : BaseSystem, ILateUpdatable, IHaveActor
     {
         
         [Required] private SubjectToGravityTagComponent subjectToGravityTagComponent;
@@ -20,10 +20,11 @@ namespace Systems
         {
             Actor.TryGetComponent(out transform);
             distance = 0.1f;
+            Physics2D.queriesHitTriggers = false;
         }
         
         public IActor Actor { get; set; }
-        public void UpdateLocal()
+        public void UpdateLateLocal()
         {
             RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(0.1f, 0.3f), 0f, Vector2.down, 0f,
                 subjectToGravityTagComponent.groudLayerMask);
