@@ -27,7 +27,7 @@ MonoBehaviour:
   m_Name: HealthComponentBluePrint
   m_EditorClassIdentifier: 
   component:
-    <maxHealth>k__BackingField: 7
+    <maxHealth>k__BackingField: 0.5
     currentHealth: 0
 --- !u!114 &-5962370057104099954
 MonoBehaviour:
@@ -65,6 +65,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 792e4eb138670234b8221e11592945a9, type: 3}
   m_Name: AttackSystem
   m_EditorClassIdentifier: 
+--- !u!114 &-2731687705311141627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f8e1572ab9eae4458b630d22f800f52, type: 3}
+  m_Name: SpeedCoeffComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    <coefficient>k__BackingField: 4.6
+    <defaultCoefficient>k__BackingField: 4.6
 --- !u!114 &-2699659569073731957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,17 +124,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holder:
     components:
-    - {fileID: 2238318995737137736}
     - {fileID: 4640029465714863572}
+    - {fileID: 3271269782150502778}
     - {fileID: 8318574334783028630}
     - {fileID: 5590763677925530770}
     - {fileID: 5047543257416142254}
-    - {fileID: 2930302041529309331}
     - {fileID: 190351825495282165}
     - {fileID: 4934030074853147346}
     - {fileID: -8678222787177240268}
-    - {fileID: -6882899634524618220}
     - {fileID: 3602857609504417523}
+    - {fileID: -2731687705311141627}
+    - {fileID: -6882899634524618220}
     systems:
     - {fileID: 866779929587457383}
     - {fileID: 1822405414675436672}
@@ -128,6 +143,7 @@ MonoBehaviour:
     - {fileID: 3804556153081520006}
     - {fileID: -5032700087768761669}
     - {fileID: -2699659569073731957}
+    - {fileID: 4728302354120536899}
     Parent: {fileID: 11400000}
   containerIndex: 642341842
 --- !u!114 &190351825495282165
@@ -168,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4c7c1a11996c545bfd4ceed73b9958, type: 3}
   m_Name: JumpingSystem
   m_EditorClassIdentifier: 
---- !u!114 &2238318995737137736
+--- !u!114 &3271269782150502778
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,20 +196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b47a93e091abe1449989e74cb9a31adf, type: 3}
   m_Name: InputListenerTagComponent
   m_EditorClassIdentifier: 
---- !u!114 &2930302041529309331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f8e1572ab9eae4458b630d22f800f52, type: 3}
-  m_Name: SpeedCoeffComponentBluePrint
-  m_EditorClassIdentifier: 
-  component:
-    <coefficient>k__BackingField: 5
 --- !u!114 &3602857609504417523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,7 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   component:
     <attackPower>k__BackingField: 1
-    <attackRangeRadius>k__BackingField: 1
+    <attackRangeRadius>k__BackingField: 2
     <enemyLayerMask>k__BackingField:
       serializedVersion: 2
       m_Bits: 512
@@ -238,6 +240,18 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: adbf045b050eb66469d0e9edf512a97c, type: 3}
   m_Name: PlayerTagComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &4728302354120536899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb2d78877cfa74c84e11cdfc8b05b6, type: 3}
+  m_Name: DeathHandlerSystem
   m_EditorClassIdentifier: 
 --- !u!114 &4934030074853147346
 MonoBehaviour:

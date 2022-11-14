@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8584673233071371138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c47178422e64b41bba99050866ba67, type: 3}
+  m_Name: EntityWithHealthComponentBluePrint
+  m_EditorClassIdentifier: 
+--- !u!114 &-6129587538305768380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e81225c5e80f6104b961aef5f59f19d0, type: 3}
+  m_Name: HealthUISystem
+  m_EditorClassIdentifier: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: HealthUIContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: -8584673233071371138}
+    - {fileID: 8626159861273617740}
+    systems:
+    - {fileID: -6129587538305768380}
+    Parent: {fileID: 11400000}
+  containerIndex: -1724000901
+--- !u!114 &8626159861273617740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7414178043f912d4cbad7769958c168c, type: 3}
+  m_Name: HealthIconPrefabComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    <healthIconPrefab>k__BackingField: {fileID: 1628065192282945802, guid: b038bbab4412c25428075d7936ba0d3e,
+      type: 3}

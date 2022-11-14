@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6860922469412374489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20f84992a3739d740aaf69f73468799e, type: 3}
+  m_Name: AnimatorStateComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    Animator: {fileID: 0}
 --- !u!114 &-6034850251336318454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,8 +66,8 @@ MonoBehaviour:
   m_Name: MeleeAttackComponentBluePrint
   m_EditorClassIdentifier: 
   component:
-    <attackPower>k__BackingField: 1
-    <attackRangeRadius>k__BackingField: 1
+    <attackPower>k__BackingField: 0.5
+    <attackRangeRadius>k__BackingField: 0.8
     <enemyLayerMask>k__BackingField:
       serializedVersion: 2
       m_Bits: 8192
@@ -100,6 +114,21 @@ MonoBehaviour:
   component:
     wayMonoComponent: {fileID: 0}
     listOfPoints: []
+--- !u!114 &-713666383543286367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4910d7f8044a6a478f3516956d749fa, type: 3}
+  m_Name: AnimationSystem
+  m_EditorClassIdentifier: 
+  system:
+    AnimatorStateComponent:
+      Animator: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,12 +148,14 @@ MonoBehaviour:
     - {fileID: 1342726688814499493}
     - {fileID: -869132460538656312}
     - {fileID: -4523684939921156265}
+    - {fileID: -6860922469412374489}
     systems:
     - {fileID: 7107435108062722836}
     - {fileID: 3722437866899373249}
     - {fileID: -6034850251336318454}
     - {fileID: -4743452599804826221}
     - {fileID: 798137645510818628}
+    - {fileID: -713666383543286367}
     Parent: {fileID: 11400000}
   containerIndex: 923621399
 --- !u!114 &798137645510818628
@@ -152,7 +183,8 @@ MonoBehaviour:
   m_Name: SpeedCoeffComponent
   m_EditorClassIdentifier: 
   component:
-    <coefficient>k__BackingField: 0.25
+    <coefficient>k__BackingField: 0.2
+    <defaultCoefficient>k__BackingField: 0.2
 --- !u!114 &3722437866899373249
 MonoBehaviour:
   m_ObjectHideFlags: 0

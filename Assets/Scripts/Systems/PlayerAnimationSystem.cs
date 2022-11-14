@@ -8,7 +8,7 @@ using Components;
 namespace Systems
 {
 	[Serializable][Documentation(Doc.NONE, "")]
-    public sealed class PlayerAnimationSystem : BaseSystem, IFixedUpdatable, IHaveActor, IReactCommand<Commands.InputCommand>, IReactCommand<Commands.InputEndedCommand>
+    public sealed class PlayerAnimationSystem : BaseSystem, IFixedUpdatable, IHaveActor, IReactCommand<Commands.InputCommand>, IReactCommand<Commands.InputEndedCommand>, IReactCommand<Commands.DamageCommand>, IReactCommand<Commands.EventStateAnimationCommand>
     {
         [Required] private CurrentSpeedComponent currentSpeedComponent;
         [Required] private SpeedCoeffComponent speedCoeffComponent;
@@ -71,6 +71,22 @@ namespace Systems
                 Owner.Command(commandIsAttacking);
             }
         }
+        
+        public void CommandReact(DamageCommand command)
+        {
+            if (!command.authorEntity.Equals(Owner))
+            {
+                BoolAnimationCommand commandIsDamaging = new BoolAnimationCommand();
+                commandIsDamaging.Index = AnimParametersMap.isDamaging;
+                commandIsDamaging.Value = true;
+                Owner.Command(commandIsDamaging);
+            }
+        }
+        
+        // public void CommandGlobalReact(DeathCommand command)
+        // {
+        //     
+        // }
 
         public IActor Actor { get; set; }
         public void CommandReact(InputEndedCommand command)
@@ -81,6 +97,17 @@ namespace Systems
                 commandIsNotAttacking.Index = AnimParametersMap.isAttacking;
                 commandIsNotAttacking.Value = false;
                 Owner.Command(commandIsNotAttacking);
+            }
+        }
+
+        public void CommandReact(EventStateAnimationCommand command)
+        {
+            if (command.StateId == AnimatorStateIdentifierMap.Ellen_Hurt)
+            {
+                BoolAnimationCommand commandIsNotDamaging = new BoolAnimationCommand();
+                commandIsNotDamaging.Index = AnimParametersMap.isDamaging;
+                commandIsNotDamaging.Value = false;
+                Owner.Command(commandIsNotDamaging);
             }
         }
     }

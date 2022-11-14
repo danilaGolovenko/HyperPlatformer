@@ -19,15 +19,16 @@ namespace Systems
         {
             if (!command.authorEntity.Equals(Owner))
             {
-                Debug.Log("Damage from " + command.authorEntity + " to " + Owner + " --- " + command.amount);
+                // Debug.Log("Damage from " + command.authorEntity + " to " + Owner + " --- " + command.amount);
                 healthComponent.currentHealth -= command.amount;
+                Owner.AddHecsComponent(new StopMovingComponent());
                 if (healthComponent.currentHealth <= 0)
                 {
                     DeathCommand deathCommand = new DeathCommand();
-                    deathCommand.entity = Owner;
-                    Owner.World.Command(deathCommand);
+                    Owner.Command(deathCommand);
+                    // Debug.Log(Owner + " id dead.");
                 }
-                Debug.Log("Current " + Owner + " health is" + healthComponent.currentHealth);
+                // Debug.Log("Current " + Owner + " health is " + healthComponent.currentHealth);
             }
         }
     }

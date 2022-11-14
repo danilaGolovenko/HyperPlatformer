@@ -20,6 +20,8 @@ namespace Systems
         private bool isForward = true;
         private float t = 0f;
         private float tCoeff = 0.0125f;
+        private bool isStoped = false;
+        
         public override void InitSystem()
         {
             Actor.TryGetComponent(out rb);
@@ -38,6 +40,7 @@ namespace Systems
                     goalPointNumber = 1;
                 goalPoint = wayComponent.listOfPoints[goalPointNumber];
                 dir = (goalPoint - currentPoint).normalized;
+                speedCoeffComponent.coefficient = speedCoeffComponent.defaultCoefficient;
                 currentSpeed.speed = speedCoeffComponent.coefficient * dir;
             }
         }
@@ -72,11 +75,40 @@ namespace Systems
                 t = 0;
                 ChangeGoalPoint();
             }
-            var newPosition = Vector2.Lerp(currentPoint, goalPoint, t);
-            rb.position = newPosition;
+            if (isStoped)
+            {
+                Owner.TryGetHecsComponent(out StopMovingComponent stopMovingComponent);
+                stopMovingComponent.currentWaitTime -= Time.fixedDeltaTime;
+                if (stopMovingComponent.currentWaitTime <= 0)
+                {
+                    Owner.RemoveHecsComponent(stopMovingComponent);
+                }
+            }
+            else
+            {
+                var newPosition = Vector2.Lerp(currentPoint, goalPoint, t);
+                rb.position = newPosition;
+            }
             currentSpeed.speed = speedCoeffComponent.coefficient * dir;
+            
         }
 
         public IActor Actor { get; set; }
+        
+        public void ComponentReact(StopMovingComponent component, bool isAdded)
+        {
+            if (isAdded)
+            {
+                speedCoeffComponent.coefficient = 0;
+                isStoped = true;
+                Owner.TryGetHecsComponent(out StopMovingComponent stopMovingComponent);
+                stopMovingComponent.currentWaitTime = stopMovingComponent.waitTIme;
+            }
+            else
+            {
+                speedCoeffComponent.coefficient = speedCoeffComponent.defaultCoefficient;
+                isStoped = false;
+            }
+        }
     }
 }

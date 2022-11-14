@@ -8,7 +8,7 @@ using UnityEngine.PlayerLoop;
 
 namespace Systems
 {
-    public class MovingSystem : BaseSystem, IReactCommand<Commands.InputCommand>, IHaveActor, IReactCommand<Commands.InputEndedCommand>, IFixedUpdatable
+    public class MovingSystem : BaseSystem, IReactCommand<Commands.InputCommand>, IHaveActor, IReactCommand<Commands.InputEndedCommand>, IFixedUpdatable, IReactComponentLocal<StopMovingComponent>
     {
        
         private Rigidbody2D rb;
@@ -16,12 +16,14 @@ namespace Systems
 
         [Required] private CurrentSpeedComponent currentSpeed;
         [Required] private SpeedCoeffComponent speedCoeff;
+        private bool isStoped = false;
 
         
         public override void InitSystem()
         {
             Actor.TryGetComponent(out transform);
             Actor.TryGetComponent(out rb);
+            speedCoeff.coefficient = speedCoeff.defaultCoefficient;
         }
 
         public void CommandReact(InputCommand command)
@@ -50,6 +52,32 @@ namespace Systems
             float positionX = transform.position.x + currentSpeed.speed.x * Time.fixedDeltaTime;
             float positionY = transform.position.y + currentSpeed.speed.y * Time.fixedDeltaTime;
             Owner.GetUnityTransformComponent().Transform.position = new Vector3(positionX, positionY, 0);
+
+            if (isStoped)
+            {
+                Owner.TryGetHecsComponent(out StopMovingComponent stopMovingComponent);
+                stopMovingComponent.currentWaitTime -= Time.fixedDeltaTime;
+                if (stopMovingComponent.currentWaitTime <= 0)
+                {
+                    Owner.RemoveHecsComponent(stopMovingComponent);
+                }
+            }
+        }
+
+        public void ComponentReact(StopMovingComponent component, bool isAdded)
+        {
+            if (isAdded)
+            {
+                speedCoeff.coefficient = 0;
+                isStoped = true;
+                Owner.TryGetHecsComponent(out StopMovingComponent stopMovingComponent);
+                stopMovingComponent.currentWaitTime = stopMovingComponent.waitTIme;
+            }
+            else
+            {
+                speedCoeff.coefficient = speedCoeff.defaultCoefficient;
+                isStoped = false;
+            }
         }
     }
 }

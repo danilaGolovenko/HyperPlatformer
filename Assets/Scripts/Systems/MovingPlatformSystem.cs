@@ -34,6 +34,7 @@ namespace Systems
                 else
                     goalPointNumber = 1;
                 goalPoint = wayComponent.listOfPoints[goalPointNumber];
+                speedCoeffComponent.coefficient = speedCoeffComponent.defaultCoefficient;
             }
         }
 
