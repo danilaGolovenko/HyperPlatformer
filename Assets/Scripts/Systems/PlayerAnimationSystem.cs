@@ -83,11 +83,6 @@ namespace Systems
             }
         }
         
-        // public void CommandGlobalReact(DeathCommand command)
-        // {
-        //     
-        // }
-
         public IActor Actor { get; set; }
         public void CommandReact(InputEndedCommand command)
         {

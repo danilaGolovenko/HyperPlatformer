@@ -1,6 +1,7 @@
 ﻿using HECSFramework.Core;
 using HECSFramework.Unity;
 using System;
+using HECSFramework.Core.Helpers;
 using UnityEngine;
 
 namespace Components
@@ -8,12 +9,12 @@ namespace Components
     [Serializable][Documentation(Doc.NONE, "")]
     public class HealthComponent : BaseComponent, IInitable
     {
-        [field: SerializeField] public float maxHealth { get; private set; } = 7;
-        [SerializeField] public float currentHealth = 7;
+        [field: SerializeField] public int maxHealth { get; private set; } = 7;
+        [SerializeField] public ReactiveValue<int> currentHealth = new ReactiveValue<int>(7);
         
         public void Init()
         {
-            currentHealth = maxHealth;
+            currentHealth.CurrentValue = maxHealth;
         }
     }
 }  

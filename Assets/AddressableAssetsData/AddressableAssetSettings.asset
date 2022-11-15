@@ -43,6 +43,9 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: db7d457a5c828b84ea92aa0d7a85db23, type: 2}
   - {fileID: 11400000, guid: 2a0f76d932f37184585af8e2a393b2ef, type: 2}
+  - {fileID: 11400000, guid: dd7e62b6f0adbf648a0d2756d925328e, type: 2}
+  - {fileID: 11400000, guid: 363ce0c04eb83be4ba6f68ef13a058b2, type: 2}
+  - {fileID: 11400000, guid: 3e175d8cc5b3c2c4ca6d79c942c06b06, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -84,6 +87,7 @@ MonoBehaviour:
   m_LabelTable:
     m_LabelNames:
     - default
+    - UIBluePrints
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: d61f569f94d70644f99e1c815ed92373, type: 2}

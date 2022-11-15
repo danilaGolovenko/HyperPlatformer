@@ -27,8 +27,7 @@ MonoBehaviour:
   m_Name: HealthComponentBluePrint
   m_EditorClassIdentifier: 
   component:
-    <maxHealth>k__BackingField: 0.5
-    currentHealth: 0
+    <maxHealth>k__BackingField: 7
 --- !u!114 &-5962370057104099954
 MonoBehaviour:
   m_ObjectHideFlags: 0

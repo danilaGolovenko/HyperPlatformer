@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: UI_BluePrints
+  m_EditorClassIdentifier: 
+  m_GroupName: UI_BluePrints
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 0f5d1ba01aed9504084c104d87782256
+  m_SerializeEntries:
+  - m_GUID: d6053cfd8e473dc4d96adf8fd96609b7
+    m_Address: Assets/BluePrints/UIBluePrints/HealthUI_UIBluePrint.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIBluePrints
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: abedd1e511a06564789dce519587c8e2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: e8a4aaa80eddc644392b7f538c3d02b9, type: 2}
+    - {fileID: 11400000, guid: ef32b930e509e384fac96f9c5ae5112d, type: 2}

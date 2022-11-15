@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Components
 {
     [Serializable][Documentation(Doc.NONE, "")]
-    public sealed class PlayerTagComponent : BaseComponent
+    public sealed class PlayerTagComponent : BaseComponent, IWorldSingleComponent
     {
        
     }

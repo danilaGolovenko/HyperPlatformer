@@ -40,7 +40,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   component:
     <maxHealth>k__BackingField: 7
-    currentHealth: 0
 --- !u!114 &-4743452599804826221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,7 +65,7 @@ MonoBehaviour:
   m_Name: MeleeAttackComponentBluePrint
   m_EditorClassIdentifier: 
   component:
-    <attackPower>k__BackingField: 0.5
+    <attackPower>k__BackingField: 1
     <attackRangeRadius>k__BackingField: 0.8
     <enemyLayerMask>k__BackingField:
       serializedVersion: 2

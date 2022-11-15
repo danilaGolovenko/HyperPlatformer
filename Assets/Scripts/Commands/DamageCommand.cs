@@ -6,7 +6,7 @@ namespace Commands
     [Documentation(Doc.NONE, "")]
 	public struct DamageCommand : ICommand
 	{
-		public float amount;
+		public int amount;
 		public IEntity authorEntity;
 	}
 }

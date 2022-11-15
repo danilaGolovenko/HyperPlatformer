@@ -6,8 +6,8 @@ using UnityEngine;
 namespace Components
 {
     [Serializable][Documentation(Doc.NONE, "")]
-    public sealed class HealthIconPrefabComponent : BaseComponent
+    public sealed class CanvasComponent : BaseComponent
     {
-        [field: SerializeField] public GameObject healthIconPrefab { get; private set; }
+        [field: SerializeField] public GameObject canvas { get; private set; }
     }
 }
