@@ -19,7 +19,7 @@ namespace Systems
         {
             if (!command.authorEntity.Equals(Owner))
             {
-                Debug.Log("Damage from " + command.authorEntity + " to " + Owner + " --- " + command.amount);
+                // Debug.Log("Damage from " + command.authorEntity + " to " + Owner + " --- " + command.amount);
                 healthComponent.currentHealth.CurrentValue -= command.amount;
                 
                 Owner.AddHecsComponent(new StopMovingComponent());
@@ -28,7 +28,7 @@ namespace Systems
                     DeathCommand deathCommand = new DeathCommand();
                     Owner.Command(deathCommand);
                 }
-                Debug.Log("Current " + Owner + " health is " + healthComponent.currentHealth.CurrentValue);
+                // Debug.Log("Current " + Owner + " health is " + healthComponent.currentHealth.CurrentValue);
             }
         }
     }

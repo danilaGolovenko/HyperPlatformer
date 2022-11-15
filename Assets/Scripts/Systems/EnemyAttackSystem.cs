@@ -57,6 +57,8 @@ namespace Systems
 
         public void CommandReact(AnimationEventCommand command)
         {
+            if (command.Id == AnimationEventIdentifierMap.StartEnemyAttack)
+                Owner.AddHecsComponent(new StopMovingComponent());
             if (command.Id == AnimationEventIdentifierMap.Shooting)
             {
                 DamageCommand damageCommand = new DamageCommand();
@@ -67,5 +69,6 @@ namespace Systems
                     GetVictim().Command(damageCommand);
             }
         }
+        
     }
 }

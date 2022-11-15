@@ -7,7 +7,7 @@ using Components;
 namespace Systems
 {
 	[Serializable][Documentation(Doc.NONE, "")]
-    public sealed class MovingEnemySystem : BaseSystem, IAfterEntityInit, IFixedUpdatable, IHaveActor
+    public sealed class MovingEnemySystem : BaseSystem, IAfterEntityInit, IFixedUpdatable, IHaveActor, IReactComponentLocal<StopMovingComponent>
     {
         [Required] private CurrentSpeedComponent currentSpeed;
         [Required] private WayComponent wayComponent;
@@ -101,8 +101,7 @@ namespace Systems
             {
                 speedCoeffComponent.coefficient = 0;
                 isStoped = true;
-                Owner.TryGetHecsComponent(out StopMovingComponent stopMovingComponent);
-                stopMovingComponent.currentWaitTime = stopMovingComponent.waitTIme;
+                component.currentWaitTime = component.waitTIme;
             }
             else
             {
