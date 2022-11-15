@@ -24148,7 +24148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282432405}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.55, y: 2.61, z: 0}
+  m_LocalPosition: {x: 46.55, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25130,7 +25130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4575080517692320, guid: f9663778c0da693408f8cf4c13bc051a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.49
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4575080517692320, guid: f9663778c0da693408f8cf4c13bc051a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -26616,11 +26616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 964b8da96c1579c4ea82bcf312788c7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthIconPrefabComponent:
-    <healthIconPrefab>k__BackingField: {fileID: 1628065192282945802, guid: b038bbab4412c25428075d7936ba0d3e,
-      type: 3}
-  canvasComponent:
-    <canvas>k__BackingField: {fileID: 907913787}
+  <healthIconPrefab>k__BackingField: {fileID: 0}
 --- !u!1 &437114138
 GameObject:
   m_ObjectHideFlags: 0
@@ -64895,11 +64891,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4212235226361802, guid: d5a46d2b2e803e14f92736765f3bdb31, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 37.76
+      value: -1.1
       objectReference: {fileID: 0}
     - target: {fileID: 4212235226361802, guid: d5a46d2b2e803e14f92736765f3bdb31, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.49
+      value: 0.93
       objectReference: {fileID: 0}
     - target: {fileID: 4212235226361802, guid: d5a46d2b2e803e14f92736765f3bdb31, type: 3}
       propertyPath: m_LocalPosition.z
