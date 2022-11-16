@@ -18,7 +18,12 @@ MonoBehaviour:
   m_GUID: 0f5d1ba01aed9504084c104d87782256
   m_SerializeEntries:
   - m_GUID: d6053cfd8e473dc4d96adf8fd96609b7
-    m_Address: Assets/BluePrints/UIBluePrints/HealthUI_UIBluePrint.asset
+    m_Address: HealthUI_UIBluePrint
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIBluePrints
+  - m_GUID: 8662dcf291d94b54ba660a5da34bed59
+    m_Address: EnemyHealthBar_UIBluePrint
     m_ReadOnly: 0
     m_SerializedLabels:
     - UIBluePrints

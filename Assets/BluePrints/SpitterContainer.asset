@@ -84,6 +84,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   component:
     <value>k__BackingField: 1
+--- !u!114 &-4378584022708571207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56d23ccc8031a949bbdcd06fa5259a1, type: 3}
+  m_Name: EnemyTagComponent
+  m_EditorClassIdentifier: 
 --- !u!114 &-1975523011561965079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,6 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holder:
     components:
+    - {fileID: -4378584022708571207}
+    - {fileID: 6292393677704006300}
     - {fileID: -5512127016278165235}
     - {fileID: -1975523011561965079}
     - {fileID: 1342726688814499493}
@@ -195,6 +209,18 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e555089adcddb3649957549b29e017d8, type: 3}
   m_Name: MovingEnemySystem
+  m_EditorClassIdentifier: 
+--- !u!114 &6292393677704006300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c515aa961a9e32a48934f2978b6519d3, type: 3}
+  m_Name: HealthBarTagComponent
   m_EditorClassIdentifier: 
 --- !u!114 &7107435108062722836
 MonoBehaviour:

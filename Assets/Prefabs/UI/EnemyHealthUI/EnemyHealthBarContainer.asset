@@ -1,6 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5818317762385417652
+--- !u!114 &-6940451992816353468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde9903e1fb26b14eabc16a8e1276d3b, type: 3}
+  m_Name: HideUISystem
+  m_EditorClassIdentifier: 
+--- !u!114 &-4634176182514839653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 580de44634b34ca48879f4567ccc62e5, type: 3}
+  m_Name: UITagComponent
+  m_EditorClassIdentifier: 
+  component:
+    ViewType: {fileID: 11400000, guid: ea756eca8b26505418876e6fd8489202, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: EnemyHealthBarContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: 8856292883144433243}
+    - {fileID: -4634176182514839653}
+    - {fileID: 4726873435346204079}
+    - {fileID: 3948278324308039234}
+    systems:
+    - {fileID: 1389157002766446649}
+    - {fileID: -6940451992816353468}
+    Parent: {fileID: 11400000}
+  containerIndex: 1800842807
+--- !u!114 &1389157002766446649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 480c8231dafc6e749aa9b09d8cdd787f, type: 3}
+  m_Name: EnemyHealthUISystem
+  m_EditorClassIdentifier: 
+--- !u!114 &3948278324308039234
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14,7 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   component:
     Transform: {fileID: 0}
---- !u!114 &-5053216259513700833
+--- !u!114 &4726873435346204079
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -28,7 +89,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   component:
     RectTransform: {fileID: 0}
---- !u!114 &11400000
+--- !u!114 &8856292883144433243
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,54 +98,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
-  m_Name: HealthUIContainer
-  m_EditorClassIdentifier: 
-  holder:
-    components:
-    - {fileID: 2060902577430666355}
-    - {fileID: -5053216259513700833}
-    - {fileID: -5818317762385417652}
-    systems:
-    - {fileID: 49454467770317173}
-    - {fileID: 2173863528714578111}
-    Parent: {fileID: 11400000}
-  containerIndex: -1724000901
---- !u!114 &49454467770317173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dde9903e1fb26b14eabc16a8e1276d3b, type: 3}
-  m_Name: HideUISystem
-  m_EditorClassIdentifier: 
---- !u!114 &2060902577430666355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 580de44634b34ca48879f4567ccc62e5, type: 3}
-  m_Name: UITagComponent
-  m_EditorClassIdentifier: 
-  component:
-    ViewType: {fileID: 11400000, guid: 6d9cc96c44ecb3d45a9a321939b21a59, type: 2}
---- !u!114 &2173863528714578111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e81225c5e80f6104b961aef5f59f19d0, type: 3}
-  m_Name: HealthUISystem
+  m_Script: {fileID: 11500000, guid: a5438a9d2b38d544f9cb7e95e640db92, type: 3}
+  m_Name: EntityHolderComponent
   m_EditorClassIdentifier: 
