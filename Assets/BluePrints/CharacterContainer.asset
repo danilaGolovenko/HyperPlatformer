@@ -91,18 +91,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3168f00db331734fb0c0a2c74c0bf95, type: 3}
   m_Name: TakeDamageSystem
   m_EditorClassIdentifier: 
---- !u!114 &-2611599890112858068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c515aa961a9e32a48934f2978b6519d3, type: 3}
-  m_Name: HealthBarTagComponent
-  m_EditorClassIdentifier: 
 --- !u!114 &-2425153255790283109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,7 +125,6 @@ MonoBehaviour:
     components:
     - {fileID: 4640029465714863572}
     - {fileID: 3271269782150502778}
-    - {fileID: -2611599890112858068}
     - {fileID: 8318574334783028630}
     - {fileID: 5590763677925530770}
     - {fileID: 5047543257416142254}

@@ -26,9 +26,13 @@ namespace Systems
                 Value = true
             };
             Owner.Command(commandIsDead);
-            if (Owner.TryGetHecsComponent(out InputListenerTagComponent tag))
+            if (Owner.TryGetHecsComponent(out InputListenerTagComponent inputListenerTag))
             {
                 Owner.RemoveHecsComponent<InputListenerTagComponent>();
+            }
+            if (Owner.TryGetHecsComponent(out HealthBarTagComponent healthBarTag))
+            {
+                Owner.RemoveHecsComponent<HealthBarTagComponent>();
             }
         }
 

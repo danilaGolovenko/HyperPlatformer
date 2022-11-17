@@ -15,7 +15,7 @@ namespace Systems
 
         public override void InitSystem()
         {
-            mainCameras = Owner.World.Filter(new FilterMask(HMasks.MainCameraTagComponent));
+            mainCameras = Owner.World.Filter(new FilterMask(HMasks.CMPlayerCamTagComponent));
             players = Owner.World.Filter(HMasks.PlayerTagComponent);
             
         }

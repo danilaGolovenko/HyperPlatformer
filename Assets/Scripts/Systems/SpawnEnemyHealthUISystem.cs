@@ -8,24 +8,17 @@ using Components;
 namespace Systems
 {
 	[Serializable][Documentation(Doc.NONE, "")]
-    public sealed class SpawnEnemyHealthUISystem : BaseSystem,  ILateStart, IReactComponentGlobal<HealthBarTagComponent>
+    public sealed class SpawnEnemyHealthUISystem : BaseSystem, IReactComponentGlobal<HealthBarTagComponent>, ILateStart
     {
         private ConcurrencyList<HealthBarTagComponent> healthBars = new ConcurrencyList<HealthBarTagComponent>();
+        private UISystem uiSystem;
         public override void InitSystem()
         {
         }
 
         public void LateStart()
         {
-            var healthBars = Owner.World.Filter(HMasks.HealthBarTagComponent);
-            foreach (var healthBar in healthBars)
-            {
-                ShowUIOnAdditionalCommand showUICommand = new ShowUIOnAdditionalCommand();
-                showUICommand.UIViewType = UIIdentifierMap.EnemyHealthBarUI_identifier;
-                showUICommand.AdditionalCanvasID = AdditionalCanvasIdentifierMap.AdditionalCanvas_identifier;
-                showUICommand.OnUILoad += (x) => ReactOnUI(x, healthBar);
-                Owner.World.Command(showUICommand);
-            }
+            uiSystem = Owner.World.GetSingleSystem<UISystem>();
         }
 
         private void ReactOnUI(IEntity ui, IEntity needHealthBar)
@@ -34,17 +27,23 @@ namespace Systems
             healthBars.Add(needHealthBar.GetHealthBarTagComponent());
             InitEnemyHealthBarCommand initEnemyHealthBarCommand = new InitEnemyHealthBarCommand();
             ui.Command(initEnemyHealthBarCommand);
+            needHealthBar.GetHealthBarTagComponent().HealthBar = ui;
         }
 
-        public void ComponentReactGlobal(HealthBarTagComponent component, bool isAdded)
+        public async void ComponentReactGlobal(HealthBarTagComponent component, bool isAdded)
         {
             if (isAdded)
             {
                 ShowUIOnAdditionalCommand showUICommand = new ShowUIOnAdditionalCommand();
                 showUICommand.UIViewType = UIIdentifierMap.EnemyHealthBarUI_identifier;
                 showUICommand.AdditionalCanvasID = AdditionalCanvasIdentifierMap.AdditionalCanvas_identifier;
+                showUICommand.MultyView = true;
                 showUICommand.OnUILoad += (x) => ReactOnUI(x, component.Owner);
                 Owner.World.Command(showUICommand);
+            }
+            else
+            {
+                component.HealthBar?.Command(new HideUICommand());
             }
         }
     }

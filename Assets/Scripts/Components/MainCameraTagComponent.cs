@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Components
 {
     [Serializable][Documentation(Doc.NONE, "")]
-    public sealed class MainCameraTagComponent : BaseComponent
+    public sealed class MainCameraTagComponent : BaseComponent, IWorldSingleComponent
     {
        
     }

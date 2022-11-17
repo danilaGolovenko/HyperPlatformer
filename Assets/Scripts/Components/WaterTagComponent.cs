@@ -6,8 +6,8 @@ using UnityEngine;
 namespace Components
 {
     [Serializable][Documentation(Doc.NONE, "")]
-    public sealed class HealthBarTagComponent : BaseComponent
+    public sealed class WaterTagComponent : BaseComponent
     {
-        public IEntity HealthBar;
+       
     }
 }

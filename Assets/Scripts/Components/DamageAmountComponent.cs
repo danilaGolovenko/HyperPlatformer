@@ -6,8 +6,8 @@ using UnityEngine;
 namespace Components
 {
     [Serializable][Documentation(Doc.NONE, "")]
-    public sealed class HealthBarTagComponent : BaseComponent
+    public sealed class DamageAmountComponent : BaseComponent
     {
-        public IEntity HealthBar;
+        [field: SerializeField] public int amount { get; private set; } 
     }
 }

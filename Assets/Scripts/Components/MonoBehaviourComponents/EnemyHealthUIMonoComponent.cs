@@ -6,17 +6,15 @@ namespace Components.MonoBehaviourComponents
 {
     public class EnemyHealthUIMonoComponent : MonoBehaviour, IHaveActor
     {
-        private Slider slider;
-        private Gradient gradient;
-        private Image fill;
+        [SerializeField] private Slider slider;
+        [SerializeField] private Gradient gradient;
+        [SerializeField] private Image fill;
 
         private HealthComponent enemyHealthComponent;
 
-        public void InitEnemyUI()
+        public void InitEnemyUI(HealthComponent healthComponent)
         {
-            slider = GetComponent<Slider>();
-            gradient = GetComponent<Gradient>();
-            fill = GetComponent<Image>();
+            enemyHealthComponent = healthComponent;
             slider.maxValue = enemyHealthComponent.maxHealth;
             slider.value = enemyHealthComponent.maxHealth;
             fill.color = gradient.Evaluate(1f);

@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6324669647132906106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9fa9d8f6ad84d94b91c9fa18713fd34, type: 3}
+  m_Name: WaterDamageSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: WaterContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: 6763031309280957401}
+    - {fileID: 8976571045475657419}
+    systems:
+    - {fileID: -6324669647132906106}
+    Parent: {fileID: 11400000}
+  containerIndex: 2079971114
+--- !u!114 &6763031309280957401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b969e8e047782e4caee32f41d33391b, type: 3}
+  m_Name: WaterTagComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &8976571045475657419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe0ebde4bda6894b93042bb1de8a27f, type: 3}
+  m_Name: DamageAmountComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    <amount>k__BackingField: 1
