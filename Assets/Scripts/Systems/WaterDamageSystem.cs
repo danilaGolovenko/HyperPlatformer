@@ -11,10 +11,9 @@ namespace Systems
     public sealed class WaterDamageSystem : BaseSystem, IHaveActor, IReactCommand<Trigger2dEnterCommand>
     {
         [Required] private DamageAmountComponent damageAmountComponent;
-        private BoxCollider2D boxCollider2D;
+        [Required] private SpawnPointComponent spawnPointComponent;
         public override void InitSystem()
         {
-            Actor.TryGetComponent(out boxCollider2D);
         }
 
         public IActor Actor { get; set; }
@@ -26,6 +25,9 @@ namespace Systems
                 damageCommand.amount = damageAmountComponent.amount;
                 damageCommand.authorEntity = Owner;
                 actor.Command(damageCommand);
+                
+                
+                
             }
         }
     }

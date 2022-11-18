@@ -12,6 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9fa9d8f6ad84d94b91c9fa18713fd34, type: 3}
   m_Name: WaterDamageSystem
   m_EditorClassIdentifier: 
+--- !u!114 &-5907314981571893090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3faf4dec771888c4e87522d54ec26d0c, type: 3}
+  m_Name: SpawnPointComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    spawnPointTransform: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28,6 +42,7 @@ MonoBehaviour:
     components:
     - {fileID: 6763031309280957401}
     - {fileID: 8976571045475657419}
+    - {fileID: -5907314981571893090}
     systems:
     - {fileID: -6324669647132906106}
     Parent: {fileID: 11400000}
