@@ -8,14 +8,14 @@ using Components;
 namespace Systems
 {
 	[Serializable][Documentation(Doc.NONE, "")]
-    public sealed class SpawnHealthUISystem : BaseSystem, IGlobalStart
+    public sealed class SpawnHealthUISystem : BaseSystem, IReactComponentGlobal<PlayerTagComponent>
     {
         public override void InitSystem()
         {
             
         }
 
-        public void GlobalStart()
+        public void ComponentReactGlobal(PlayerTagComponent component, bool isAdded)
         {
             ShowUICommand showUICommand = new ShowUICommand();
             showUICommand.UIViewType = UIIdentifierMap.HealthUI_identifier;

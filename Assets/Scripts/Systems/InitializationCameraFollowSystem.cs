@@ -8,7 +8,7 @@ using Components;
 namespace Systems
 {
 	[Serializable][Documentation(Doc.NONE, "")]
-    public sealed class InitializationCameraFollowSystem : BaseSystem, ILateStart
+    public sealed class InitializationCameraFollowSystem : BaseSystem, IReactComponentGlobal<PlayerTagComponent>
     {
         private ConcurrencyList<IEntity> mainCameras;
         private ConcurrencyList<IEntity> players;
@@ -20,23 +20,20 @@ namespace Systems
             
         }
 
-        public void LateStart()
+        public void ComponentReactGlobal(PlayerTagComponent component, bool isAdded)
         {
-            //Data - сам список
-            IEntity camera = mainCameras.Data[0];
-            IEntity player = players.Data[0];
-            UnityTransformComponent playerTransformComponent;
-            // playerTransformComponent = player.GetOrAddComponent<UnityTransformComponent>(player);
-            playerTransformComponent = player.GetUnityTransformComponent();
-            // playerTransformComponent = player.GetHECSComponent<UnityTransformComponent>();
-            // player.TryGetHecsComponent(HMasks.UnityTransformComponent, out playerTransformComponent);
-            // camera.Transform = playerTransform;
-
-            // var cameraActor = camera as IActor;
-            if (camera is IActor cameraActor)
+            if (isAdded)
             {
-                cameraActor.TryGetComponent(out CinemachineVirtualCamera virtualCamera);
-                virtualCamera.Follow = playerTransformComponent.Transform;
+                //Data - сам список
+                IEntity camera = mainCameras.Data[0];
+                IEntity player = players.Data[0];
+                UnityTransformComponent playerTransformComponent;
+                playerTransformComponent = player.GetUnityTransformComponent();
+                if (camera is IActor cameraActor)
+                {
+                    cameraActor.TryGetComponent(out CinemachineVirtualCamera virtualCamera);
+                    virtualCamera.Follow = playerTransformComponent.Transform;
+                }
             }
         }
     }

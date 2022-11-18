@@ -25,6 +25,10 @@ MonoBehaviour:
     m_Address: Assets/BluePrints/AdditionalCanvasContainer.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 2660c71bb5176f84a921fa3b7ae4fec9
+    m_Address: Assets/Prefabs/Enemy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: abedd1e511a06564789dce519587c8e2, type: 2}
   m_SchemaSet:

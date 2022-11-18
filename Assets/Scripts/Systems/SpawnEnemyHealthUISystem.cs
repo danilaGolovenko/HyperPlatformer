@@ -8,19 +8,13 @@ using Components;
 namespace Systems
 {
 	[Serializable][Documentation(Doc.NONE, "")]
-    public sealed class SpawnEnemyHealthUISystem : BaseSystem, IReactComponentGlobal<HealthBarTagComponent>, ILateStart
+    public sealed class SpawnEnemyHealthUISystem : BaseSystem, IReactComponentGlobal<HealthBarTagComponent>
     {
         private ConcurrencyList<HealthBarTagComponent> healthBars = new ConcurrencyList<HealthBarTagComponent>();
-        private UISystem uiSystem;
         public override void InitSystem()
         {
         }
-
-        public void LateStart()
-        {
-            uiSystem = Owner.World.GetSingleSystem<UISystem>();
-        }
-
+        
         private void ReactOnUI(IEntity ui, IEntity needHealthBar)
         {
             ui.GetEntityHolderComponent().entity = needHealthBar;

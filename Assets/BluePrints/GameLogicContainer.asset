@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6453700509712975786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47e28c388aadc043b9f91eacf7b7cb7, type: 3}
+  m_Name: PlayerContainerComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    <actorContainer>k__BackingField: {fileID: 11400000, guid: eb0c9cb62763b754b947564d59eac419,
+      type: 2}
 --- !u!114 &-5931733013696809346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34,6 +49,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa8706a1d33035d408e27a558fcbd53d, type: 3}
   m_Name: SpawnHealthUISystem
   m_EditorClassIdentifier: 
+--- !u!114 &-3863239885266948893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a21761bc06e71b4fabc56e3c9336556, type: 3}
+  m_Name: PlayerSpawnSystem
+  m_EditorClassIdentifier: 
 --- !u!114 &-3569346804489630735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,6 +73,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1c581ae92d5cc74c85611cc5dba2c8a, type: 3}
   m_Name: InitializationCameraFollowSystem
   m_EditorClassIdentifier: 
+--- !u!114 &-214676535929160816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de93bf6433e3524488f7315e5a9045e3, type: 3}
+  m_Name: EnemySpawnSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &-78603686563500936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6a5da7b16b415043a2311454897bbc1, type: 3}
+  m_Name: EnemyContainerComponent
+  m_EditorClassIdentifier: 
+  component:
+    <actorContainer>k__BackingField: {fileID: 11400000, guid: 4d5daba583fc27d44bcce5707b83919d,
+      type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,12 +113,16 @@ MonoBehaviour:
   m_Name: GameLogicContainer
   m_EditorClassIdentifier: 
   holder:
-    components: []
+    components:
+    - {fileID: -6453700509712975786}
+    - {fileID: -78603686563500936}
     systems:
     - {fileID: -3569346804489630735}
     - {fileID: 163667382468224473}
     - {fileID: -4895332416686945981}
     - {fileID: 822082577844414936}
+    - {fileID: -3863239885266948893}
+    - {fileID: -214676535929160816}
     Parent: {fileID: 11400000}
   containerIndex: 503398846
 --- !u!114 &163667382468224473

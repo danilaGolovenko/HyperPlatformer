@@ -10,16 +10,12 @@ namespace Systems
 	[Serializable][Documentation(Doc.NONE, "")]
     public sealed class DeathHandlerSystem : BaseSystem, IReactCommand<Commands.DeathCommand>, IReactCommand<Commands.EventStateAnimationCommand>
     {
-        
-        //TODO 
-        // АДО СДЕЛАТЬ ЕЕ ЛОКАЛЬНОЙ
         public override void InitSystem()
         {
         }
 
         public void CommandReact(DeathCommand command)
         {
-            // Debug.Log("============================== " + command.entity + " --- RIP ==============================");
             BoolAnimationCommand commandIsDead = new BoolAnimationCommand
             {
                 Index = AnimParametersMap.isDead,
@@ -34,6 +30,11 @@ namespace Systems
             {
                 Owner.RemoveHecsComponent<HealthBarTagComponent>();
             }
+
+            if (Owner.TryGetHecsComponent(out EnemyTagComponent enemyTag))
+            {
+                Owner.World.Command(new IncreaseWinPointsCommand());
+            }
         }
 
         public void CommandReact(EventStateAnimationCommand command)
@@ -43,6 +44,10 @@ namespace Systems
                 DestroyEntityWorldCommand destroyEntityWorldCommand = new DestroyEntityWorldCommand();
                 destroyEntityWorldCommand.Entity = Owner;
                 Owner.World.Command(destroyEntityWorldCommand);
+            }
+            if (command.StateId == AnimatorStateIdentifierMap.SpitterDeath)
+            {
+                Owner.World.Command(new EnemySpawnCommand());
             }
         }
     }

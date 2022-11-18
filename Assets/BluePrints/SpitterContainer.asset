@@ -14,6 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   component:
     Animator: {fileID: 0}
+--- !u!114 &-6724866004478949359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d4dea159ccad543afdd93db81c3768, type: 3}
+  m_Name: ViewReferenceComponent
+  m_EditorClassIdentifier: 
+  component:
+    ViewReference:
+      m_AssetGUID: 2660c71bb5176f84a921fa3b7ae4fec9
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
 --- !u!114 &-6034850251336318454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +181,7 @@ MonoBehaviour:
     - {fileID: -4523684939921156265}
     - {fileID: -6860922469412374489}
     - {fileID: 8853384271974006515}
+    - {fileID: -6724866004478949359}
     systems:
     - {fileID: 7107435108062722836}
     - {fileID: 3722437866899373249}
@@ -197,8 +216,8 @@ MonoBehaviour:
   m_Name: SpeedCoeffComponent
   m_EditorClassIdentifier: 
   component:
-    <coefficient>k__BackingField: 0.2
-    <defaultCoefficient>k__BackingField: 0.2
+    <coefficient>k__BackingField: 0.07
+    <defaultCoefficient>k__BackingField: 0.07
 --- !u!114 &3722437866899373249
 MonoBehaviour:
   m_ObjectHideFlags: 0
