@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1c581ae92d5cc74c85611cc5dba2c8a, type: 3}
   m_Name: InitializationCameraFollowSystem
   m_EditorClassIdentifier: 
---- !u!114 &-214676535929160816
+--- !u!114 &-1312387049388833403
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,8 +122,8 @@ MonoBehaviour:
     - {fileID: -4895332416686945981}
     - {fileID: 822082577844414936}
     - {fileID: -3863239885266948893}
-    - {fileID: -214676535929160816}
     - {fileID: 315475429348678568}
+    - {fileID: -1312387049388833403}
     Parent: {fileID: 11400000}
   containerIndex: 503398846
 --- !u!114 &163667382468224473

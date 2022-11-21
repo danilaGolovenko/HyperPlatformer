@@ -4,6 +4,7 @@ using HECSFramework.Unity;
 using HECSFramework.Core;
 using UnityEngine;
 using Components;
+using Unity.VisualScripting;
 
 namespace Systems
 {

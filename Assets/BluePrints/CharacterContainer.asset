@@ -136,7 +136,6 @@ MonoBehaviour:
   m_Name: WinPointsComponentBluePrint
   m_EditorClassIdentifier: 
   component:
-    currentAmount: 0
     <requiredAmount>k__BackingField: 1
 --- !u!114 &-1176483292641232669
 MonoBehaviour:

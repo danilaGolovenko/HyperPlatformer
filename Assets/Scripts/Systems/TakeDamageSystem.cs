@@ -24,12 +24,13 @@ namespace Systems
             {
                 healthComponent.currentHealth.CurrentValue -= command.amount;
                 Owner.AddHecsComponent(new StopMovingComponent());
-                if (healthComponent.currentHealth.CurrentValue <= 0)
+                if (healthComponent.currentHealth.CurrentValue <= 0 && !Owner.TryGetHecsComponent(out DeadTagComponent deadTagComponent))
                 {
+                    Owner.AddHecsComponent(new DeadTagComponent());
                     DeathCommand deathCommand = new DeathCommand();
                     Owner.Command(deathCommand);
                 }
-                if (command.authorEntity.TryGetHecsComponent(out WaterTagComponent waterTagComponent))
+                if (command.authorEntity.TryGetHecsComponent(out WaterTagComponent waterTagComponent))    
                 {
                     var spawnPoint = command.authorEntity.GetSpawnPointComponent().spawnPointTransform.position;
                     var waitTime = waitComponent.waitMonoComponent.waitTime;

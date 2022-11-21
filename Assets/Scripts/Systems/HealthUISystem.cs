@@ -10,7 +10,6 @@ namespace Systems
     public sealed class HealthUISystem : BaseSystem, IHaveActor, ILateStart
     {
         private HealthUIMonoComponent healthUIMonoComponent;
-        private IEntity player;
 
         public override void InitSystem()
         {
@@ -21,7 +20,7 @@ namespace Systems
         
         public void LateStart()
         {
-            player = Owner.World.GetSingleComponent<PlayerTagComponent>().Owner;
+            IEntity player = Owner.World.GetSingleComponent<PlayerTagComponent>().Owner;
             player.TryGetHecsComponent(out HealthComponent healthComponent);
             healthComponent.currentHealth.OnChange += CurrentHealthOnChange;
             healthUIMonoComponent.InitHealthUI(healthComponent);
