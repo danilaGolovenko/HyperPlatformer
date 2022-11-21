@@ -25,6 +25,10 @@ MonoBehaviour:
     m_Address: Assets/Prefabs/UI/EnemyHealthUI/EnemyHealthBarContainer.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: e4d1fd09327ccbe4f8c9a18d75d76d84
+    m_Address: Assets/Prefabs/UI/KilledEnemiesUI/KilledEnemiesUIContainer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: abedd1e511a06564789dce519587c8e2, type: 2}
   m_SchemaSet:

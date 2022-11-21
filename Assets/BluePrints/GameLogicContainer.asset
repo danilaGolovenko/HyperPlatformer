@@ -123,6 +123,7 @@ MonoBehaviour:
     - {fileID: 822082577844414936}
     - {fileID: -3863239885266948893}
     - {fileID: -214676535929160816}
+    - {fileID: 315475429348678568}
     Parent: {fileID: 11400000}
   containerIndex: 503398846
 --- !u!114 &163667382468224473
@@ -136,6 +137,18 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6247539fa45bb43468dee8a5ab90305e, type: 3}
   m_Name: GravitySystem
+  m_EditorClassIdentifier: 
+--- !u!114 &315475429348678568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7e88e247e2cab84d9ee9e36ef608f70, type: 3}
+  m_Name: SpawnKilledEnemiesUISystem
   m_EditorClassIdentifier: 
 --- !u!114 &822082577844414936
 MonoBehaviour:

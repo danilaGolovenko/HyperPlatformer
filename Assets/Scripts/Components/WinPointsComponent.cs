@@ -1,7 +1,6 @@
 using HECSFramework.Core;
-using HECSFramework.Unity;
 using System;
-using Commands;
+using HECSFramework.Core.Helpers;
 using UnityEngine;
 
 namespace Components
@@ -9,7 +8,12 @@ namespace Components
     [Serializable][Documentation(Doc.NONE, "")]
     public sealed class WinPointsComponent : BaseComponent
     {
-        public float currentAmount;
-        [field: SerializeField] public float requiredAmount { get; private set; }
+        public ReactiveValue<int> currentAmount = new ReactiveValue<int>(0);
+        [field: SerializeField] public int requiredAmount { get; private set; }
+
+        public override string ToString()
+        {
+            return currentAmount.CurrentValue + "/" + requiredAmount;
+        }
     }
 }

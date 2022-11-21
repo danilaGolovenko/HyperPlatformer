@@ -19,7 +19,7 @@ namespace Systems
             if (command.Collider.gameObject.TryGetComponent(out Actor actor) &&
                 actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent))
             {
-                if (actor.GetWinPointsComponent().currentAmount >= actor.GetWinPointsComponent().requiredAmount)
+                if (actor.GetWinPointsComponent().currentAmount.CurrentValue >= actor.GetWinPointsComponent().requiredAmount)
                 {
                     Debug.Log("GAME OVER! WIN!");
                 }

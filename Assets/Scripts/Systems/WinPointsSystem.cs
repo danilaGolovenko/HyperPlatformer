@@ -17,7 +17,7 @@ namespace Systems
 
         public void CommandGlobalReact(IncreaseWinPointsCommand command)
         {
-            winPointsComponent.currentAmount++;
+            winPointsComponent.currentAmount.CurrentValue++;
         }
     }
 }
