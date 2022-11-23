@@ -9,22 +9,22 @@ using Unity.VisualScripting;
 namespace Systems
 {
 	[Serializable][Documentation(Doc.NONE, "")]
-    public sealed class WinSystem : BaseSystem, IReactCommand<Trigger2dEnterCommand>
+    public sealed class WinSystem : BaseSystem, IReactGlobalCommand<Commands.WinCommand>
     {
         public override void InitSystem()
         {
+           
         }
 
-        public void CommandReact(Trigger2dEnterCommand command)
+        public void CommandGlobalReact(WinCommand command)
         {
-            if (command.Collider.gameObject.TryGetComponent(out Actor actor) &&
-                actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent))
-            {
-                if (actor.GetWinPointsComponent().currentAmount.CurrentValue >= actor.GetWinPointsComponent().requiredAmount)
-                {
-                    Debug.Log("GAME OVER! WIN!");
-                }
-            }
+            ShowUICommand showUICommand = new ShowUICommand();
+            showUICommand.UIViewType = UIIdentifierMap.WinUI_identifier;
+            Owner.World.Command(showUICommand);
+
+            var playerList = Owner.World.Filter(HMasks.PlayerTagComponent);
+            var player = playerList.Data[0];
+            player.RemoveHecsSystem<MovingSystem>();
         }
     }
 }

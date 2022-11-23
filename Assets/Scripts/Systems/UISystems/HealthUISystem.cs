@@ -20,10 +20,10 @@ namespace Systems
         
         public void LateStart()
         {
-            IEntity player = Owner.World.GetSingleComponent<PlayerTagComponent>().Owner;
-            player.TryGetHecsComponent(out HealthComponent healthComponent);
-            healthComponent.currentHealth.OnChange += CurrentHealthOnChange;
-            healthUIMonoComponent.InitHealthUI(healthComponent);
+            // IEntity player = Owner.World.GetSingleComponent<PlayerTagComponent>().Owner;
+            // player.TryGetHecsComponent(out HealthComponent healthComponent);
+            // healthComponent.currentHealth.OnChange += CurrentHealthOnChange;
+            // healthUIMonoComponent.InitHealthUI(healthComponent);
         }
 
         private void CurrentHealthOnChange(int obj)

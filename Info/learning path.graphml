@@ -1206,7 +1206,7 @@
     <node id="n71">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="54.36527260018693" width="240.0" x="6794.866561825146" y="-715.9639500955478"/>
+          <y:Geometry height="54.36527260018693" width="240.0" x="7088.355374607235" y="-725.038476365587"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="70.03515625" x="84.982421875" xml:space="preserve" y="17.832050362593463">RootCanvas<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
@@ -1220,7 +1220,7 @@
           <y:Geometry height="54.36527260018693" width="240.0" x="6092.733126875516" y="-614.3130037687432"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="174.0859375" x="32.95703125" xml:space="preserve" y="17.832050362593463">PlayersKeysAmountComponent<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="168.0859375" x="35.95703125" xml:space="preserve" y="17.832050362593463">PlayerKeysAmountComponent<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
@@ -1308,7 +1308,7 @@
           <y:Geometry height="54.36527260018693" width="240.0" x="5361.859373470796" y="-165.93790433899647"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="133.3984375" x="53.30078125" xml:space="preserve" y="17.832050362593463">RequiredAmountOfKeys<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="195.4375" x="22.28125" xml:space="preserve" y="17.832050362593463">RequiredAmountOfKeysComponent<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
@@ -1341,7 +1341,7 @@
           <y:Geometry height="54.36527260018693" width="240.0" x="6092.733126875516" y="-377.37788890535484"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="169.41015625" x="35.294921875" xml:space="preserve" y="17.832050362593463">SwitchToAnotherSceneSystem<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="113.376953125" x="63.3115234375" xml:space="preserve" y="17.832050362593463">SwitchSceneSystem<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
@@ -1363,7 +1363,7 @@
           <y:Geometry height="54.36527260018693" width="240.0" x="6209.8412682822545" y="-966.0302525328266"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="174.0859375" x="32.95703125" xml:space="preserve" y="17.832050362593463">PlayersKeysAmountComponent<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="168.0859375" x="35.95703125" xml:space="preserve" y="17.832050362593463">PlayerKeysAmountComponent<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
@@ -1385,7 +1385,7 @@
           <y:Geometry height="54.36527260018693" width="268.3276764212487" x="6722.527439482794" y="-874.7979952526482"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="222.103515625" x="23.112080398123908" xml:space="preserve" y="17.832050362593463">IReactCommand&lt;Collision2dCommand&gt;<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="1.6653345369377348E-15" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="222.103515625" x="23.112080398124817" xml:space="preserve" y="17.832050362593463">IReactCommand&lt;Collision2dCommand&gt;<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="1.6653345369377348E-15" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
@@ -1407,7 +1407,7 @@
           <y:Geometry height="83.63720490214405" width="456.99000138676547" x="7058.157069015401" y="-976.6059183967595"/>
           <y:Fill color="#CCFFFF" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="77.505859375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="431.53515625" x="12.72742256838319" xml:space="preserve" y="3.0656727635720245">if (command.Collider.gameObject.TryGetComponent(out Actor actor) &amp;&amp; 
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="77.505859375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="431.53515625" x="12.72742256838228" xml:space="preserve" y="3.0656727635720245">if (command.Collider.gameObject.TryGetComponent(out Actor actor) &amp;&amp; 
 actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
    actor.GetPlayersKeysAmountComponent.currentAmount.CurrentValue++;
    // удалить ключ со сцены
@@ -1422,19 +1422,18 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
           <y:Geometry height="54.36527260018693" width="240.0" x="5442.299831367594" y="-377.37788890535484"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="221.458984375" x="9.2705078125" xml:space="preserve" y="17.832050362593463">SwitchToAnotherSceneMonoComponent<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="165.42578125" x="37.287109375" xml:space="preserve" y="17.832050362593463">SwitchSceneMonoComponent<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
     </node>
     <node id="n91">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="96.33990902077755" width="306.6669730475305" x="5563.97530704261" y="-884.6034086259109"/>
+          <y:Geometry height="96.33990902077755" width="306.6669730475305" x="5604.598475390167" y="-853.3728292873562"/>
           <y:Fill color="#CCFFFF" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="62.8046875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="282.466796875" x="12.100088086264805" xml:space="preserve" y="16.767610760388834">нужно передавать в другую сцену данные игрока:
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="62.8046875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="282.466796875" x="12.100088086264805" xml:space="preserve" y="16.76761076038872">нужно передавать в другую сцену данные игрока:
 HealthComponent
 WinPointsComponent
 PlayersKeysAmountComponent<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
@@ -1443,33 +1442,31 @@ PlayersKeysAmountComponent<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/><
       </data>
     </node>
     <node id="n92">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="83.63720490214405" width="415.44525050512584" x="6122.118643029692" y="-1191.2296431897898"/>
-          <y:Fill color="#FF0000" transparent="false"/>
+          <y:Fill color="#CCFFFF" color2="#FF0000" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="55.4541015625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#FFFFFF" verticalTextPosition="bottom" visible="true" width="383.6474609375" x="15.898894783813375" xml:space="preserve" y="14.091551669822024">WinPointsComponent - кто хранит требуемое количество? 
-не PlayerEntity! Дверь-финиш?
-Нужно переписать KilledEnemiesUI<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="72.60546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="369.134765625" x="23.155242440061556" xml:space="preserve" y="7.0317361521438215">WinPointsComponent
+кто хранит требуемое количество? вряд ли PlayerEntity 
+Дверь-финиш?
+Если менять, то нужно переписать KilledEnemiesUI<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.5" nodeRatioX="-1.1102230246251565E-15" nodeRatioY="0.5" offsetX="0.0" offsetY="-4.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
     </node>
     <node id="n93">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="136.53952577899565" width="252.8289775911844" x="5590.8943047707835" y="-758.2634996051333"/>
+          <y:Geometry height="136.53952577899565" width="300.56120039956295" x="5607.65136171415" y="-727.0329202665787"/>
           <y:Fill color="#CCFFFF" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="121.609375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="232.796875" x="10.016051295591751" xml:space="preserve" y="7.46507538949777">public static class PlayerStatsComponent
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="106.908203125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="293.494140625" x="3.5335298872814747" xml:space="preserve" y="14.81566132699777">public static class PlayerStats
 {
     public static int currentHealth { get; set; }
-    public static int maxHealth { get; set; } 
     public static int kills { get; set; }
     public static int keys { get; set; }
-    public static Vecor2 portalPoint {get; set}
+    public static Vector2 beforePortalPosition {get; set; }
 }<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
@@ -1492,7 +1489,7 @@ PlayersKeysAmountComponent<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/><
           <y:Geometry height="213.94451643988873" width="539.3291141845284" x="5614.548729302506" y="137.83584191000324"/>
           <y:Fill color="#CCFFFF" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="165.712890625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="517.90234375" x="10.713385217264658" xml:space="preserve" y="24.115812907444365">if (command.Collider.gameObject.TryGetComponent(out Actor actor) &amp;&amp; 
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="165.712890625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="517.90234375" x="10.713385217263749" xml:space="preserve" y="24.115812907444365">if (command.Collider.gameObject.TryGetComponent(out Actor actor) &amp;&amp; 
 actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
    if (actor.GetPlayersKeysAmountComponent.currentAmount.CurrentValue &gt;= requiredAmount){
       Owner.World.Commands(new SwitchSceneCommand);
@@ -1524,7 +1521,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
           <y:Geometry height="54.36527260018693" width="268.3276764212487" x="6092.733126875516" y="-14.006117522845045"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="243.443359375" x="12.442158523124817" xml:space="preserve" y="17.832050362593463">IReactCommand&lt;Trigger2dEnterCommand&gt;<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="243.443359375" x="12.442158523123908" xml:space="preserve" y="17.832050362593463">IReactCommand&lt;Trigger2dEnterCommand&gt;<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
@@ -1554,10 +1551,10 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
     <node id="n100">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="54.36527260018693" width="268.3276764212487" x="6484.969204759421" y="-503.5875311718992"/>
-          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:Geometry height="54.36527260018693" width="268.3276764212487" x="6484.969204759421" y="-503.79752841023077"/>
+          <y:Fill color="#FFCC00" color2="#FF0000" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="138.080078125" x="65.12379914812391" xml:space="preserve" y="17.832050362593463">SceneManagerConrainer<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="156.080078125" x="56.12379914812391" xml:space="preserve" y="17.832050362593463">SceneManagerConrainer (?)<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
@@ -1601,10 +1598,10 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
     <node id="n104">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="54.36527260018693" width="240.0" x="5597.308793566375" y="-526.7335676658397"/>
-          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:Geometry height="54.36527260018693" width="240.0" x="5442.299831367594" y="-535.6198857418676"/>
+          <y:Fill color="#FFCC00" color2="#FF0000" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="127.3984375" x="56.30078125" xml:space="preserve" y="17.832050362593463">PlayerStatsComponent<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="157.416015625" x="41.2919921875" xml:space="preserve" y="17.832050362593463">PlayerStatsMonoComponent<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
@@ -1616,17 +1613,6 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="134.74609375" x="52.626953125" xml:space="preserve" y="17.832050362593463">TargetSceneComponent<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
-          <y:Shape type="rectangle"/>
-        </y:ShapeNode>
-      </data>
-    </node>
-    <node id="n106">
-      <data key="d6">
-        <y:ShapeNode>
-          <y:Geometry height="58.14229612302012" width="268.3276764212487" x="5761.537530843296" y="-310.9639237641113"/>
-          <y:Fill color="#FFCC00" transparent="false"/>
-          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="252.806640625" x="7.760517898123908" xml:space="preserve" y="19.720562124010087">SwitchToAnotherSceneMonoComponent (???)<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
@@ -2441,8 +2427,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e62" source="n71" target="n70">
-      <data key="d9"/>
+    <edge id="e62" source="n72" target="n73">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2452,8 +2437,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e63" source="n72" target="n73">
-      <data key="d9"/>
+    <edge id="e63" source="n74" target="n72">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2463,8 +2447,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e64" source="n74" target="n72">
-      <data key="d9"/>
+    <edge id="e64" source="n75" target="n70">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2474,8 +2457,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e65" source="n75" target="n70">
-      <data key="d9"/>
+    <edge id="e65" source="n77" target="n76">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2485,8 +2467,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e66" source="n77" target="n76">
-      <data key="d9"/>
+    <edge id="e66" source="n76" target="n75">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2496,8 +2477,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e67" source="n76" target="n75">
-      <data key="d9"/>
+    <edge id="e67" source="n70" target="n78">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2507,8 +2487,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e68" source="n70" target="n78">
-      <data key="d9"/>
+    <edge id="e68" source="n78" target="n72">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2518,8 +2497,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e69" source="n78" target="n72">
-      <data key="d9"/>
+    <edge id="e69" source="n80" target="n81">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2529,8 +2507,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e70" source="n80" target="n81">
-      <data key="d9"/>
+    <edge id="e70" source="n79" target="n80">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2540,8 +2517,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e71" source="n79" target="n80">
-      <data key="d9"/>
+    <edge id="e71" source="n87" target="n88">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2551,8 +2527,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e72" source="n83" target="n72">
-      <data key="d9"/>
+    <edge id="e72" source="n86" target="n88">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2562,8 +2537,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e73" source="n87" target="n88">
-      <data key="d9"/>
+    <edge id="e73" source="n88" target="n85">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2573,8 +2547,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e74" source="n86" target="n88">
-      <data key="d9"/>
+    <edge id="e74" source="n84" target="n85">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2584,8 +2557,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e75" source="n88" target="n85">
-      <data key="d9"/>
+    <edge id="e75" source="n88" target="n89">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2595,8 +2567,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e76" source="n84" target="n85">
-      <data key="d9"/>
+    <edge id="e76" source="n83" target="n90">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2606,8 +2577,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e77" source="n88" target="n89">
-      <data key="d9"/>
+    <edge id="e77" source="n79" target="n96">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2617,8 +2587,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e78" source="n83" target="n90">
-      <data key="d9"/>
+    <edge id="e78" source="n96" target="n95">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2628,21 +2597,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e79" source="n90" target="n84">
-      <data key="d9"/>
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="5562.299831367594" y="-1050.4098019875523"/>
-          </y:Path>
-          <y:LineStyle color="#000000" type="dotted" width="2.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e80" source="n79" target="n96">
-      <data key="d9"/>
+    <edge id="e79" source="n98" target="n83">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2652,8 +2607,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e81" source="n96" target="n95">
-      <data key="d9"/>
+    <edge id="e80" source="n97" target="n96">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2663,8 +2617,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e82" source="n98" target="n83">
-      <data key="d9"/>
+    <edge id="e81" source="n99" target="n83">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2674,8 +2627,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e83" source="n97" target="n96">
-      <data key="d9"/>
+    <edge id="e82" source="n100" target="n83">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2685,8 +2637,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e84" source="n99" target="n83">
-      <data key="d9"/>
+    <edge id="e83" source="n97" target="n101">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2696,8 +2647,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e85" source="n100" target="n83">
-      <data key="d9"/>
+    <edge id="e84" source="n94" target="n101">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2707,30 +2657,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e86" source="n97" target="n101">
-      <data key="d9"/>
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e87" source="n94" target="n101">
-      <data key="d9"/>
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e88" source="n95" target="n102">
-      <data key="d9"/>
+    <edge id="e85" source="n95" target="n102">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2740,8 +2667,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e89" source="n103" target="n102">
-      <data key="d9"/>
+    <edge id="e86" source="n103" target="n102">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="17.18158302888969" sy="24.759142424395066" tx="0.0" ty="0.0"/>
@@ -2751,8 +2677,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e90" source="n102" target="n83">
-      <data key="d9"/>
+    <edge id="e87" source="n102" target="n83">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2762,8 +2687,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e91" source="n101" target="n103">
-      <data key="d9"/>
+    <edge id="e88" source="n101" target="n103">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2773,8 +2697,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e92" source="n104" target="n93">
-      <data key="d9"/>
+    <edge id="e89" source="n104" target="n93">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2784,8 +2707,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e93" source="n91" target="n93">
-      <data key="d9"/>
+    <edge id="e90" source="n91" target="n93">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2795,8 +2717,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e94" source="n90" target="n104">
-      <data key="d9"/>
+    <edge id="e91" source="n90" target="n104">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2806,8 +2727,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e95" source="n101" target="n105">
-      <data key="d9"/>
+    <edge id="e92" source="n101" target="n105">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2817,8 +2737,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e96" source="n96" target="n105">
-      <data key="d9"/>
+    <edge id="e93" source="n96" target="n105">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2828,8 +2747,7 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e97" source="n102" target="n105">
-      <data key="d9"/>
+    <edge id="e94" source="n102" target="n105">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2839,8 +2757,61 @@ actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e98" source="n83" target="n106">
-      <data key="d9"/>
+    <edge id="e95" source="n95" target="n72">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="dotted" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e96" source="n90" target="n104">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e97" source="n104" target="n84">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="-17.772636152055384" sy="2.3277425262745055" tx="0.0" ty="0.0">
+            <y:Point x="5544.527195215539" y="-1050.4098019875523"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="dotted" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e98" source="n84" target="n104">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="-4.970448517723526" sy="13.66015853209933" tx="0.0" ty="0.0">
+            <y:Point x="5562.299831367594" y="-1036.749643455453"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="dotted" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e99" source="n71" target="n75">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="dotted" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e100" source="n84" target="n92">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>

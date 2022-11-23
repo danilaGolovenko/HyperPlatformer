@@ -29,6 +29,18 @@ MonoBehaviour:
     m_Address: Assets/Prefabs/UI/KilledEnemiesUI/KilledEnemiesUIContainer.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 7badb7d729133f040beac9ab1d2e51da
+    m_Address: Assets/Prefabs/UI/KeyUI/KeyUIContainer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b4a0b6789ceb4554a8822071bfcb83b9
+    m_Address: Assets/Prefabs/WinUIContainer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8142610f336be6945bf27ded6bd4ab46
+    m_Address: Assets/Prefabs/UI/DialogueUI/DialogueUIContainer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: abedd1e511a06564789dce519587c8e2, type: 2}
   m_SchemaSet:

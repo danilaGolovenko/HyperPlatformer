@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1021076941567435394
+--- !u!114 &-6660658296158225
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4010d599a9491ee4fbe81a979a3daf07, type: 3}
-  m_Name: WinSystem
+  m_Script: {fileID: 11500000, guid: f97955a1e1cfb1c45a421c0d03f51b17, type: 3}
+  m_Name: CatchByPlayerSystem
   m_EditorClassIdentifier: 
 --- !u!114 &11400000
 MonoBehaviour:
@@ -22,11 +22,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
-  m_Name: FinishPlaceContainer
+  m_Name: KeyContainer
   m_EditorClassIdentifier: 
   holder:
     components: []
     systems:
-    - {fileID: -1021076941567435394}
+    - {fileID: -6660658296158225}
     Parent: {fileID: 11400000}
-  containerIndex: 1100486634
+  containerIndex: -266576463

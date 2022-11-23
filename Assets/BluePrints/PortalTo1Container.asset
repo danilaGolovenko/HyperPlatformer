@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6216687869016929159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 210e4913d214fec47b029c497cc8c5cd, type: 3}
+  m_Name: TargetSceneComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    <sceneIndex>k__BackingField: 1
+--- !u!114 &-3682135293102514675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3faf4dec771888c4e87522d54ec26d0c, type: 3}
+  m_Name: SpawnPointComponent
+  m_EditorClassIdentifier: 
+  component:
+    spawnPointTransform: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: PortalTo1Container
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: -6216687869016929159}
+    - {fileID: -3682135293102514675}
+    systems:
+    - {fileID: 8820653193753491479}
+    Parent: {fileID: 11400000}
+  containerIndex: 307770401
+--- !u!114 &8820653193753491479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73985da1002ae245bf303042df91236, type: 3}
+  m_Name: PortalSwitchSystem
+  m_EditorClassIdentifier: 

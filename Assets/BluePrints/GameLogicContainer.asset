@@ -124,6 +124,8 @@ MonoBehaviour:
     - {fileID: -3863239885266948893}
     - {fileID: 315475429348678568}
     - {fileID: -1312387049388833403}
+    - {fileID: 8287598888801470628}
+    - {fileID: 1365853468946053553}
     Parent: {fileID: 11400000}
   containerIndex: 503398846
 --- !u!114 &163667382468224473
@@ -161,4 +163,28 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34ce6c8788e357246a76929370b15de8, type: 3}
   m_Name: SpawnEnemyHealthUISystem
+  m_EditorClassIdentifier: 
+--- !u!114 &1365853468946053553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4010d599a9491ee4fbe81a979a3daf07, type: 3}
+  m_Name: WinSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &8287598888801470628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ffed219d4842254382b0df61948ba1c, type: 3}
+  m_Name: SpawnKeyUISystem
   m_EditorClassIdentifier: 

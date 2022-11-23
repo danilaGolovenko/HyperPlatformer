@@ -9,7 +9,7 @@ namespace Components
     [Serializable][Documentation(Doc.NONE, "")]
     public class HealthComponent : BaseComponent, IInitable
     {
-        [field: SerializeField] public int maxHealth { get; private set; } = 7;
+        [field: SerializeField] public int maxHealth { get; set; } = 7;
         [SerializeField] public ReactiveValue<int> currentHealth = new ReactiveValue<int>(7);
         
         public void Init()

@@ -9,7 +9,7 @@ namespace Components
     public sealed class WinPointsComponent : BaseComponent
     {
         public ReactiveValue<int> currentAmount = new ReactiveValue<int>(0);
-        [field: SerializeField] public int requiredAmount { get; private set; }
+        [field: SerializeField] public int requiredAmount { get; set; }
 
         public override string ToString()
         {

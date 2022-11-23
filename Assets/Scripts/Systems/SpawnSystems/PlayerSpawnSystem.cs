@@ -11,6 +11,7 @@ namespace Systems
     {
         [Required] private PlayerContainerComponent playerContainerComponent;
         private ConcurrencyList<IEntity> spawnPoints;
+        
         public override void InitSystem()
         {
             spawnPoints = Owner.World.Filter(HMasks.PlayerSpawnPointTagComponent);
@@ -18,10 +19,9 @@ namespace Systems
 
         public async void LateStart()
         {
-            IActor actor = await playerContainerComponent.actorContainer.GetActor(true, null,
-                spawnPoints.Data[0].GetUnityTransformComponent().Transform.position);
-            
-            actor.Init();
+            // IActor actor = await playerContainerComponent.actorContainer.GetActor(true, null,
+                // spawnPoints.Data[0].GetUnityTransformComponent().Transform.position);
+            // actor.Init();
         }
     }
 }

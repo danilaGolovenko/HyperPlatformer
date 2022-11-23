@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8447378947954322454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 580de44634b34ca48879f4567ccc62e5, type: 3}
+  m_Name: UITagComponent
+  m_EditorClassIdentifier: 
+  component:
+    ViewType: {fileID: 11400000, guid: 687ab098cdacac544ac6f8e3593dca16, type: 2}
+--- !u!114 &-8436751267973141454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b45feaad71d4814e99fdf963af24ceb, type: 3}
+  m_Name: UnityRectTransformComponent
+  m_EditorClassIdentifier: 
+  component:
+    RectTransform: {fileID: 0}
+--- !u!114 &-7089399941046803301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde9903e1fb26b14eabc16a8e1276d3b, type: 3}
+  m_Name: HideUISystem
+  m_EditorClassIdentifier: 
+--- !u!114 &-3542853105990066369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd62bbe9c6e6f884cafc8d0360cb4c4a, type: 3}
+  m_Name: UnityTransformComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    Transform: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: KeyUIContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: -8447378947954322454}
+    - {fileID: -8436751267973141454}
+    - {fileID: -3542853105990066369}
+    systems:
+    - {fileID: 7931502005773141864}
+    - {fileID: -7089399941046803301}
+    Parent: {fileID: 11400000}
+  containerIndex: 1996478288
+--- !u!114 &7931502005773141864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd7a2ca9b3ba8b4ebbd808cd73dcff3, type: 3}
+  m_Name: KeyUISystem
+  m_EditorClassIdentifier: 

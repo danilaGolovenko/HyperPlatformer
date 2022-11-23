@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4872649677715213092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd62bbe9c6e6f884cafc8d0360cb4c4a, type: 3}
+  m_Name: UnityTransformComponent
+  m_EditorClassIdentifier: 
+  component:
+    Transform: {fileID: 0}
+--- !u!114 &-4677268656973618293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b45feaad71d4814e99fdf963af24ceb, type: 3}
+  m_Name: UnityRectTransformComponent
+  m_EditorClassIdentifier: 
+  component:
+    RectTransform: {fileID: 0}
+--- !u!114 &-2393098259658837236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 580de44634b34ca48879f4567ccc62e5, type: 3}
+  m_Name: UITagComponent
+  m_EditorClassIdentifier: 
+  component:
+    ViewType: {fileID: 11400000, guid: bb70a7459a2fc864faa5332cd6183ec9, type: 2}
+--- !u!114 &-1125311663682903482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde9903e1fb26b14eabc16a8e1276d3b, type: 3}
+  m_Name: HideUISystem
+  m_EditorClassIdentifier: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: WinUIContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: -4872649677715213092}
+    - {fileID: -2393098259658837236}
+    - {fileID: -4677268656973618293}
+    systems:
+    - {fileID: -1125311663682903482}
+    Parent: {fileID: 11400000}
+  containerIndex: 1989269282

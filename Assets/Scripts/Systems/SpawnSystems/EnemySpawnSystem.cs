@@ -30,9 +30,10 @@ namespace Systems
             actor.Init();
         }
         
-        public async void LateStart()
+        public void LateStart()
         { 
-            SpawnEnemy();
+            // if (spawnPoints.Data[0] != null)
+                // SpawnEnemy();
         }
 
         public async void CommandGlobalReact(EnemySpawnCommand command)

@@ -32,6 +32,21 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - UIBluePrints
+  - m_GUID: e18b9b2ea3b439c41978c2eadff29cb7
+    m_Address: Assets/BluePrints/UIBluePrints/KeyUI_UIBluePrint.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIBluePrints
+  - m_GUID: 41b4fba800bb1e94aa20c7a2493b6eee
+    m_Address: Assets/BluePrints/UIBluePrints/WinUI_UIBluePrint.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIBluePrints
+  - m_GUID: b1efcf6df40955e4b8d102bfbc083dc8
+    m_Address: Assets/BluePrints/UIBluePrints/DialogueUI_UIBluePrint.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIBluePrints
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: abedd1e511a06564789dce519587c8e2, type: 2}
   m_SchemaSet:
