@@ -58,6 +58,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   component:
     <maxHealth>k__BackingField: 7
+--- !u!114 &-5150739542963464661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6af5e8d05789346429dc7ef270cc9b9f, type: 3}
+  m_Name: WaitComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    waitMonoComponent: {fileID: 0}
 --- !u!114 &-4743452599804826221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +196,8 @@ MonoBehaviour:
     - {fileID: -6860922469412374489}
     - {fileID: 8853384271974006515}
     - {fileID: -6724866004478949359}
+    - {fileID: -5150739542963464661}
+    - {fileID: 1333302348750064952}
     systems:
     - {fileID: 7107435108062722836}
     - {fileID: 3722437866899373249}
@@ -202,6 +218,18 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6478bd9f84743e3459da93e13877b298, type: 3}
   m_Name: EnemyAttackSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &1333302348750064952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5438a9d2b38d544f9cb7e95e640db92, type: 3}
+  m_Name: EntityHolderComponentBluePrint
   m_EditorClassIdentifier: 
 --- !u!114 &1342726688814499493
 MonoBehaviour:

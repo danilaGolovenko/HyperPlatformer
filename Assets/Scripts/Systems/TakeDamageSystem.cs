@@ -12,10 +12,17 @@ namespace Systems
 	[Serializable][Documentation(Doc.NONE, "")]
     public sealed class TakeDamageSystem : BaseSystem, IReactCommand<Commands.DamageCommand>
     {
-        [Required] private HealthComponent healthComponent;
+        private IHealthComponent healthComponent;
+        
         [Required] private WaitComponent waitComponent;
         public override void InitSystem()
         {
+            healthComponent = Owner.GetHECSComponent<IHealthComponent>();
+            // PlayerHolderComponent playerHolderComponent;
+            // if (Owner.TryGetHecsComponent(out playerHolderComponent))
+            // {
+            //     healthComponent = playerHolderComponent.PlayerEntity.GetHealthComponent();
+            // }
         }
 
         public void CommandReact(DamageCommand command)

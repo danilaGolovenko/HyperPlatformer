@@ -6,8 +6,8 @@ using UnityEngine;
 namespace Components
 {
     [Serializable][Documentation(Doc.NONE, "")]
-    public sealed class TargetSceneComponent : BaseComponent
+    public sealed class AdditionalSceneObjectTagComponent : BaseComponent
     {
-        [field: SerializeField] public SceneIdentifier SceneIdentifier{ get; private set; }
+       
     }
 }

@@ -6,8 +6,8 @@ using UnityEngine;
 namespace Components
 {
     [Serializable][Documentation(Doc.NONE, "")]
-    public sealed class PlayerContainerComponent : BaseComponent
+    public sealed class CharacterContainerHolderComponent : BaseComponent
     {
-        [field: SerializeField] public ActorContainer actorContainer { get; private set; }
+        [field: SerializeField] public ActorContainer CharacterContainer { get; private set; }
     }
 }

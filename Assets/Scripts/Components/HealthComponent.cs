@@ -6,11 +6,17 @@ using UnityEngine;
 
 namespace Components
 {
+    public interface IHealthComponent
+    {
+        public ReactiveValue<int> currentHealth { get;}
+    }
+    
+    
     [Serializable][Documentation(Doc.NONE, "")]
-    public class HealthComponent : BaseComponent, IInitable
+    public class HealthComponent : BaseComponent, IInitable, IHealthComponent
     {
         [field: SerializeField] public int maxHealth { get; set; } = 7;
-        [SerializeField] public ReactiveValue<int> currentHealth = new ReactiveValue<int>(7);
+        [SerializeField] public ReactiveValue<int> currentHealth { get; set; } = new ReactiveValue<int>(7);
         
         public void Init()
         {

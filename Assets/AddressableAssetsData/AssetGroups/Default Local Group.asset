@@ -29,6 +29,18 @@ MonoBehaviour:
     m_Address: Assets/Prefabs/Enemy.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 8610844e0039be54095e5ad0cd41d90a
+    m_Address: Assets/Scenes/Root.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5ff5e033c6bf1634fb8f78f670de9a15
+    m_Address: Assets/Scenes/MainLocation.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 777cf6a36f3277e489dbb34bf700ed64
+    m_Address: Assets/Scenes/WithKeyLocation.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: abedd1e511a06564789dce519587c8e2, type: 2}
   m_SchemaSet:

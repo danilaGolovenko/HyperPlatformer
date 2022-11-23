@@ -18,10 +18,10 @@ namespace Systems
         public IActor Actor { get; set; }
         public void LateStart()
         {
-            // IEntity player = Owner.World.GetSingleComponent<PlayerTagComponent>().Owner;
-            // player.TryGetHecsComponent(out PlayerKeysAmountComponent playerKeysAmountComponent);
-            // playerKeysAmountComponent.amount.OnChange += CurrentWinPointsAmountOnChange;
-            // keysUIMonoComponent.InitKeyUI(playerKeysAmountComponent);
+            IEntity player = Owner.World.GetSingleComponent<PlayerTagComponent>().Owner;
+            player.TryGetHecsComponent(out PlayerKeysAmountComponent playerKeysAmountComponent);
+            playerKeysAmountComponent.amount.OnChange += CurrentWinPointsAmountOnChange;
+            keysUIMonoComponent.InitKeyUI(playerKeysAmountComponent);
         }
         
         private void CurrentWinPointsAmountOnChange(int obj)

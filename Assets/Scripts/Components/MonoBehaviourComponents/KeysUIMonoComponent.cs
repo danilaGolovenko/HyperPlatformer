@@ -17,6 +17,7 @@ public class KeysUIMonoComponent : MonoBehaviour
 
     public void UpdateCurrentAmount()
     {
-        pointsText.text = playerKeysAmountComponent.amount.CurrentValue.ToString();
+        if (pointsText.text != null)
+            pointsText.text = playerKeysAmountComponent.amount.CurrentValue.ToString();
     }
 }

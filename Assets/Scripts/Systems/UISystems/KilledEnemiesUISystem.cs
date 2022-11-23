@@ -20,10 +20,10 @@ namespace Systems
         public IActor Actor { get; set; }
         public void LateStart()
         {
-            // IEntity player = Owner.World.GetSingleComponent<PlayerTagComponent>().Owner;
-            // player.TryGetHecsComponent(out WinPointsComponent winPointsComponent);
-            // winPointsComponent.currentAmount.OnChange += CurrentWinPointsAmountOnChange;
-            // killedEnemiesUIMonoComponent.InitKilledEnemiesUI(winPointsComponent);
+            IEntity player = Owner.World.GetSingleComponent<PlayerTagComponent>().Owner;
+            player.TryGetHecsComponent(out WinPointsComponent winPointsComponent);
+            winPointsComponent.currentAmount.OnChange += CurrentWinPointsAmountOnChange;
+            killedEnemiesUIMonoComponent.InitKilledEnemiesUI(winPointsComponent);
         }
         
         private void CurrentWinPointsAmountOnChange(int obj)

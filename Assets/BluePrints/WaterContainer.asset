@@ -41,6 +41,7 @@ MonoBehaviour:
   holder:
     components:
     - {fileID: 6763031309280957401}
+    - {fileID: 7080639689943176728}
     - {fileID: 8976571045475657419}
     - {fileID: -5907314981571893090}
     systems:
@@ -58,6 +59,18 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b969e8e047782e4caee32f41d33391b, type: 3}
   m_Name: WaterTagComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &7080639689943176728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2acde6a27e2fa9541ad29c553078ea5b, type: 3}
+  m_Name: AdditionalSceneObjectTagComponent
   m_EditorClassIdentifier: 
 --- !u!114 &8976571045475657419
 MonoBehaviour:

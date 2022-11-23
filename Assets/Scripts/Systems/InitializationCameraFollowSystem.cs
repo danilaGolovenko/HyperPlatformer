@@ -8,7 +8,7 @@ using Components;
 namespace Systems
 {
 	[Serializable][Documentation(Doc.NONE, "")]
-    public sealed class InitializationCameraFollowSystem : BaseSystem, IReactComponentGlobal<PlayerTagComponent>
+    public sealed class InitializationCameraFollowSystem : BaseSystem, IReactComponentGlobal<PlayerHolderComponent>
     {
         private ConcurrencyList<IEntity> mainCameras;
         private ConcurrencyList<IEntity> players;
@@ -16,19 +16,17 @@ namespace Systems
         public override void InitSystem()
         {
             mainCameras = Owner.World.Filter(new FilterMask(HMasks.CMPlayerCamTagComponent));
-            players = Owner.World.Filter(HMasks.PlayerTagComponent);
-            
+            players = Owner.World.Filter(HMasks.PlayerHolderComponent);
         }
 
-        public void ComponentReactGlobal(PlayerTagComponent component, bool isAdded)
+        public void ComponentReactGlobal(PlayerHolderComponent component, bool isAdded)
         {
             if (isAdded)
             {
                 //Data - сам список
                 IEntity camera = mainCameras.Data[0];
                 IEntity player = players.Data[0];
-                UnityTransformComponent playerTransformComponent;
-                playerTransformComponent = player.GetUnityTransformComponent();
+                var playerTransformComponent = player.GetUnityTransformComponent();
                 if (camera is IActor cameraActor)
                 {
                     cameraActor.TryGetComponent(out CinemachineVirtualCamera virtualCamera);

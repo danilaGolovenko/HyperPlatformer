@@ -3,8 +3,7 @@ using HECSFramework.Core;
 namespace Commands
 {
     [Documentation(Doc.NONE, "")]
-	public struct SwitchSceneCommand : ICommand, IGlobalCommand
+	public struct LoadedSceneCommand : ICommand, IGlobalCommand
 	{
-		public int TargetSceneId;
 	}
 }

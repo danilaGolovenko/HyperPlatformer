@@ -10,9 +10,11 @@ namespace Systems
 	[Serializable][Documentation(Doc.NONE, "")]
     public sealed class WinPointsSystem : BaseSystem, IReactGlobalCommand<Commands.IncreaseWinPointsCommand>
     {
-        [Required] private WinPointsComponent winPointsComponent;
+        [Required] private PlayerHolderComponent playerHolderComponent;
+        private WinPointsComponent winPointsComponent;
         public override void InitSystem()
         {
+            winPointsComponent = playerHolderComponent.PlayerEntity.GetWinPointsComponent();
         }
 
         public void CommandGlobalReact(IncreaseWinPointsCommand command)

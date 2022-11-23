@@ -12,14 +12,13 @@ using Commands;
 namespace Systems
 {
 	[Serializable][Documentation(Doc.NONE, "")]
-    public sealed class EnemySpawnSystem : BaseSystem, ILateStart, IReactGlobalCommand<Commands.EnemySpawnCommand>
+    public sealed class EnemySpawnSystem : BaseSystem, IReactGlobalCommand<Commands.EnemySpawnCommand>, IReactGlobalCommand<LoadedSceneCommand>
     {
         [Required] private EnemyContainerComponent enemyContainerComponent;
         private ConcurrencyList<IEntity> spawnPoints;
         private float waitTime = 5f;
         public override void InitSystem()
         {
-            spawnPoints = Owner.World.Filter(HMasks.EnemySpawnPointTagComponent);
         }
 
         private async void SpawnEnemy()
@@ -30,13 +29,14 @@ namespace Systems
             actor.Init();
         }
         
-        public void LateStart()
+        public void CommandGlobalReact(LoadedSceneCommand command)
         { 
-            // if (spawnPoints.Data[0] != null)
-                // SpawnEnemy();
+            spawnPoints = Owner.World.Filter(HMasks.EnemySpawnPointTagComponent);
+            if (spawnPoints.Data[0] != null)
+                SpawnEnemy();
         }
 
-        public async void CommandGlobalReact(EnemySpawnCommand command)
+        public void CommandGlobalReact(EnemySpawnCommand command)
         {
             WaitAndCallbackCommand callbackCommand = new WaitAndCallbackCommand();
             callbackCommand.CallBack = SpawnEnemy;

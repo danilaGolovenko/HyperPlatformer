@@ -1,4 +1,5 @@
 using System;
+using Commands;
 using HECSFramework.Unity;
 using HECSFramework.Core;
 using Components;
@@ -17,18 +18,17 @@ namespace Systems
         }
         
         public IActor Actor { get; set; }
-        
-        public void LateStart()
-        {
-            // IEntity player = Owner.World.GetSingleComponent<PlayerTagComponent>().Owner;
-            // player.TryGetHecsComponent(out HealthComponent healthComponent);
-            // healthComponent.currentHealth.OnChange += CurrentHealthOnChange;
-            // healthUIMonoComponent.InitHealthUI(healthComponent);
-        }
 
         private void CurrentHealthOnChange(int obj)
         {
             healthUIMonoComponent.UpdateHealthUI();
+        }
+        public void LateStart()
+        {
+            IEntity player = Owner.World.GetSingleComponent<PlayerTagComponent>().Owner;
+            player.TryGetHecsComponent(out HealthComponent healthComponent);
+            healthComponent.currentHealth.OnChange += CurrentHealthOnChange;
+            healthUIMonoComponent.InitHealthUI(healthComponent);
         }
     }
 }

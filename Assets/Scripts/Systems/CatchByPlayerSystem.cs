@@ -17,8 +17,8 @@ namespace Systems
         public void CommandReact(Trigger2dEnterCommand command)
         {
             if (command.Collider.gameObject.TryGetComponent(out Actor actor) && 
-                actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
-                actor.GetPlayerKeysAmountComponent().amount.CurrentValue++;
+                actor.TryGetHecsComponent(out PlayerHolderComponent playerHolderComponent)){
+                playerHolderComponent.PlayerEntity.GetPlayerKeysAmountComponent().amount.CurrentValue++;
 
                 DestroyEntityWorldCommand destroyEntityWorldCommand = new DestroyEntityWorldCommand();
                 destroyEntityWorldCommand.Entity = Owner;

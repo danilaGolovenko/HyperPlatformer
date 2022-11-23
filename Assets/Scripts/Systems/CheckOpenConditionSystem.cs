@@ -18,8 +18,8 @@ namespace Systems
         public void CommandReact(Trigger2dEnterCommand command)
         {
             if (command.Collider.gameObject.TryGetComponent(out Actor actor) && 
-                actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)){
-                if (actor.GetPlayerKeysAmountComponent().amount.CurrentValue >= requiredAmountOfKeysComponent.amount){
+                actor.TryGetHecsComponent(out PlayerHolderComponent playerHolderComponent)){
+                if (playerHolderComponent.PlayerEntity.GetPlayerKeysAmountComponent().amount.CurrentValue >= requiredAmountOfKeysComponent.amount){
                      Owner.World.Command(new WinCommand());
                 }
                 else

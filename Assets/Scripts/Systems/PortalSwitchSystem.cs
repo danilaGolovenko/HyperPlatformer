@@ -18,10 +18,10 @@ namespace Systems
 
         public void CommandReact(Trigger2dEnterCommand command)
         {
-            if (command.Collider.gameObject.TryGetComponent(out Actor actor) && actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)) 
+            if (command.Collider.gameObject.TryGetComponent(out Actor actor) && actor.TryGetHecsComponent(out PlayerHolderComponent playerHolderComponent)) 
             {
                 SwitchSceneCommand switchSceneCommand = new SwitchSceneCommand();
-                switchSceneCommand.targetSceneIndex = targetSceneComponent.sceneIndex;
+                switchSceneCommand.TargetSceneId = targetSceneComponent.SceneIdentifier.Id;
                 Owner.World.Command(switchSceneCommand);
             }
         }

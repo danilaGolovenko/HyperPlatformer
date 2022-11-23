@@ -24,7 +24,7 @@ namespace Systems
             needHealthBar.GetHealthBarTagComponent().HealthBar = ui;
         }
 
-        public async void ComponentReactGlobal(HealthBarTagComponent component, bool isAdded)
+        public void ComponentReactGlobal(HealthBarTagComponent component, bool isAdded)
         {
             if (isAdded)
             {

@@ -1,17 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6412455031576941829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01640e267c15fe64992d638d46698e45, type: 3}
-  m_Name: SwitchSceneSystem
-  m_EditorClassIdentifier: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25,8 +13,49 @@ MonoBehaviour:
   m_Name: SceneManagerContainer
   m_EditorClassIdentifier: 
   holder:
-    components: []
+    components:
+    - {fileID: 3164791691623695630}
     systems:
-    - {fileID: -6412455031576941829}
+    - {fileID: 797998356459167469}
     Parent: {fileID: 11400000}
   containerIndex: -233384116
+--- !u!114 &797998356459167469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01640e267c15fe64992d638d46698e45, type: 3}
+  m_Name: SwitchSceneSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &3164791691623695630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb00f4d2de9e6d04dbbc21527fc64274, type: 3}
+  m_Name: SceneHolderComponent
+  m_EditorClassIdentifier: 
+  component:
+    scenes:
+    - SceneIdentifier: {fileID: 11400000, guid: 2cc0eed4642ebc146834606af193d95d,
+        type: 2}
+      Scene:
+        m_AssetGUID: 5ff5e033c6bf1634fb8f78f670de9a15
+        m_SubObjectName: 
+        m_SubObjectType: 
+        m_EditorAssetChanged: 0
+    - SceneIdentifier: {fileID: 11400000, guid: 3fb5b5558007010418e3d2a86b2aab36,
+        type: 2}
+      Scene:
+        m_AssetGUID: 777cf6a36f3277e489dbb34bf700ed64
+        m_SubObjectName: 
+        m_SubObjectType: 
+        m_EditorAssetChanged: 0

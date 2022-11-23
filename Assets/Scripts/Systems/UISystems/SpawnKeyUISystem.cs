@@ -8,13 +8,13 @@ using Components;
 namespace Systems
 {
 	[Serializable][Documentation(Doc.NONE, "")]
-    public sealed class SpawnKeyUISystem : BaseSystem, IReactComponentGlobal<PlayerTagComponent>
+    public sealed class SpawnKeyUISystem : BaseSystem, IReactComponentGlobal<PlayerHolderComponent>
     {
         public override void InitSystem()
         {
         }
 
-        public void ComponentReactGlobal(PlayerTagComponent component, bool isAdded)
+        public void ComponentReactGlobal(PlayerHolderComponent component, bool isAdded)
         {
             if (isAdded)
             {
