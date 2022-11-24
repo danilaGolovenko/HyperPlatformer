@@ -6,8 +6,8 @@ using UnityEngine;
 namespace Components
 {
     [Serializable][Documentation(Doc.NONE, "")]
-    public sealed class RequiredAmountOfKeysComponent : BaseComponent
+    public sealed class IconHolderComponent : BaseComponent
     {
-       [field: SerializeField] public int amount { get; private set; }
+        public Sprite iconSprite;
     }
 }

@@ -9,7 +9,7 @@ using Unity.VisualScripting;
 namespace Systems
 {
 	[Serializable][Documentation(Doc.NONE, "")]
-    public sealed class WinSystem : BaseSystem, IReactGlobalCommand<Commands.WinCommand>
+    public sealed class ShowWinUISystem : BaseSystem, IReactGlobalCommand<Commands.WinCommand>
     {
         public override void InitSystem()
         {

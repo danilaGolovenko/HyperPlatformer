@@ -8,6 +8,6 @@ namespace Components
     [Serializable][Documentation(Doc.NONE, "")]
     public sealed class EnemyContainerComponent : BaseComponent
     {
-        [field: SerializeField] public ActorContainer actorContainer { get; private set; }
+        [field: SerializeField] public ActorContainer ActorContainer { get; private set; }
     }
 }

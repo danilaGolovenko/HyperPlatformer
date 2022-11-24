@@ -6,17 +6,17 @@ namespace Components.MonoBehaviourComponents
     public class KilledEnemiesUIMonoComponent : MonoBehaviour
     {
         [field: SerializeField] public Text pointsText { get; private set; }
-        private WinPointsComponent playerWinPointsComponent;
+        private KilledEnemiesComponent playerKilledEnemiesComponent;
 
-        public void InitKilledEnemiesUI(WinPointsComponent winPointsComponent)
+        public void InitKilledEnemiesUI(KilledEnemiesComponent killedEnemiesComponent)
         {
-            playerWinPointsComponent = winPointsComponent;
-            pointsText.text = playerWinPointsComponent.ToString();
+            playerKilledEnemiesComponent = killedEnemiesComponent;
+            pointsText.text = playerKilledEnemiesComponent.ToString();
         }
 
         public void UpdateCurrentAmount()
         {
-            pointsText.text = playerWinPointsComponent.ToString();
+            pointsText.text = playerKilledEnemiesComponent.ToString();
         }
     }
 }

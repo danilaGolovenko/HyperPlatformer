@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8875890736486872407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697c4b19286dce84cbf74ec4f5d4fb49, type: 3}
+  m_Name: RequiredItemsComponent
+  m_EditorClassIdentifier: 
+  component:
+    requiredItemsList:
+    - entityContainerIndex: -1557464432
+      amount: 1
+    - entityContainerIndex: 845698434
+      amount: 1
 --- !u!114 &-4775792546794544373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,7 +57,7 @@ MonoBehaviour:
   holder:
     components:
     - {fileID: -2982750723124498361}
-    - {fileID: 9083556095431286584}
+    - {fileID: -8875890736486872407}
     systems:
     - {fileID: -4775792546794544373}
     Parent: {fileID: 11400000}

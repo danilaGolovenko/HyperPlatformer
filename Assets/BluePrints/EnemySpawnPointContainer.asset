@@ -24,6 +24,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08cdbc8a6fe53d47899efbaa4c38484, type: 3}
   m_Name: EnemySpawnPointTagComponent
   m_EditorClassIdentifier: 
+--- !u!114 &-803680126748846005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6a5da7b16b415043a2311454897bbc1, type: 3}
+  m_Name: EnemyContainerComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    <ActorContainer>k__BackingField: {fileID: 11400000, guid: 4d5daba583fc27d44bcce5707b83919d,
+      type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41,9 +56,23 @@ MonoBehaviour:
     - {fileID: -5002957034534854780}
     - {fileID: -5888240960197286626}
     - {fileID: 3856818861637711075}
-    systems: []
+    - {fileID: -803680126748846005}
+    systems:
+    - {fileID: 3300752968370399017}
     Parent: {fileID: 11400000}
   containerIndex: 1747317711
+--- !u!114 &3300752968370399017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de93bf6433e3524488f7315e5a9045e3, type: 3}
+  m_Name: EnemySpawnSystem
+  m_EditorClassIdentifier: 
 --- !u!114 &3856818861637711075
 MonoBehaviour:
   m_ObjectHideFlags: 0

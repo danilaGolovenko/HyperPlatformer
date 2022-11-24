@@ -8,18 +8,18 @@ using Components;
 namespace Systems
 {
 	[Serializable][Documentation(Doc.NONE, "")]
-    public sealed class WinPointsSystem : BaseSystem, IReactGlobalCommand<Commands.IncreaseWinPointsCommand>
+    public sealed class KilledEnemiesSystem : BaseSystem, IReactGlobalCommand<Commands.IncreaseWinPointsCommand>
     {
         [Required] private PlayerHolderComponent playerHolderComponent;
-        private WinPointsComponent winPointsComponent;
+        private KilledEnemiesComponent killedEnemiesComponent;
         public override void InitSystem()
         {
-            winPointsComponent = playerHolderComponent.PlayerEntity.GetWinPointsComponent();
+            killedEnemiesComponent = playerHolderComponent.PlayerEntity.GetKilledEnemiesComponent();
         }
 
         public void CommandGlobalReact(IncreaseWinPointsCommand command)
         {
-            winPointsComponent.currentAmount.CurrentValue++;
+            killedEnemiesComponent.CurrentAmount.CurrentValue++;
         }
     }
 }

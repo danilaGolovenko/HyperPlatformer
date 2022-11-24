@@ -28,9 +28,25 @@ MonoBehaviour:
     components:
     - {fileID: -9064741879884375740}
     - {fileID: 8356641426682858304}
+    - {fileID: 3276841781050337044}
     systems: []
     Parent: {fileID: 11400000}
   containerIndex: 1619929283
+--- !u!114 &3276841781050337044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37713e040a255a64399a96724e015b47, type: 3}
+  m_Name: PlayerSpawnPointIdentifierComponent
+  m_EditorClassIdentifier: 
+  component:
+    <PlayerSpawnPointIdentifier>k__BackingField: {fileID: 11400000, guid: 3682e8dbe42c8e34f82a54841b292926,
+      type: 2}
 --- !u!114 &8356641426682858304
 MonoBehaviour:
   m_ObjectHideFlags: 0

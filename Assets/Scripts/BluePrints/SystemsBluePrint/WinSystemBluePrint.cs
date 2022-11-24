@@ -1,1 +1,1 @@
-using Systems;namespace HECSFramework.Unity{	public class WinSystemBluePrint : SystemBluePrint<WinSystem>	{	}}
+using Systems;namespace HECSFramework.Unity{	public class WinSystemBluePrint : SystemBluePrint<ShowWinUISystem>	{	}}

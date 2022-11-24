@@ -32,7 +32,7 @@ namespace Systems
         public IActor Actor { get; set; }
         public void CommandReact(Trigger2dEnterCommand command)
         {
-            if (command.Collider.gameObject.TryGetComponent(out Actor actor) && actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent)) 
+            if (command.Collider.gameObject.TryGetComponent(out Actor actor) && actor.TryGetHecsComponent(out PlayerHolderComponent playerHolderComponent)) 
             {
                 actor.TryGetComponent(out Rigidbody2D rb);
                 catchesListComponent.rbList.Add(rb);
@@ -41,7 +41,7 @@ namespace Systems
 
         public void CommandReact(Trigger2dExitCommand command)
         {
-            if (command.Collider.TryGetComponent(out Actor actor) && actor.TryGetHecsComponent(out PlayerTagComponent playerTagComponent))
+            if (command.Collider.TryGetComponent(out Actor actor) && actor.TryGetHecsComponent(out PlayerHolderComponent playerHolderComponent))
             {
                 actor.TryGetComponent(out Rigidbody2D rb);
                 catchesListComponent.rbList.Remove(rb);

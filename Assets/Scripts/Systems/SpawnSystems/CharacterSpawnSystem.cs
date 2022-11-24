@@ -19,12 +19,19 @@ namespace Systems
         
         public async void CommandGlobalReact(LoadedSceneCommand command)
         {
-            // var player = Owner.World.GetSingleComponent<PlayerTagComponent>().Owner;
-            // characterContainerHolderComponent.CharacterContainer.GetComponent<PlayerHolderComponent>().PlayerEntity =
-            // player;
             spawnPoints = Owner.World.Filter(HMasks.PlayerSpawnPointTagComponent);
+            Vector3 startSpawnPointPosition = Vector3.zero;
+            foreach (var point in spawnPoints)
+            {
+                if (point.GetPlayerSpawnPointIdentifierComponent().PlayerSpawnPointIdentifier.Id ==
+                    PlayerSpawnPointIdentifierMap.StartSpawnPoint_identifier)
+                {
+                    startSpawnPointPosition = point.GetUnityTransformComponent().Transform.position;
+                    break;
+                }
+            }
             IActor actor = await characterContainerHolderComponent.CharacterContainer.GetActor(true, null,
-            spawnPoints.Data[0].GetUnityTransformComponent().Transform.position);
+                startSpawnPointPosition);
             actor.Init();
         }
     }

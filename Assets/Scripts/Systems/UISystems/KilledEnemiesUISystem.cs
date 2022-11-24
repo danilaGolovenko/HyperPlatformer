@@ -21,9 +21,17 @@ namespace Systems
         public void LateStart()
         {
             IEntity player = Owner.World.GetSingleComponent<PlayerTagComponent>().Owner;
-            player.TryGetHecsComponent(out WinPointsComponent winPointsComponent);
-            winPointsComponent.currentAmount.OnChange += CurrentWinPointsAmountOnChange;
+            player.TryGetHecsComponent(out KilledEnemiesComponent winPointsComponent);
+            winPointsComponent.CurrentAmount.OnChange += CurrentWinPointsAmountOnChange;
             killedEnemiesUIMonoComponent.InitKilledEnemiesUI(winPointsComponent);
+        }
+        
+        public override void Dispose()
+        {
+            base.Dispose();
+            IEntity player = Owner.World.GetSingleComponent<PlayerTagComponent>().Owner;
+            player.TryGetHecsComponent(out KilledEnemiesComponent winPointsComponent);
+            winPointsComponent.CurrentAmount.OnChange -= CurrentWinPointsAmountOnChange;
         }
         
         private void CurrentWinPointsAmountOnChange(int obj)

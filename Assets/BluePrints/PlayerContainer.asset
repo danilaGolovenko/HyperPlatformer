@@ -55,12 +55,44 @@ MonoBehaviour:
   holder:
     components:
     - {fileID: 8262960635707126897}
+    - {fileID: 1980238599152752430}
     - {fileID: -4183044919393589568}
-    - {fileID: -1024153423915461726}
     - {fileID: -1285788233356606828}
     systems: []
     Parent: {fileID: 11400000}
   containerIndex: -743113290
+--- !u!114 &1980238599152752430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928074e14ea4a74449e748f0627023c3, type: 3}
+  m_Name: PlayerInventoryComponent
+  m_EditorClassIdentifier: 
+  component:
+    StartItemsList: []
+--- !u!114 &8045787737824934880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66af3a76fcb0aad44ad3c45f25c123b1, type: 3}
+  m_Name: InventoryComponent
+  m_EditorClassIdentifier: 
+  <IsOverride>k__BackingField: 0
+  <IsColorNeeded>k__BackingField: 0
+  component:
+    <IsAlive>k__BackingField: 1
+    <IsRegistered>k__BackingField: 0
+    items: []
 --- !u!114 &8262960635707126897
 MonoBehaviour:
   m_ObjectHideFlags: 0

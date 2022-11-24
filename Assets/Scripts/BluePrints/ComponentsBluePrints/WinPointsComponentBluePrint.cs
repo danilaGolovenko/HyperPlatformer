@@ -1,1 +1,1 @@
-using Components;using System;using System.Collections.Generic;namespace HECSFramework.Unity{	public class WinPointsComponentBluePrint : ComponentBluePrintContainer<WinPointsComponent>	{	}}
+using Components;using System;using System.Collections.Generic;namespace HECSFramework.Unity{	public class WinPointsComponentBluePrint : ComponentBluePrintContainer<KilledEnemiesComponent>	{	}}

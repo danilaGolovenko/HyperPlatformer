@@ -30,5 +30,13 @@ namespace Systems
             healthComponent.currentHealth.OnChange += CurrentHealthOnChange;
             healthUIMonoComponent.InitHealthUI(healthComponent);
         }
+        
+        public override void Dispose()
+        {
+            base.Dispose();
+            IEntity player = Owner.World.GetSingleComponent<PlayerTagComponent>().Owner;
+            player.TryGetHecsComponent(out HealthComponent healthComponent);
+            healthComponent.currentHealth.OnChange -= CurrentHealthOnChange;
+        }
     }
 }

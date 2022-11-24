@@ -1,1 +1,0 @@
-using Systems;namespace HECSFramework.Unity{	public class CatchByPlayerSystemBluePrint : SystemBluePrint<CatchByPlayerSystem>	{	}}

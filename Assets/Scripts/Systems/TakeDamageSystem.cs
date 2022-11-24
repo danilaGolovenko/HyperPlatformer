@@ -18,31 +18,22 @@ namespace Systems
         public override void InitSystem()
         {
             healthComponent = Owner.GetHECSComponent<IHealthComponent>();
-            // PlayerHolderComponent playerHolderComponent;
-            // if (Owner.TryGetHecsComponent(out playerHolderComponent))
-            // {
-            //     healthComponent = playerHolderComponent.PlayerEntity.GetHealthComponent();
-            // }
         }
 
         public void CommandReact(DamageCommand command)
         {
-            if (!command.authorEntity.Equals(Owner))
+            healthComponent.currentHealth.CurrentValue -= command.amount;
+            Owner.AddHecsComponent(new StopMovingComponent());
+            if (healthComponent.currentHealth.CurrentValue <= 0 && !Owner.TryGetHecsComponent(out DeadTagComponent deadTagComponent))
             {
-                healthComponent.currentHealth.CurrentValue -= command.amount;
-                Owner.AddHecsComponent(new StopMovingComponent());
-                if (healthComponent.currentHealth.CurrentValue <= 0 && !Owner.TryGetHecsComponent(out DeadTagComponent deadTagComponent))
-                {
-                    Owner.AddHecsComponent(new DeadTagComponent());
-                    DeathCommand deathCommand = new DeathCommand();
-                    Owner.Command(deathCommand);
-                }
-                if (command.authorEntity.TryGetHecsComponent(out WaterTagComponent waterTagComponent))    
-                {
-                    var spawnPoint = command.authorEntity.GetSpawnPointComponent().spawnPointTransform.position;
-                    var waitTime = waitComponent.waitMonoComponent.waitTime;
-                    waitComponent.waitMonoComponent.StartCoroutine(SendRespawnCommand(spawnPoint, waitTime));
-                }
+                Owner.AddHecsComponent(new DeadTagComponent());
+                Owner.Command(new DeathCommand());
+            }
+            if (command.authorEntity.TryGetHecsComponent(out WaterTagComponent waterTagComponent))    
+            {
+                var spawnPoint = command.authorEntity.GetSpawnPointComponent().spawnPointTransform.position;
+                var waitTime = waitComponent.waitMonoComponent.waitTime;
+                waitComponent.waitMonoComponent.StartCoroutine(SendRespawnCommand(spawnPoint, waitTime));
             }
         }
 

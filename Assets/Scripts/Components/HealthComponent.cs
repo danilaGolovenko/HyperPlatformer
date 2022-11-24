@@ -8,7 +8,7 @@ namespace Components
 {
     public interface IHealthComponent
     {
-        public ReactiveValue<int> currentHealth { get;}
+        public ReactiveValue<int> currentHealth { get; set; }
     }
     
     
