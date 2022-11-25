@@ -4,6 +4,7 @@ using HECSFramework.Unity;
 using HECSFramework.Core;
 using UnityEngine;
 using Components;
+using Unity.VisualScripting;
 
 namespace Systems
 {
@@ -16,7 +17,17 @@ namespace Systems
         
         public void CommandGlobalReact(OnPickUpItemCommand command)
         {
-            // todo отрисовка сообщения "вы взяли такую-то вещь"
+            ShowUICommand showUICommand = new ShowUICommand();
+            showUICommand.UIViewType = UIIdentifierMap.DialogueUI_identifier;
+            showUICommand.OnUILoad += (ui) =>
+            {
+                InitDialogueUITextCommand initDialogueUITextCommand = new InitDialogueUITextCommand
+                {
+                    DialogueText = "You pick up " + command.Item.GetDescriptionComponent().description + "."
+                };
+                ui.Command(initDialogueUITextCommand);
+            };
+            Owner.World.Command(showUICommand);
         }
     }
 }

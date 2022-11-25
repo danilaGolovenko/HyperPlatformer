@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6216687869016929159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 210e4913d214fec47b029c497cc8c5cd, type: 3}
+  m_Name: TargetSceneComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    <SceneIdentifier>k__BackingField: {fileID: 11400000, guid: f21a30cd467c26f4cb5a1d8944479a95,
+      type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: PortalToWithKeyLocation2Container
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: 5616003911409489371}
+    - {fileID: -6216687869016929159}
+    systems:
+    - {fileID: 8820653193753491479}
+    Parent: {fileID: 11400000}
+  containerIndex: -1546022681
+--- !u!114 &5616003911409489371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2acde6a27e2fa9541ad29c553078ea5b, type: 3}
+  m_Name: AdditionalSceneObjectTagComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &8820653193753491479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73985da1002ae245bf303042df91236, type: 3}
+  m_Name: PortalSwitchSystem
+  m_EditorClassIdentifier: 

@@ -12,8 +12,14 @@ namespace Systems
     public sealed class CheckOpenConditionSystem : BaseSystem, IReactCommand<Trigger2dEnterCommand>, IReactCommand<Trigger2dExitCommand>
     {
         [Required] private RequiredItemsComponent requiredItemsComponent;
+        private string requiredItemsString = "";
         public override void InitSystem()
         {
+            foreach (var item in requiredItemsComponent.itemsList)
+            {
+                requiredItemsString += "\n" + item.itemContainer.GetComponent<DescriptionComponent>().description +
+                                       " in the amount of " + item.amount;
+            }
         }
 
         public void CommandReact(Trigger2dEnterCommand command)
@@ -21,19 +27,35 @@ namespace Systems
             if (command.Collider.gameObject.TryGetComponent(out Actor actor) && 
                 actor.TryGetHecsComponent(out PlayerHolderComponent playerHolderComponent)){
                 var playerInventory = playerHolderComponent.PlayerEntity.GetPlayerInventoryComponent().currentItems;
-                foreach(KeyValuePair<int, int> kvp in requiredItemsComponent.requiredItemsDictionary)
+                bool playerHasAllRequiredItems = true;
+                foreach(Item item in requiredItemsComponent.itemsList)
                 {
-                    if (playerInventory.ContainsKey(kvp.Key) && playerInventory[kvp.Key] >= kvp.Value){
-                        Owner.World.Command(new WinCommand());
-                    }
-                    else
+                    if (!playerInventory.ContainsKey(item.itemContainer.ContainerIndex) ||
+                        playerInventory[item.itemContainer.ContainerIndex] < item.amount)
                     {
-                        // todo диалоговое окно должно сообщать об отсутствии конкретных вещей, необходимых для этой двери
-                        ShowUICommand showUICommand = new ShowUICommand();
-                        showUICommand.UIViewType = UIIdentifierMap.DialogueUI_identifier;
-                        Owner.World.Command(showUICommand);
+                        playerHasAllRequiredItems = false;
+                        break;
                     }
-                }   
+                }
+                if (playerHasAllRequiredItems)
+                {
+                    Owner.World.Command(new WinCommand());
+                }
+                else
+                {
+                    ShowUICommand showUICommand = new ShowUICommand();
+                    showUICommand.UIViewType = UIIdentifierMap.DialogueUI_identifier;
+                    showUICommand.OnUILoad += (ui) =>
+                    {
+                        InitDialogueUITextCommand initDialogueUITextCommand = new InitDialogueUITextCommand
+                        {
+                            DialogueText = "To open the door you need: " + requiredItemsString
+                                           
+                        };
+                        ui.Command(initDialogueUITextCommand);
+                    };
+                    Owner.World.Command(showUICommand);
+                }
             }
         }
 

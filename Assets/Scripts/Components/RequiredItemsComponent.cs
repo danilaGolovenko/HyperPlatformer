@@ -7,17 +7,8 @@ using UnityEngine;
 namespace Components
 {
     [Serializable][Documentation(Doc.NONE, "")]
-    public sealed class RequiredItemsComponent : BaseComponent, IAfterEntityInit
+    public sealed class RequiredItemsComponent : BaseComponent
     {
-        public List<Item> requiredItemsList = new List<Item>();
-        public Dictionary<int, int> requiredItemsDictionary = new Dictionary<int, int>();
-
-        public void AfterEntityInit()
-        {
-            foreach (var item in requiredItemsList)
-            {
-                requiredItemsDictionary.Add(item.entityContainerIndex, item.amount);
-            }
-        }
+        public List<Item> itemsList = new List<Item>();
     }
 }

@@ -35,15 +35,18 @@ namespace Systems
                 {
                     playerInventoryComponent.currentItems.Add(itemContainerIndex, 1);
                 }
-                Owner.World.Command(new OnPickUpItemCommand());
-                DestroyEntityWorldCommand destroyEntityWorldCommand = new DestroyEntityWorldCommand
-                {
-                    Entity = actor
-                };
-                Owner.World.Command(destroyEntityWorldCommand);
-                Debug.Log("You took the key with index " + itemContainerIndex + ", теперь их целых " + playerInventoryComponent.currentItems[itemContainerIndex]);
+                
+                OnPickUpItemCommand onPickUpItemCommand = new OnPickUpItemCommand();
+                onPickUpItemCommand.Item = actor;
+                Owner.World.Command(onPickUpItemCommand);
+
+                BoolAnimationCommand commandIsPickUped = new BoolAnimationCommand();
+                commandIsPickUped.Index = AnimParametersMap.isPickUped;
+                commandIsPickUped.Value = true;
+                actor.Command(commandIsPickUped);
+                
+                actor.RemoveHecsComponent(itemTag);
             }
         }
-        
     }
 }

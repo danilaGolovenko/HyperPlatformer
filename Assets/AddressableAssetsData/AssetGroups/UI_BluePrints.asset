@@ -47,6 +47,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - UIBluePrints
+  - m_GUID: bcc2ff66ece6ccb4fa9ff62f5076fce1
+    m_Address: Assets/BluePrints/UIBluePrints/PlayerInventoryUI_UIBluePrint.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIBluePrints
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: abedd1e511a06564789dce519587c8e2, type: 2}
   m_SchemaSet:

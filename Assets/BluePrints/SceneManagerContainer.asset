@@ -59,3 +59,10 @@ MonoBehaviour:
         m_SubObjectName: 
         m_SubObjectType: 
         m_EditorAssetChanged: 0
+    - SceneIdentifier: {fileID: 11400000, guid: f21a30cd467c26f4cb5a1d8944479a95,
+        type: 2}
+      Scene:
+        m_AssetGUID: 5697a7037fb7b5043a2536c427b6c97c
+        m_SubObjectName: 
+        m_SubObjectType: 
+        m_EditorAssetChanged: 0

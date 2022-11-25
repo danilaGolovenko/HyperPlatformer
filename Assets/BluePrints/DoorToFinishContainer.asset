@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: RequiredItemsComponent
   m_EditorClassIdentifier: 
   component:
-    requiredItemsList:
-    - entityContainerIndex: -1557464432
-      amount: 1
-    - entityContainerIndex: 845698434
+    itemsList:
+    - itemContainer: {fileID: 11400000, guid: ee78b109c65415245a84a6e6ffc97412, type: 2}
+      amount: 2
+    - itemContainer: {fileID: 11400000, guid: 9e76b68c47d23c748be4ee7ed7fe7b91, type: 2}
       amount: 1
 --- !u!114 &-4775792546794544373
 MonoBehaviour:

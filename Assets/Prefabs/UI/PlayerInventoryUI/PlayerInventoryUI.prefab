@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5089915772484967501
+--- !u!1 &7259718900285840823
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4719089971497009234}
-  - component: {fileID: -3013391818207685566}
-  - component: {fileID: -6067366024212092051}
+  - component: {fileID: 2954130391539495437}
+  - component: {fileID: 1190698765824174653}
+  - component: {fileID: 7263333780208838432}
+  - component: {fileID: -7079120461304664075}
   m_Layer: 5
   m_Name: PlayerInventoryUI
   m_TagString: Untagged
@@ -18,14 +19,14 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4719089971497009234
+--- !u!224 &2954130391539495437
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5089915772484967501}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 7259718900285840823}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -33,40 +34,21 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 230.40112, y: -83}
-  m_SizeDelta: {x: 398.8022, y: 100}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -225, y: 75}
+  m_SizeDelta: {x: 431.4, y: 149.12909}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &-3013391818207685566
+--- !u!114 &1190698765824174653
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5089915772484967501}
+  m_GameObject: {fileID: 7259718900285840823}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cd7fddeb34feb04aaf6855a2af9e383, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actorInitModule:
-    initActorMode: 0
-    guidRule: 0
-    guid: 444370e7-ba42-4df6-bdcf-7cdc804517ad
-    worldIndex: 0
-    iD: HealthUI
-  actorContainer: {fileID: 0}
---- !u!114 &-6067366024212092051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5089915772484967501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
@@ -75,11 +57,42 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 190, y: 100}
+  m_Spacing: {x: 0, y: 25}
+  m_Constraint: 0
+  m_ConstraintCount: 2
+--- !u!114 &7263333780208838432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7259718900285840823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd7fddeb34feb04aaf6855a2af9e383, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actorInitModule:
+    initActorMode: 0
+    guidRule: 0
+    guid: d470fd43-d0ab-43c6-98ef-ea6d6326cfa5
+    worldIndex: 0
+    iD: PlayerInventoryUI
+  actorContainer: {fileID: 11400000, guid: bf2c209accc28594cb420327d1f78eaf, type: 2}
+--- !u!114 &-7079120461304664075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7259718900285840823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8901565155ce5c47acd7e9815878b0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <SlotPrefab>k__BackingField: {fileID: 2997646375088556924, guid: 29c60b2d4e0668345bc3a1e5afc4cb47,
+    type: 3}
