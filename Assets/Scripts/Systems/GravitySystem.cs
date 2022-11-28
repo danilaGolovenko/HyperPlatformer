@@ -20,8 +20,8 @@ namespace Systems
         {
             foreach (var entity in entities)
             {
-                float speedX = entity.GetCurrentSpeedComponent().speed.x;
-                float speedY = entity.GetCurrentSpeedComponent().speed.y -= 9.8f * Time.fixedDeltaTime;
+                var speedX = entity.GetCurrentSpeedComponent().speed.x;
+                var speedY = entity.GetCurrentSpeedComponent().speed.y -= 9.8f * Time.fixedDeltaTime;
                 entity.GetCurrentSpeedComponent().speed = new Vector2(speedX, speedY);
             }
         }

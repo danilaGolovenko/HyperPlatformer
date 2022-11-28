@@ -27,7 +27,9 @@ MonoBehaviour:
   m_Name: StartInventoryComponent
   m_EditorClassIdentifier: 
   component:
-    startItemsList: []
+    startItemsList:
+    - itemContainer: {fileID: 11400000, guid: 9e76b68c47d23c748be4ee7ed7fe7b91, type: 2}
+      amount: 1
 --- !u!114 &-1285788233356606828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,6 +73,7 @@ MonoBehaviour:
     - {fileID: -1285788233356606828}
     - {fileID: -3291329660495121029}
     - {fileID: 1980238599152752430}
+    - {fileID: 4293377948792000508}
     systems:
     - {fileID: 7972992587245948316}
     Parent: {fileID: 11400000}
@@ -86,6 +89,18 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 928074e14ea4a74449e748f0627023c3, type: 3}
   m_Name: PlayerInventoryComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &4293377948792000508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6bb4bfe3b42daa469d519ab390d1387, type: 3}
+  m_Name: AfterPortalSpawnPointsComponent
   m_EditorClassIdentifier: 
 --- !u!114 &7972992587245948316
 MonoBehaviour:

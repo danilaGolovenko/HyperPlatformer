@@ -5,6 +5,7 @@ using HECSFramework.Unity;
 using HECSFramework.Core;
 using UnityEngine;
 using Components;
+using Helpers;
 
 namespace Systems
 {
@@ -24,7 +25,7 @@ namespace Systems
 
         public void CommandReact(Trigger2dEnterCommand command)
         {
-            if (command.Collider.gameObject.TryGetComponent(out Actor actor) && 
+            if (command.Collider.TryGetActorFromCollision(out var actor) && 
                 actor.TryGetHecsComponent(out PlayerHolderComponent playerHolderComponent)){
                 var playerInventory = playerHolderComponent.PlayerEntity.GetPlayerInventoryComponent().currentItems;
                 bool playerHasAllRequiredItems = true;
@@ -61,8 +62,10 @@ namespace Systems
 
         public void CommandReact(Trigger2dExitCommand command)
         {
-            HideUICommand hideUICommand = new HideUICommand();
-            hideUICommand.UIViewType = UIIdentifierMap.DialogueUI_identifier;
+            var hideUICommand = new HideUICommand
+            {
+                UIViewType = UIIdentifierMap.DialogueUI_identifier
+            };
             Owner.World.Command(hideUICommand);
         }
     }

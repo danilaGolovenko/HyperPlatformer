@@ -1,9 +1,12 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using Commands;
 using HECSFramework.Unity;
 using HECSFramework.Core;
 using UnityEngine;
 using Components;
+using Helpers;
 using Unity.VisualScripting;
 
 namespace Systems
@@ -13,9 +16,11 @@ namespace Systems
     {
         [Required] private PlayerHolderComponent playerHolderComponent;
         private PlayerInventoryComponent playerInventoryComponent;
+        private ItemsOnSceneComponent itemsOnSceneComponent;
         
         public override void InitSystem()
         {
+            itemsOnSceneComponent = Owner.World.GetSingleComponent<ItemsOnSceneComponent>();
         }
         
         public void AfterEntityInit()
@@ -24,7 +29,7 @@ namespace Systems
         }
         public void CommandReact(Trigger2dEnterCommand command)
         {
-            if (command.Collider.gameObject.TryGetComponent(out Actor actor) &&
+            if (command.Collider.TryGetActorFromCollision(out var actor) &&
                 actor.TryGetHecsComponent(out ItemTagComponent itemTag))
             {
                 int itemContainerIndex = actor.GetActorContainerID().ContainerIndex;
@@ -35,15 +40,26 @@ namespace Systems
                 {
                     playerInventoryComponent.currentItems.Add(itemContainerIndex, 1);
                 }
-                
-                OnPickUpItemCommand onPickUpItemCommand = new OnPickUpItemCommand();
-                onPickUpItemCommand.Item = actor;
-                Owner.World.Command(onPickUpItemCommand);
 
-                BoolAnimationCommand commandIsPickUped = new BoolAnimationCommand();
-                commandIsPickUped.Index = AnimParametersMap.isPickUped;
-                commandIsPickUped.Value = true;
-                actor.Command(commandIsPickUped);
+                var currentSceneId = Owner.World.GetSingleComponent<CurrentSceneIdentifierComponent>().SceneId;
+                var position = actor.GetUnityTransformComponent().Transform.transform.position;
+                var entityContainer = ((Actor)actor).ActorContainer;
+                
+                var newItemsOnSceneList = itemsOnSceneComponent.ItemsOnScene.Where(itemOnScene => itemOnScene.SceneId != currentSceneId || itemOnScene.Position != position || itemOnScene.EntityContainer != entityContainer).ToList();
+                itemsOnSceneComponent.ItemsOnScene = newItemsOnSceneList;
+                
+                var onPickUpItemCommand = new OnPickUpItemCommand
+                {
+                    Item = actor
+                };
+                Owner.World.Command(onPickUpItemCommand);
+                
+                var commandIsPickedUp = new BoolAnimationCommand
+                {
+                    Index = AnimParametersMap.isPickUped,
+                    Value = true
+                };
+                actor.Command(commandIsPickedUp);
                 
                 actor.RemoveHecsComponent(itemTag);
             }

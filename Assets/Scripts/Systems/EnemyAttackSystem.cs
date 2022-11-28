@@ -57,6 +57,7 @@ namespace Systems
 
         public void CommandReact(AnimationEventCommand command)
         {
+            // todo переписать на SendStateAnimationEvent
             if (command.Id == AnimationEventIdentifierMap.StartEnemyAttack)
                 Owner.AddHecsComponent(new StopMovingComponent());
             if (command.Id == AnimationEventIdentifierMap.Shooting)

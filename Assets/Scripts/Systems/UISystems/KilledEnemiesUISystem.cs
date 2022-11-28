@@ -29,9 +29,11 @@ namespace Systems
         public override void Dispose()
         {
             base.Dispose();
-            IEntity player = Owner.World.GetSingleComponent<PlayerTagComponent>().Owner;
-            player.TryGetHecsComponent(out KilledEnemiesComponent winPointsComponent);
-            winPointsComponent.CurrentAmount.OnChange -= CurrentWinPointsAmountOnChange;
+            if (Owner.World.TryGetSingleComponent(out PlayerTagComponent playerTagComponent))
+            {
+                playerTagComponent.Owner.TryGetHecsComponent(out KilledEnemiesComponent killedEnemiesComponent);
+                killedEnemiesComponent.CurrentAmount.OnChange -= CurrentWinPointsAmountOnChange;
+            }
         }
         
         private void CurrentWinPointsAmountOnChange(int obj)

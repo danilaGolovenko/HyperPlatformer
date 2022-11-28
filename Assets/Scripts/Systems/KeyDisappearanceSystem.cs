@@ -18,8 +18,10 @@ namespace Systems
         {
             if (command.StateId == AnimatorStateIdentifierMap.KeyPickUp)
             {
-                HideUICommand hideUICommand = new HideUICommand();
-                hideUICommand.UIViewType = UIIdentifierMap.DialogueUI_identifier;
+                HideUICommand hideUICommand = new HideUICommand
+                {
+                    UIViewType = UIIdentifierMap.DialogueUI_identifier
+                };
                 Owner.World.Command(hideUICommand);
                 
                 DestroyEntityWorldCommand destroyEntityWorldCommand = new DestroyEntityWorldCommand

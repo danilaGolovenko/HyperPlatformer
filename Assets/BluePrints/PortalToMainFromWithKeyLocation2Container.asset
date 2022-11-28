@@ -1,19 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7790892942897815923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3faf4dec771888c4e87522d54ec26d0c, type: 3}
-  m_Name: SpawnPointComponent
-  m_EditorClassIdentifier: 
-  component:
-    spawnPointTransform: {fileID: 0}
 --- !u!114 &-6216687869016929159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27,32 +13,11 @@ MonoBehaviour:
   m_Name: TargetSceneComponentBluePrint
   m_EditorClassIdentifier: 
   component:
-    <TargetSceneIdentifier>k__BackingField: {fileID: 11400000, guid: 3fb5b5558007010418e3d2a86b2aab36,
+    <TargetSceneIdentifier>k__BackingField: {fileID: 11400000, guid: 2cc0eed4642ebc146834606af193d95d,
       type: 2}
-    <CurrentSceneIdentifier>k__BackingField: {fileID: 11400000, guid: 2cc0eed4642ebc146834606af193d95d,
+    <CurrentSceneIdentifier>k__BackingField: {fileID: 11400000, guid: f21a30cd467c26f4cb5a1d8944479a95,
       type: 2}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
-  m_Name: PortalToWithKeyLocationContainer
-  m_EditorClassIdentifier: 
-  holder:
-    components:
-    - {fileID: 5616003911409489371}
-    - {fileID: -6216687869016929159}
-    - {fileID: -7790892942897815923}
-    systems:
-    - {fileID: 8820653193753491479}
-    Parent: {fileID: 11400000}
-  containerIndex: 1765180324
---- !u!114 &5616003911409489371
+--- !u!114 &-4816710263875656341
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -64,6 +29,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2acde6a27e2fa9541ad29c553078ea5b, type: 3}
   m_Name: AdditionalSceneObjectTagComponent
   m_EditorClassIdentifier: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: PortalToMainFromWithKeyLocation2Container
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: -4816710263875656341}
+    - {fileID: -6216687869016929159}
+    systems:
+    - {fileID: 8820653193753491479}
+    Parent: {fileID: 11400000}
+  containerIndex: -104811427
 --- !u!114 &8820653193753491479
 MonoBehaviour:
   m_ObjectHideFlags: 0

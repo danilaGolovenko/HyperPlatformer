@@ -57,11 +57,30 @@ MonoBehaviour:
     - {fileID: 3464466117235516095}
     - {fileID: 8155759032687656557}
     - {fileID: 5884495959279915314}
+    - {fileID: 610779486835416741}
     systems:
     - {fileID: -3743186177925827803}
     - {fileID: -4606471742895660714}
     Parent: {fileID: 11400000}
   containerIndex: 845698434
+--- !u!114 &610779486835416741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d4dea159ccad543afdd93db81c3768, type: 3}
+  m_Name: ViewReferenceComponent
+  m_EditorClassIdentifier: 
+  component:
+    ViewReference:
+      m_AssetGUID: 740e482ed6f0cf14ba572b5066727082
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
 --- !u!114 &3464466117235516095
 MonoBehaviour:
   m_ObjectHideFlags: 0

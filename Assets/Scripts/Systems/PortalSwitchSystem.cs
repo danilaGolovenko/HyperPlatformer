@@ -5,36 +5,30 @@ using HECSFramework.Core;
 using UnityEngine;
 using Components;
 using Components.MonoBehaviourComponents;
+using Helpers;
 using Unity.VisualScripting;
 
 namespace Systems
 {
 	[Serializable][Documentation(Doc.NONE, "")]
-    public sealed class PortalSwitchSystem : BaseSystem, IReactCommand<Commands.Trigger2dEnterCommand>, IHaveActor
+    public sealed class PortalSwitchSystem : BaseSystem, IReactCommand<Commands.Trigger2dEnterCommand>
     {
-        [Required] private TargetSceneComponent targetSceneComponent;
-        private Transform portalSpawnPoint;
+        [Required] private PortalScenesComponent portalScenesComponent;
+        [Required] private SpawnPointComponent spawnPointComponent;
         public override void InitSystem()
         {
-            if (Actor.TryGetComponent(out SpawnPointMonoComponent spawnPointMonoComponent))
-            {
-                portalSpawnPoint = spawnPointMonoComponent.SpawnPointTransform;
-            }
-            else
-            {
-                portalSpawnPoint = null;
-            }
         }
 
         public void CommandReact(Trigger2dEnterCommand command)
         {
-            if (command.Collider.gameObject.TryGetComponent(out Actor actor) && actor.TryGetHecsComponent(out PlayerHolderComponent playerHolderComponent)) 
-            {
-                if (portalSpawnPoint != null){
-                    // todo придумать, как запоминать/перемещать spawnPoint после портала. в PlayerContainer'е?
-                }
-                SwitchSceneCommand switchSceneCommand = new SwitchSceneCommand();
-                switchSceneCommand.TargetSceneId = targetSceneComponent.SceneIdentifier.Id;
+            if (command.Collider.TryGetActorFromCollision(out var actor) && actor.TryGetHecsComponent(out PlayerHolderComponent playerHolderComponent)) 
+            {   
+                SwitchSceneCommand switchSceneCommand = new SwitchSceneCommand
+                {
+                    TargetSceneId = portalScenesComponent.TargetSceneIdentifier,
+                    CurrentSceneId = portalScenesComponent.CurrentSceneIdentifier,
+                    PortalSpawnPointPosition = spawnPointComponent.spawnPointTransform != null ? spawnPointComponent.spawnPointTransform.position : Vector3.zero
+                };
                 Owner.World.Command(switchSceneCommand);
             }
         }

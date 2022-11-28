@@ -4,6 +4,8 @@ using HECSFramework.Unity;
 using HECSFramework.Core;
 using UnityEngine;
 using Components;
+using Helpers;
+
 namespace Systems
 {
 	[Serializable][Documentation(Doc.NONE, "")]
@@ -32,7 +34,7 @@ namespace Systems
         public IActor Actor { get; set; }
         public void CommandReact(Trigger2dEnterCommand command)
         {
-            if (command.Collider.gameObject.TryGetComponent(out Actor actor) && actor.TryGetHecsComponent(out PlayerHolderComponent playerHolderComponent)) 
+            if (command.Collider.TryGetActorFromCollision(out var actor) && actor.TryGetHecsComponent(out PlayerHolderComponent playerHolderComponent)) 
             {
                 actor.TryGetComponent(out Rigidbody2D rb);
                 catchesListComponent.rbList.Add(rb);

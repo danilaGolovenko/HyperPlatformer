@@ -18,7 +18,7 @@ namespace Systems
 
         public async void LateStart()
         {
-            IActor actor = await enemyContainerComponent.ActorContainer.GetActor(true, null,
+            var actor = await enemyContainerComponent.ActorContainer.GetActor(true, null,
                 Vector3.zero, default(Quaternion), transform);
             actor.AddOrReplaceComponent(Owner.GetWayComponent());
             actor.Init();

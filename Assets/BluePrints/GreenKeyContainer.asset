@@ -26,7 +26,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   component:
     ViewReference:
-      m_AssetGUID: 
+      m_AssetGUID: e888dd0b988da5046b66c84a75246726
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0

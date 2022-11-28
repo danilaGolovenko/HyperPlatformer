@@ -9,6 +9,7 @@ namespace Components.MonoBehaviourComponents
     {
         [field: SerializeField] public GameObject SlotPrefab { get; private set; }
         private RectTransform playerInventoryUITransform;
+        private readonly List<GameObject> oldSlots = new List<GameObject>();
 
         public void InitInventoryUI(List<Item> inventory)
         {
@@ -20,11 +21,18 @@ namespace Components.MonoBehaviourComponents
                 var text = slot.GetComponentInChildren<Text>();
                 image.sprite = item.itemContainer.GetComponent<IconHolderComponent>().iconSprite;
                 text.text = item.amount.ToString();
+                oldSlots.Add(slot);
             }
         }
         
         public void UpdateInventoryUI(List<Item> inventory)
         {
+            foreach (var slot in oldSlots)
+            {
+                Destroy(slot);
+            }
+            oldSlots.Clear();
+            
             foreach (var item in inventory)
             {
                 var slot = Instantiate (SlotPrefab, playerInventoryUITransform, true);
@@ -32,6 +40,7 @@ namespace Components.MonoBehaviourComponents
                 var text = slot.GetComponentInChildren<Text>();
                 image.sprite = item.itemContainer.GetComponent<IconHolderComponent>().iconSprite;
                 text.text = item.amount.ToString();
+                oldSlots.Add(slot);
             }
         }
         

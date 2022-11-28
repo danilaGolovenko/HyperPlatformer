@@ -16,9 +16,21 @@ namespace Components
         {
             foreach (var scene in scenes)
             {
-                if (scene.SceneIdentifier.Id == sceneId)
+                if (scene.sceneIdentifier.Id == sceneId)
                 {
-                    return scene.Scene;
+                    return scene.scene;
+                }
+            }
+            return null;
+        }
+        
+        public SceneIdentifier GetSceneIdentifier(AssetReference scene)
+        {
+            foreach (var idToScene in scenes)
+            {
+                if (idToScene.scene == scene)
+                {
+                    return idToScene.sceneIdentifier;
                 }
             }
             return null;
@@ -27,7 +39,7 @@ namespace Components
     [Serializable]
     public struct IdToScene
     {
-        public SceneIdentifier SceneIdentifier;
-        public AssetReference Scene;
+        public SceneIdentifier sceneIdentifier;
+        public AssetReference scene;
     }
 }

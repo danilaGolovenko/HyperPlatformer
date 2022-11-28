@@ -94,7 +94,8 @@ MonoBehaviour:
   m_Name: EnemyContainerComponent
   m_EditorClassIdentifier: 
   component:
-    <ActorContainer>k__BackingField: {fileID: 0}
+    <ActorContainer>k__BackingField: {fileID: 11400000, guid: 4d5daba583fc27d44bcce5707b83919d,
+      type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,6 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holder:
     components:
+    - {fileID: 4415592826704701022}
     - {fileID: -78603686563500936}
     - {fileID: 2274584069426935205}
     - {fileID: 3226168835309615732}
@@ -122,6 +124,7 @@ MonoBehaviour:
     - {fileID: 3699514555925307557}
     - {fileID: -485191530088583923}
     - {fileID: 1365853468946053553}
+    - {fileID: 5228808718565561455}
     Parent: {fileID: 11400000}
   containerIndex: 503398846
 --- !u!114 &163667382468224473
@@ -200,7 +203,9 @@ MonoBehaviour:
   m_Name: ItemsListComponent
   m_EditorClassIdentifier: 
   component:
-    items: []
+    items:
+    - {fileID: 11400000, guid: 9e76b68c47d23c748be4ee7ed7fe7b91, type: 2}
+    - {fileID: 11400000, guid: ee78b109c65415245a84a6e6ffc97412, type: 2}
 --- !u!114 &3699514555925307557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +218,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34ce6c8788e357246a76929370b15de8, type: 3}
   m_Name: SpawnEnemyHealthUISystem
   m_EditorClassIdentifier: 
+--- !u!114 &4415592826704701022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d4622681b736e54fa93dae1e326252a, type: 3}
+  m_Name: ItemsOnSceneComponent
+  m_EditorClassIdentifier: 
+  component:
+    ItemsOnScene:
+    - SceneId: 1924708800
+      Position: {x: 24.51, y: -4.32, z: 0}
+      EntityContainer: {fileID: 11400000, guid: ee78b109c65415245a84a6e6ffc97412,
+        type: 2}
+    - SceneId: 1572376663
+      Position: {x: 29.62, y: 0.48, z: 0}
+      EntityContainer: {fileID: 11400000, guid: 9e76b68c47d23c748be4ee7ed7fe7b91,
+        type: 2}
+    - SceneId: 1572376663
+      Position: {x: 15.06, y: -3.63, z: 0}
+      EntityContainer: {fileID: 11400000, guid: ee78b109c65415245a84a6e6ffc97412,
+        type: 2}
+--- !u!114 &5228808718565561455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4f7816254d92944bb8153650ef3cb29, type: 3}
+  m_Name: ItemsSpawnSystem
+  m_EditorClassIdentifier: 
+  system:
+    itemsOnSceneComponent:
+      ItemsOnScene: []
 --- !u!114 &7563921348140066073
 MonoBehaviour:
   m_ObjectHideFlags: 0

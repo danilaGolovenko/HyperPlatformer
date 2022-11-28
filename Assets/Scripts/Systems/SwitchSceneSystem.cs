@@ -13,45 +13,58 @@ namespace Systems
 	[Serializable][Documentation(Doc.NONE, "")]
     public sealed class SwitchSceneSystem : BaseSystem, IReactGlobalCommand<Commands.SwitchSceneCommand>, IGlobalStart
     {
-        // [Required] private SpawnPointComponent spawnPointComponent;
         [Required] private SceneHolderComponent sceneHolderComponent;
+        [Required] private CurrentSceneIdentifierComponent currentSceneIdentifierComponent;
         private SceneInstance currentScene;
-        // todo нужно где-то кешировать Transform игрока до переключения сцены, чтобы при возвращении на эту локацию он появлялся в нужном месте
         public override void InitSystem()
         {
         }
         public async void CommandGlobalReact(SwitchSceneCommand command)
         {
-            
             var oldObjects = Owner.World.Filter(HMasks.AdditionalSceneObjectTagComponent).ToArray();
             foreach (var oldObject in oldObjects)
             {
                 oldObject.HecsDestroy();
             }
-            
             Addressables.UnloadSceneAsync(currentScene);
+            
+            if (command.PortalSpawnPointPosition != Vector3.zero)
+            {
+                var player = Owner.World.GetSingleComponent<PlayerTagComponent>().Owner;
+                if (player.GetAfterPortalSpawnPointsComponent().SpawnPoints.ContainsKey(command.CurrentSceneId))
+                {
+                    player.GetAfterPortalSpawnPointsComponent().SpawnPoints[command.CurrentSceneId] = command.PortalSpawnPointPosition;
+                }
+                else
+                {
+                    player.GetAfterPortalSpawnPointsComponent().SpawnPoints
+                    .Add(command.CurrentSceneId, command.PortalSpawnPointPosition);
+                }
+            }
 
-            var sceneReference = sceneHolderComponent.GetScene(command.TargetSceneId);
+            var sceneReference = sceneHolderComponent.GetScene(command.TargetSceneId.Id);
             if (sceneReference == null)
             {
                 Debug.LogError("Нет сцены для " + command.TargetSceneId);
                 return;
             }
-            var result = await Addressables.LoadSceneAsync(sceneHolderComponent.GetScene(command.TargetSceneId), LoadSceneMode.Additive).Task;
-           
+            var result = await Addressables.LoadSceneAsync(sceneHolderComponent.GetScene(command.TargetSceneId.Id), LoadSceneMode.Additive).Task;
             currentScene = result;
+            currentSceneIdentifierComponent.SceneId = command.TargetSceneId.Id;
             
-            LoadedSceneCommand loadedSceneCommand = new LoadedSceneCommand();
+            var loadedSceneCommand = new LoadedSceneCommand()
+            {
+                SceneIdentifier = command.TargetSceneId
+            };
             Owner.World.Command(loadedSceneCommand);
-            
         }
+        
         public async void GlobalStart()
         {
             var result = await Addressables.LoadSceneAsync(sceneHolderComponent.GetScene(SceneIdentifierMap.MainLocation_identifier), LoadSceneMode.Additive).Task;
             currentScene = result;
-            
-            LoadedSceneCommand loadedSceneCommand = new LoadedSceneCommand();
-            Owner.World.Command(loadedSceneCommand);
+            currentSceneIdentifierComponent.SceneId = SceneIdentifierMap.MainLocation_identifier;
+            Owner.World.Command(new LoadedSceneCommand());
         }
     }
 }

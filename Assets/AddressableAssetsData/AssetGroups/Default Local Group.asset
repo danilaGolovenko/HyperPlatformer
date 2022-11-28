@@ -45,6 +45,18 @@ MonoBehaviour:
     m_Address: Assets/Scenes/WithKeyLocation2.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: f21a30cd467c26f4cb5a1d8944479a95
+    m_Address: Assets/BluePrints/Identifiers/SceneIdentifiers/WithKeyLocation2_identifier.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e888dd0b988da5046b66c84a75246726
+    m_Address: Assets/Prefabs/GreenKey.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 740e482ed6f0cf14ba572b5066727082
+    m_Address: Assets/Prefabs/BlueKey.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: abedd1e511a06564789dce519587c8e2, type: 2}
   m_SchemaSet:

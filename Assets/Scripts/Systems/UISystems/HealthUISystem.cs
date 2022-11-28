@@ -34,9 +34,11 @@ namespace Systems
         public override void Dispose()
         {
             base.Dispose();
-            IEntity player = Owner.World.GetSingleComponent<PlayerTagComponent>().Owner;
-            player.TryGetHecsComponent(out HealthComponent healthComponent);
-            healthComponent.currentHealth.OnChange -= CurrentHealthOnChange;
+            if (Owner.World.TryGetSingleComponent(out PlayerTagComponent playerTagComponent))
+            {
+                playerTagComponent.Owner.TryGetHecsComponent(out HealthComponent healthComponent);
+                healthComponent.currentHealth.OnChange -= CurrentHealthOnChange;
+            }
         }
     }
 }

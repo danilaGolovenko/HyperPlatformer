@@ -1,1 +1,1 @@
-using Components;using System;using System.Collections.Generic;namespace HECSFramework.Unity{	public class TargetSceneComponentBluePrint : ComponentBluePrintContainer<TargetSceneComponent>	{	}}
+using Components;using System;using System.Collections.Generic;namespace HECSFramework.Unity{	public class TargetSceneComponentBluePrint : ComponentBluePrintContainer<PortalScenesComponent>	{	}}
