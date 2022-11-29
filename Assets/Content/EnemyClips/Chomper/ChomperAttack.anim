@@ -93,10 +93,18 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.5
+  - time: 0
     functionName: SendAnimationEvent
     data: 
     objectReferenceParameter: {fileID: 11400000, guid: 5a702a9c406f3d24586a0d50af3139b0,
+      type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5
+    functionName: SendAnimationEvent
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: 969d3c7d88f8e2d4885dbb98da9fb784,
       type: 2}
     floatParameter: 0
     intParameter: 0

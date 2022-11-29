@@ -16,20 +16,18 @@ namespace Systems
         
         public void CommandReact(EventStateAnimationCommand command)
         {
-            if (command.StateId == AnimatorStateIdentifierMap.KeyPickUp)
+            if (command.StateId != AnimatorStateIdentifierMap.KeyPickUp) return;
+            var hideUICommand = new HideUICommand
             {
-                HideUICommand hideUICommand = new HideUICommand
-                {
-                    UIViewType = UIIdentifierMap.DialogueUI_identifier
-                };
-                Owner.World.Command(hideUICommand);
+                UIViewType = UIIdentifierMap.DialogueUI_identifier
+            };
+            Owner.World.Command(hideUICommand);
                 
-                DestroyEntityWorldCommand destroyEntityWorldCommand = new DestroyEntityWorldCommand
-                {
-                    Entity = Owner
-                };
-                Owner.World.Command(destroyEntityWorldCommand);
-            }
+            var destroyEntityWorldCommand = new DestroyEntityWorldCommand
+            {
+                Entity = Owner
+            };
+            Owner.World.Command(destroyEntityWorldCommand);
         }
     }
 }

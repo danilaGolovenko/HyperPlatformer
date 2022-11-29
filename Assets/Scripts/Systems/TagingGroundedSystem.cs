@@ -26,7 +26,7 @@ namespace Systems
         public IActor Actor { get; set; }
         public void UpdateLateLocal()
         {
-            RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(0.1f, 0.3f), 0f, Vector2.down, 0f,
+            var hit = Physics2D.BoxCast(transform.position, new Vector2(0.1f, 0.3f), 0f, Vector2.down, 0f,
                 subjectToGravityTagComponent.groudLayerMask);
             if (hit.collider != null && Mathf.Abs(transform.position.y - hit.point.y) <= distance)
             {

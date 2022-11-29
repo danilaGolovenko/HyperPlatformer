@@ -9,12 +9,12 @@ namespace Systems
 {
     [Serializable]
     [Documentation(Doc.NONE, "")]
-    public sealed class SpitterAnimationSystem : BaseSystem, IFixedUpdatable, IHaveActor,
+    public sealed class ChomperAnimationSystem : BaseSystem, IFixedUpdatable, IHaveActor,
         IReactCommand<Commands.DamageCommand>, IReactCommand<Commands.EventStateAnimationCommand>
     {
         [Required] private CurrentSpeedComponent currentSpeedComponent;
         private SpriteRenderer spriteRenderer;
-
+        
         public override void InitSystem()
         {
             Owner.TryGetHecsComponent(HMasks.CurrentSpeedComponent, out currentSpeedComponent);
@@ -38,28 +38,24 @@ namespace Systems
 
         public void CommandReact(DamageCommand command)
         {
-            if (!command.authorEntity.Equals(Owner))
+            if (command.authorEntity.Equals(Owner)) return;
+            var commandIsDamaging = new BoolAnimationCommand
             {
-                var commandIsDamaging = new BoolAnimationCommand
-                {
-                    Index = AnimParametersMap.isDamaging,
-                    Value = true
-                };
-                Owner.Command(commandIsDamaging);
-            }
+                Index = AnimParametersMap.isDamaging,
+                Value = true
+            };
+            Owner.Command(commandIsDamaging);
         }
 
         public void CommandReact(EventStateAnimationCommand command)
         {
-            if (command.StateId == AnimatorStateIdentifierMap.SpitterHit)
+            if (command.StateId != AnimatorStateIdentifierMap.ChomperHit) return;
+            var commandIsNotDamaging = new BoolAnimationCommand
             {
-                var commandIsNotDamaging = new BoolAnimationCommand
-                {
-                    Index = AnimParametersMap.isDamaging,
-                    Value = false
-                };
-                Owner.Command(commandIsNotDamaging);
-            }
+                Index = AnimParametersMap.isDamaging,
+                Value = false
+            };
+            Owner.Command(commandIsNotDamaging);
         }
     }
 }

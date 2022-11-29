@@ -21,16 +21,15 @@ namespace Systems
 
         public void CommandReact(Trigger2dEnterCommand command)
         {
-            if (command.Collider.TryGetActorFromCollision(out var actor) && actor.TryGetHecsComponent(out PlayerHolderComponent playerHolderComponent)) 
-            {   
-                SwitchSceneCommand switchSceneCommand = new SwitchSceneCommand
-                {
-                    TargetSceneId = portalScenesComponent.TargetSceneIdentifier,
-                    CurrentSceneId = portalScenesComponent.CurrentSceneIdentifier,
-                    PortalSpawnPointPosition = spawnPointComponent.spawnPointTransform != null ? spawnPointComponent.spawnPointTransform.position : Vector3.zero
-                };
-                Owner.World.Command(switchSceneCommand);
-            }
+            if (!command.Collider.TryGetActorFromCollision(out var actor) ||
+                !actor.TryGetHecsComponent(out PlayerHolderComponent playerHolderComponent)) return;
+            var switchSceneCommand = new SwitchSceneCommand
+            {
+                TargetSceneId = portalScenesComponent.TargetSceneIdentifier,
+                CurrentSceneId = portalScenesComponent.CurrentSceneIdentifier,
+                PortalSpawnPointPosition = spawnPointComponent.spawnPointTransform != null ? spawnPointComponent.spawnPointTransform.position : Vector3.zero
+            };
+            Owner.World.Command(switchSceneCommand);
         }
 
         public IActor Actor { get; set; }

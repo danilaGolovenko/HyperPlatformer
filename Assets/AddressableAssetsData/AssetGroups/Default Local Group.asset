@@ -57,6 +57,14 @@ MonoBehaviour:
     m_Address: Assets/Prefabs/BlueKey.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: bc7efe02b5a12d14e8e22f9d10c8ea14
+    m_Address: Assets/Prefabs/Chomper.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bc24f67de8b6d3b488a3f60b2f809b39
+    m_Address: Assets/Prefabs/Warhead.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: abedd1e511a06564789dce519587c8e2, type: 2}
   m_SchemaSet:

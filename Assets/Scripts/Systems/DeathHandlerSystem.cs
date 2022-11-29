@@ -16,7 +16,7 @@ namespace Systems
 
         public void CommandReact(DeathCommand command)
         {
-            BoolAnimationCommand commandIsDead = new BoolAnimationCommand
+            var commandIsDead = new BoolAnimationCommand
             {
                 Index = AnimParametersMap.isDead,
                 Value = true
@@ -39,7 +39,7 @@ namespace Systems
 
         public void CommandReact(EventStateAnimationCommand command)
         {
-            if (command.StateId == AnimatorStateIdentifierMap.SpitterDeath || command.StateId == AnimatorStateIdentifierMap.Ellen_Death)
+            if (command.StateId == AnimatorStateIdentifierMap.SpitterDeath || command.StateId == AnimatorStateIdentifierMap.Ellen_Death || command.StateId == AnimatorStateIdentifierMap.ChomperDeath)
             {
                 DestroyEntityWorldCommand destroyEntityWorldCommand = new DestroyEntityWorldCommand();
                 destroyEntityWorldCommand.Entity = Owner;

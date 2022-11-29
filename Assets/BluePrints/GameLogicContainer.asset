@@ -237,7 +237,7 @@ MonoBehaviour:
       EntityContainer: {fileID: 11400000, guid: ee78b109c65415245a84a6e6ffc97412,
         type: 2}
     - SceneId: 1572376663
-      Position: {x: 29.62, y: 0.48, z: 0}
+      Position: {x: 34.2, y: 0.5, z: 0}
       EntityContainer: {fileID: 11400000, guid: 9e76b68c47d23c748be4ee7ed7fe7b91,
         type: 2}
     - SceneId: 1572376663

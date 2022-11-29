@@ -17,8 +17,10 @@ namespace Systems
         
         public void CommandGlobalReact(OnPickUpItemCommand command)
         {
-            ShowUICommand showUICommand = new ShowUICommand();
-            showUICommand.UIViewType = UIIdentifierMap.DialogueUI_identifier;
+            var showUICommand = new ShowUICommand
+            {
+                UIViewType = UIIdentifierMap.DialogueUI_identifier
+            };
             showUICommand.OnUILoad += (ui) =>
             {
                 InitDialogueUITextCommand initDialogueUITextCommand = new InitDialogueUITextCommand

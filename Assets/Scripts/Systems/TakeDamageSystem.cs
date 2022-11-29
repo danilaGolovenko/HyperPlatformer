@@ -29,19 +29,20 @@ namespace Systems
                 Owner.AddHecsComponent(new DeadTagComponent());
                 Owner.Command(new DeathCommand());
             }
-            if (command.authorEntity.TryGetHecsComponent(out WaterTagComponent waterTagComponent))    
-            {
-                var spawnPoint = command.authorEntity.GetSpawnPointComponent().spawnPointTransform.position;
-                var waitTime = waitComponent.waitMonoComponent.waitTime;
-                waitComponent.waitMonoComponent.StartCoroutine(SendRespawnCommand(spawnPoint, waitTime));
-            }
+
+            if (!command.authorEntity.TryGetHecsComponent(out WaterTagComponent waterTagComponent)) return;
+            var spawnPoint = command.authorEntity.GetSpawnPointComponent().spawnPointTransform.position;
+            var waitTime = waitComponent.waitMonoComponent.waitTime;
+            waitComponent.waitMonoComponent.StartCoroutine(SendRespawnCommand(spawnPoint, waitTime));
         }
 
         private IEnumerator SendRespawnCommand(Vector2 spawnPoint, float waitTime)
         {
             yield return new WaitForSeconds(waitTime);
-            RespawnCommand respawnCommand = new RespawnCommand();
-            respawnCommand.spawnPoint = spawnPoint;
+            var respawnCommand = new RespawnCommand
+            {
+                spawnPoint = spawnPoint
+            };
             Owner.Command(respawnCommand);
         }
     }

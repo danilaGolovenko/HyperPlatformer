@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8016846958340556281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2acde6a27e2fa9541ad29c553078ea5b, type: 3}
+  m_Name: AdditionalSceneObjectTagComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &-7746136198416129662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb9c65d925be894383b6065e71b5e50, type: 3}
+  m_Name: WarheadDamageAmountComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    <EnemyLayerMask>k__BackingField:
+      serializedVersion: 2
+      m_Bits: 8192
+    <PlatformLayerMask>k__BackingField:
+      serializedVersion: 2
+      m_Bits: 2147483648
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: WarheadContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: -8016846958340556281}
+    - {fileID: 8106832288920972215}
+    - {fileID: 4858653916086760331}
+    - {fileID: 6626243458966843046}
+    systems:
+    - {fileID: 5352052703025608537}
+    - {fileID: 7316728740106534276}
+    Parent: {fileID: 11400000}
+  containerIndex: 848772017
+--- !u!114 &4858653916086760331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d4dea159ccad543afdd93db81c3768, type: 3}
+  m_Name: ViewReferenceComponent
+  m_EditorClassIdentifier: 
+  component:
+    ViewReference:
+      m_AssetGUID: bc24f67de8b6d3b488a3f60b2f809b39
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+--- !u!114 &5352052703025608537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31fd26430222f1643b6eb3ded06580d5, type: 3}
+  m_Name: WarheadMovingSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &6626243458966843046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60adcfc0c4bd3ae4bbee75975e0ebbed, type: 3}
+  m_Name: WarheadComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    <EnemyLayerMask>k__BackingField:
+      serializedVersion: 2
+      m_Bits: 8192
+    <PlatformLayerMask>k__BackingField:
+      serializedVersion: 2
+      m_Bits: 2147483648
+--- !u!114 &7316728740106534276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d12fb41f12fdf2438cad7f26ed3e5cc, type: 3}
+  m_Name: WarheadTouchSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &8106832288920972215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f8e1572ab9eae4458b630d22f800f52, type: 3}
+  m_Name: SpeedCoeffComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    <coefficient>k__BackingField: 3
+    <defaultCoefficient>k__BackingField: 3

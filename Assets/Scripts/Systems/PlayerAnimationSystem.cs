@@ -37,18 +37,24 @@ namespace Systems
 
         public void FixedUpdateLocal()
         {
-            FloatAnimationCommand commandHorizontalSpeed = new FloatAnimationCommand();
-            commandHorizontalSpeed.Index = AnimParametersMap.HorizontalSpeed;
-            commandHorizontalSpeed.Value = Math.Abs(currentSpeedComponent.speed.x / speedCoeffComponent.coefficient);
+            var commandHorizontalSpeed = new FloatAnimationCommand
+            {
+                Index = AnimParametersMap.HorizontalSpeed,
+                Value = Math.Abs(currentSpeedComponent.speed.x / speedCoeffComponent.coefficient)
+            };
             Owner.Command(commandHorizontalSpeed);
             
-            FloatAnimationCommand commandVerticalSpeed = new FloatAnimationCommand();
-            commandVerticalSpeed.Index = AnimParametersMap.VerticalSpeed;
-            commandVerticalSpeed.Value = currentSpeedComponent.speed.y;
+            var commandVerticalSpeed = new FloatAnimationCommand
+            {
+                Index = AnimParametersMap.VerticalSpeed,
+                Value = currentSpeedComponent.speed.y
+            };
             Owner.Command(commandVerticalSpeed);
 
-            BoolAnimationCommand commandIsJumping = new BoolAnimationCommand();
-            commandIsJumping.Index = AnimParametersMap.isJumping;
+            var commandIsJumping = new BoolAnimationCommand
+            {
+                Index = AnimParametersMap.isJumping
+            };
             if (Owner.TryGetHecsComponent(HMasks.GroundedTagComponent, out GroundedTagComponent groundedTag))
             {
                 commandIsJumping.Value = false;
@@ -63,13 +69,13 @@ namespace Systems
 
         public void CommandReact(InputCommand command)
         {
-            if (command.Index == InputIdentifierMap.Hit)
+            if (command.Index != InputIdentifierMap.Hit) return;
+            var commandIsAttacking = new BoolAnimationCommand
             {
-                BoolAnimationCommand commandIsAttacking = new BoolAnimationCommand();
-                commandIsAttacking.Index = AnimParametersMap.isAttacking;
-                commandIsAttacking.Value = true;
-                Owner.Command(commandIsAttacking);
-            }
+                Index = AnimParametersMap.isAttacking,
+                Value = true
+            };
+            Owner.Command(commandIsAttacking);
         }
         
         public void CommandReact(DamageCommand command)
@@ -86,24 +92,24 @@ namespace Systems
         public IActor Actor { get; set; }
         public void CommandReact(InputEndedCommand command)
         {
-            if (command.Index == InputIdentifierMap.Hit)
+            if (command.Index != InputIdentifierMap.Hit) return;
+            var commandIsNotAttacking = new BoolAnimationCommand
             {
-                BoolAnimationCommand commandIsNotAttacking = new BoolAnimationCommand();
-                commandIsNotAttacking.Index = AnimParametersMap.isAttacking;
-                commandIsNotAttacking.Value = false;
-                Owner.Command(commandIsNotAttacking);
-            }
+                Index = AnimParametersMap.isAttacking,
+                Value = false
+            };
+            Owner.Command(commandIsNotAttacking);
         }
 
         public void CommandReact(EventStateAnimationCommand command)
         {
-            if (command.StateId == AnimatorStateIdentifierMap.Ellen_Hurt)
+            if (command.StateId != AnimatorStateIdentifierMap.Ellen_Hurt) return;
+            var commandIsNotDamaging = new BoolAnimationCommand
             {
-                BoolAnimationCommand commandIsNotDamaging = new BoolAnimationCommand();
-                commandIsNotDamaging.Index = AnimParametersMap.isDamaging;
-                commandIsNotDamaging.Value = false;
-                Owner.Command(commandIsNotDamaging);
-            }
+                Index = AnimParametersMap.isDamaging,
+                Value = false
+            };
+            Owner.Command(commandIsNotDamaging);
         }
     }
 }

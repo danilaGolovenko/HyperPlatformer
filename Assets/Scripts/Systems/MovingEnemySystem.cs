@@ -29,20 +29,15 @@ namespace Systems
 
         public void AfterEntityInit()
         {
-            if (Actor.TryGetHecsComponent(out wayComponent) && wayComponent.listOfPoints.Count > 0)
-            {
-                currentPoint = wayComponent.listOfPoints[0];
-                Actor.TryGetComponent(out rb);
-                rb.position = currentPoint;
-                if (wayComponent.listOfPoints.Count == 1)
-                    goalPointNumber = 0;
-                else
-                    goalPointNumber = 1;
-                goalPoint = wayComponent.listOfPoints[goalPointNumber];
-                dir = (goalPoint - currentPoint).normalized;
-                speedCoeffComponent.coefficient = speedCoeffComponent.defaultCoefficient;
-                currentSpeed.speed = speedCoeffComponent.coefficient * dir;
-            }
+            if (!Actor.TryGetHecsComponent(out wayComponent) || wayComponent.listOfPoints.Count <= 0) return;
+            currentPoint = wayComponent.listOfPoints[0];
+            Actor.TryGetComponent(out rb);
+            rb.position = currentPoint;
+            goalPointNumber = wayComponent.listOfPoints.Count == 1 ? 0 : 1;
+            goalPoint = wayComponent.listOfPoints[goalPointNumber];
+            dir = (goalPoint - currentPoint).normalized;
+            speedCoeffComponent.coefficient = speedCoeffComponent.defaultCoefficient;
+            currentSpeed.speed = speedCoeffComponent.coefficient * dir;
         }
 
         private void ChangeGoalPoint()

@@ -22,19 +22,17 @@ namespace Systems
 
         public void CommandReact(InputStartedCommand command)
         {
-            if (command.Index == InputIdentifierMap.Hit) 
+            if (command.Index != InputIdentifierMap.Hit) return;
+            var hit = Physics2D.CircleCast(rb.position, meleeAttackComponent.attackRangeRadius, Vector2.zero, 0f,
+                meleeAttackComponent.enemyLayerMask);
+            if (hit.collider == null) return;
+            var damageCommand = new DamageCommand
             {
-                RaycastHit2D hit = Physics2D.CircleCast(rb.position, meleeAttackComponent.attackRangeRadius, Vector2.zero, 0f,
-                    meleeAttackComponent.enemyLayerMask);
-                if (hit.collider != null)
-                {
-                    DamageCommand damageCommand = new DamageCommand();
-                    damageCommand.amount = meleeAttackComponent.attackPower;
-                    damageCommand.authorEntity = Owner;
-                    hit.collider.gameObject.TryGetComponent(out Actor victim);
-                    victim.Command(damageCommand);
-                }
-            }
+                amount = meleeAttackComponent.attackPower,
+                authorEntity = Owner
+            };
+            hit.collider.gameObject.TryGetComponent(out Actor victim);
+            victim.Command(damageCommand);
         }
 
         public IActor Actor { get; set; }
