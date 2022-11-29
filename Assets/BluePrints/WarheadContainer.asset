@@ -31,6 +31,18 @@ MonoBehaviour:
     <PlatformLayerMask>k__BackingField:
       serializedVersion: 2
       m_Bits: 2147483648
+--- !u!114 &-3017250416491480197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72e7cb80865400343ace5549ece2d39b, type: 3}
+  m_Name: RemoveEntityAfterDelaySystem
+  m_EditorClassIdentifier: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,9 +61,11 @@ MonoBehaviour:
     - {fileID: 8106832288920972215}
     - {fileID: 4858653916086760331}
     - {fileID: 6626243458966843046}
+    - {fileID: 6586967944317982132}
     systems:
     - {fileID: 5352052703025608537}
     - {fileID: 7316728740106534276}
+    - {fileID: -3017250416491480197}
     Parent: {fileID: 11400000}
   containerIndex: 848772017
 --- !u!114 &4858653916086760331
@@ -84,6 +98,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31fd26430222f1643b6eb3ded06580d5, type: 3}
   m_Name: WarheadMovingSystem
   m_EditorClassIdentifier: 
+--- !u!114 &6586967944317982132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6af5e8d05789346429dc7ef270cc9b9f, type: 3}
+  m_Name: WaitComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    waitMonoComponent: {fileID: 0}
 --- !u!114 &6626243458966843046
 MonoBehaviour:
   m_ObjectHideFlags: 0

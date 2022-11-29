@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 982760526844732814}
   - component: {fileID: 9054379627250013432}
   - component: {fileID: 3189128685850021881}
+  - component: {fileID: 8599968799433001840}
   m_Layer: 20
   m_Name: Warhead
   m_TagString: Untagged
@@ -243,3 +244,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebb6dc8205b799744bc17a502796b713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8599968799433001840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8783961207072391613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdc3520f80d64a04589368a365b41a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 2

@@ -2441,7 +2441,7 @@ actor.Init();<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel
     <node id="n174">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="54.36527260018693" width="210.0" x="10855.495746225246" y="-1372.3286356615731"/>
+          <y:Geometry height="54.36527260018693" width="210.0" x="10855.495746225246" y="-1385.0836795621578"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="83.365234375" x="63.3173828125" xml:space="preserve" y="17.832050362593463">ChomperEntity<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
@@ -2463,7 +2463,7 @@ actor.Init();<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel
     <node id="n176">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="54.36527260018693" width="210.0" x="11130.43780363785" y="-1372.3286356615731"/>
+          <y:Geometry height="54.36527260018693" width="210.0" x="11130.43780363785" y="-1385.0836795621578"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="112.71484375" x="48.642578125" xml:space="preserve" y="17.832050362593463">RangeAttackSystem<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
@@ -2518,7 +2518,7 @@ actor.Init();<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel
     <node id="n181">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="54.36527260018693" width="365.89498100714627" x="10937.978363449027" y="-1491.4463645098685"/>
+          <y:Geometry height="54.36527260018693" width="365.89498100714627" x="10937.978363449027" y="-1504.2014084104533"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="340.158203125" x="12.868388941073135" xml:space="preserve" y="17.832050362593463">IReactCommand&lt;Commands.EventStateAnimationCommand&gt;<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
@@ -2581,18 +2581,7 @@ public void CommandReact(EventStateAnimationCommand command)
     <node id="n185">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="54.36527260018693" width="210.0" x="10855.495746225246" y="-1281.6261012574153"/>
-          <y:Fill color="#FFCC00" transparent="false"/>
-          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="162.0859375" x="23.95703125" xml:space="preserve" y="17.832050362593463">WarheadsAmountComponent<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
-          <y:Shape type="rectangle"/>
-        </y:ShapeNode>
-      </data>
-    </node>
-    <node id="n186">
-      <data key="d6">
-        <y:ShapeNode>
-          <y:Geometry height="54.36527260018693" width="210.0" x="11348.690777047854" y="-1491.4463645098685"/>
+          <y:Geometry height="54.36527260018693" width="210.0" x="11348.690777047854" y="-1504.2014084104533"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="91.38671875" x="59.306640625" xml:space="preserve" y="17.832050362593463">IFixedUpdatable<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
@@ -2600,7 +2589,7 @@ public void CommandReact(EventStateAnimationCommand command)
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n187">
+    <node id="n186">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="249.87405788073556" width="592.2993942765561" x="12043.023149221854" y="-866.7628188636007"/>
@@ -2626,18 +2615,18 @@ Owner.World.Command(destroyEntityWorldCommand);
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n188">
+    <node id="n187">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="54.36527260018693" width="210.0" x="11674.935032674499" y="-964.0980926711703"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="100.73828125" x="54.630859375" xml:space="preserve" y="17.832050362593463">SpeedComponent<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="129.419921875" x="40.2900390625" xml:space="preserve" y="17.832050362593463">SpeedCoeffComponent<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n189">
+    <node id="n188">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="54.36527260018693" width="210.0" x="11914.935032674499" y="-964.0980926711703"/>
@@ -2648,10 +2637,10 @@ Owner.World.Command(destroyEntityWorldCommand);
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n190">
+    <node id="n189">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="54.36527260018693" width="210.0" x="10569.2015304362" y="-1372.3286356615731"/>
+          <y:Geometry height="54.36527260018693" width="210.0" x="10569.2015304362" y="-1385.0836795621578"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="134.74609375" x="37.626953125" xml:space="preserve" y="17.832050362593463">RangeAttackComponent<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
@@ -2659,16 +2648,17 @@ Owner.World.Command(destroyEntityWorldCommand);
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n191">
+    <node id="n190">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="91.49662262188872" width="453.76306121116977" x="10371.732685014076" y="-1254.8405090661875"/>
+          <y:Geometry height="91.49662262188872" width="453.76306121116977" x="10447.319999830614" y="-1300.718406961971"/>
           <y:Fill color="#CCFFFF" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="62.8046875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="406.1875" x="23.787780605585795" xml:space="preserve" y="14.345967560944246">[field: SerializeField] public int attackPower { get; private set; } = 1;
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="77.505859375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="406.1875" x="23.787780605585795" xml:space="preserve" y="6.995381623444473">[field: SerializeField] public int attackPower { get; private set; } = 1;
 [field: SerializeField] public float attackRangeRadius { get; private set; } = 1;
 [field: SerializeField] public LayerMask enemyLayerMask { get; private set; }
-[field: SerializeField] public GameObject warheadPrefab { get; private set; }<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+[field: SerializeField] public GameObject warheadPrefab { get; private set; }
+[field: SerializeField] public int warheadsAmount { get; private set; } = 1;<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
@@ -4672,7 +4662,7 @@ Owner.World.Command(destroyEntityWorldCommand);
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e180" source="n174" target="n185">
+    <edge id="e180" source="n184" target="n179">
       <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -4683,7 +4673,7 @@ Owner.World.Command(destroyEntityWorldCommand);
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e181" source="n184" target="n179">
+    <edge id="e181" source="n185" target="n176">
       <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -4694,7 +4684,7 @@ Owner.World.Command(destroyEntityWorldCommand);
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e182" source="n186" target="n176">
+    <edge id="e182" source="n182" target="n186">
       <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -4705,7 +4695,7 @@ Owner.World.Command(destroyEntityWorldCommand);
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e183" source="n182" target="n187">
+    <edge id="e183" source="n186" target="n175">
       <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -4716,7 +4706,7 @@ Owner.World.Command(destroyEntityWorldCommand);
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e184" source="n187" target="n175">
+    <edge id="e184" source="n179" target="n187">
       <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -4738,7 +4728,7 @@ Owner.World.Command(destroyEntityWorldCommand);
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e186" source="n179" target="n189">
+    <edge id="e186" source="n174" target="n189">
       <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -4749,18 +4739,7 @@ Owner.World.Command(destroyEntityWorldCommand);
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e187" source="n174" target="n190">
-      <data key="d9"/>
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e188" source="n190" target="n191">
+    <edge id="e187" source="n189" target="n190">
       <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>

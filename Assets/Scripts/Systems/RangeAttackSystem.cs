@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Threading.Tasks;
 using Commands;
 using HECSFramework.Unity;
 using HECSFramework.Core;
@@ -12,13 +14,17 @@ namespace Systems
     {
         [Required] private RangeAttackComponent rangeAttackComponent;
         [Required] private WarheadHolderComponent warheadHolderComponent;
+        [Required] private WaitComponent waitComponent;
+        private RightSpawnProjectilePointMonoComponent rightSpawnProjectilePoint;
+        private LeftSpawnProjectilePointMonoComponent leftSpawnProjectilePoint;
         private Rigidbody2D rb;
-        private float waitTime = 1f;
-        private float currentWaitTime = 0;
-        private float bu = 1f;
+        private SpriteRenderer spriteRenderer;
         public override void InitSystem()
         {
             Actor.TryGetComponent(out rb);
+            Actor.TryGetComponent(out rightSpawnProjectilePoint, true);
+            Actor.TryGetComponent(out leftSpawnProjectilePoint, true);
+            Actor.TryGetComponent(out spriteRenderer);
         }
         private IActor GetTarget()
         {
@@ -31,24 +37,12 @@ namespace Systems
 
         public void FixedUpdateLocal()
         {
-            if (currentWaitTime > 0)
-            {
-                currentWaitTime -= Time.fixedDeltaTime;
-                return;
-            }
-
             var commandIsAttacking = new BoolAnimationCommand
             {
                 Index = AnimParametersMap.isAttacking
             };
             var target = GetTarget();
-            if (target != null)
-            {
-                commandIsAttacking.Value = true;
-                currentWaitTime = waitTime;
-            }
-            else
-                commandIsAttacking.Value = false;
+            commandIsAttacking.Value = target != null;
             Owner.Command(commandIsAttacking);
         }
 
@@ -61,15 +55,20 @@ namespace Systems
             {
                 for (var i=0; i < rangeAttackComponent.WarheadsAmount; i++)
                 {
-                    var position = rb.transform.position;
-                    position.y += bu;
+                    var waitTime = waitComponent.waitMonoComponent.waitTime;
+                    var isRightDirection = !spriteRenderer.flipX;
+                    var position = isRightDirection ? rightSpawnProjectilePoint.transform.position : leftSpawnProjectilePoint.transform.position;
                     var actor = await warheadHolderComponent.WarheadHolderContainer.GetActor(true, null,
-                        rb.transform.position);
+                        position);
                     var warheadComponent = actor.GetOrAddComponent<WarheadComponent>();
                     warheadComponent.AttackPower = rangeAttackComponent.AttackPower;
+                    if (isRightDirection)
+                    {
+                       actor.GetOrAddComponent<SpeedCoeffComponent>().coefficient *= -1f;
+                    }
                     actor.Init();
+                    await Task.Delay((int)waitTime * 1000);
                 }
-                
             }
         }
     }

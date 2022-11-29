@@ -169,12 +169,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   component:
     <AttackPower>k__BackingField: 1
-    <AttackRangeRadius>k__BackingField: 1
+    <AttackRangeRadius>k__BackingField: 3
     <EnemyLayerMask>k__BackingField:
       serializedVersion: 2
       m_Bits: 8192
-    <WarheadPrefab>k__BackingField: {fileID: 0}
-    <WarheadsAmount>k__BackingField: 1
+    <WarheadPrefab>k__BackingField: {fileID: 8783961207072391613, guid: bc24f67de8b6d3b488a3f60b2f809b39,
+      type: 3}
+    <WarheadsAmount>k__BackingField: 2
 --- !u!114 &777980625621044538
 MonoBehaviour:
   m_ObjectHideFlags: 0

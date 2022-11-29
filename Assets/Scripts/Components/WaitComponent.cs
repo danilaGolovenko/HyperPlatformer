@@ -15,8 +15,6 @@ namespace Components
         {
             if (Actor != null)
                 waitMonoComponent = Actor.GameObject.GetComponent<WaitMonoComponent>();
-            else
-                Actor.RemoveHecsComponent(this);
         }
     }
 }
