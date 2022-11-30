@@ -23,8 +23,10 @@ namespace Systems
         public void CommandReact(InputStartedCommand command)
         {
             if (command.Index != InputIdentifierMap.Hit) return;
+            // Physics.SphereCast(rb.position,  meleeAttackComponent.attackRangeRadius, Vector3.zero, out var hit, meleeAttackComponent.attackRangeRadius, 
+                // meleeAttackComponent.enemyLayerMask, QueryTriggerInteraction.Collide);
             var hit = Physics2D.CircleCast(rb.position, meleeAttackComponent.attackRangeRadius, Vector2.zero, 0f,
-                meleeAttackComponent.enemyLayerMask);
+            meleeAttackComponent.enemyLayerMask);
             if (hit.collider == null) return;
             var damageCommand = new DamageCommand
             {

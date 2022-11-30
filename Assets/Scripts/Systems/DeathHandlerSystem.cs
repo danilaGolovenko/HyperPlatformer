@@ -33,7 +33,7 @@ namespace Systems
 
             if (Owner.TryGetHecsComponent(out EnemyTagComponent enemyTag))
             {
-                Owner.World.Command(new IncreaseWinPointsCommand());
+                Owner.World.Command(new IncreaseKilledEnemiesAmountCommand());
             }
         }
 
@@ -45,7 +45,8 @@ namespace Systems
                 destroyEntityWorldCommand.Entity = Owner;
                 Owner.World.Command(destroyEntityWorldCommand);
             }
-            if (command.StateId == AnimatorStateIdentifierMap.SpitterDeath)
+            // todo переделать. 1) это не ответственность данной системы. 2) при смерти одного спавняться все
+            if (command.StateId == AnimatorStateIdentifierMap.SpitterDeath || command.StateId == AnimatorStateIdentifierMap.ChomperDeath)
             {
                 Owner.World.Command(new EnemySpawnCommand());
             }

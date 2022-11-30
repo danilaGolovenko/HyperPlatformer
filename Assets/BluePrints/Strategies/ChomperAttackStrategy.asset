@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9067597996891986928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af4a1f9927c447e7bcfa2d89b6d62836, type: 3}
+  m_Name: Strategies.FlipToCorrectDirectionNode
+  m_EditorClassIdentifier: 
+  coords: {x: -32.666668, y: -84.666664}
+  parent: {fileID: 1939366842712760713}
+  Next: {fileID: 6431845171525970623}
+--- !u!114 &-7718359637383548360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4241fded2a6c54faf168b580257866, type: 3}
+  m_Name: Strategies.SetWaitNode
+  m_EditorClassIdentifier: 
+  coords: {x: -52.666668, y: 78.666664}
+  Set: {fileID: 6431845171525970623}
+  Time: {fileID: 1771141385393571026}
+--- !u!114 &-4117707759917443212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4d319f6fb67dda4d82b1eff379b6838, type: 3}
+  m_Name: Strategies.ChangeStrategyDecision
+  m_EditorClassIdentifier: 
+  coords: {x: 509.33334, y: -9.333334}
+  node: {fileID: 6431845171525970623}
+  Strategy: {fileID: 11400000, guid: f82e66cd97fb37749959cb657c5cefdb, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7553786a8538cd647abacef21d6b06fc, type: 3}
+  m_Name: ChomperAttackStrategy
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 2541030845221042370}
+  - {fileID: -4117707759917443212}
+  - {fileID: 1939366842712760713}
+  - {fileID: -9067597996891986928}
+  - {fileID: 6431845171525970623}
+  - {fileID: -7718359637383548360}
+  - {fileID: 1771141385393571026}
+--- !u!114 &1771141385393571026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634f1e361f426884798169e61315b0b0, type: 3}
+  m_Name: FloatNode
+  m_EditorClassIdentifier: 
+  coords: {x: -278.66666, y: 82}
+  Out: {fileID: -7718359637383548360}
+  SetValue: 1.01
+--- !u!114 &1939366842712760713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b3f5706e20241bca4ac824c4618017f, type: 3}
+  m_Name: Strategies.SendBoolAnimationCommandIsAttackingNode
+  m_EditorClassIdentifier: 
+  coords: {x: -340.66666, y: -136}
+  parent: {fileID: 2541030845221042370}
+  Next: {fileID: -9067597996891986928}
+--- !u!114 &2541030845221042370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d95d38a62ffec3e4fadf46477c6336d3, type: 3}
+  m_Name: Strategies.StartDecision
+  m_EditorClassIdentifier: 
+  coords: {x: -516.6667, y: -136}
+  startDecision: {fileID: 1939366842712760713}
+--- !u!114 &6431845171525970623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a9b45561810b5941b030cd57eea7ebb, type: 3}
+  m_Name: Strategies.SetStateNode
+  m_EditorClassIdentifier: 
+  coords: {x: 164.66667, y: -57.333336}
+  Input: {fileID: -9067597996891986928}
+  OnStartStateNodes: {fileID: -7718359637383548360}
+  Exit: {fileID: -4117707759917443212}
+  State: {fileID: 11400000, guid: 5e81933268519074d884df057ebf6add, type: 2}

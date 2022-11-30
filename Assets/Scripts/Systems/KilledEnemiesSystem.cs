@@ -8,7 +8,7 @@ using Components;
 namespace Systems
 {
 	[Serializable][Documentation(Doc.NONE, "")]
-    public sealed class KilledEnemiesSystem : BaseSystem, IReactGlobalCommand<Commands.IncreaseWinPointsCommand>
+    public sealed class KilledEnemiesSystem : BaseSystem, IReactGlobalCommand<Commands.IncreaseKilledEnemiesAmountCommand>
     {
         [Required] private PlayerHolderComponent playerHolderComponent;
         private KilledEnemiesComponent killedEnemiesComponent;
@@ -17,7 +17,7 @@ namespace Systems
             killedEnemiesComponent = playerHolderComponent.PlayerEntity.GetKilledEnemiesComponent();
         }
 
-        public void CommandGlobalReact(IncreaseWinPointsCommand command)
+        public void CommandGlobalReact(IncreaseKilledEnemiesAmountCommand command)
         {
             killedEnemiesComponent.CurrentAmount.CurrentValue++;
         }

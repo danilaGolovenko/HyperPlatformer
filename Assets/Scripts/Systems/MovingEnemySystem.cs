@@ -78,6 +78,7 @@ namespace Systems
                 {
                     Owner.RemoveHecsComponent(stopMovingComponent);
                 }
+                return;
             }
             else
             {

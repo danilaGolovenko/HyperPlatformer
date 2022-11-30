@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Name: JumpStartSpeedComponent
   m_EditorClassIdentifier: 
   component:
-    <startSpeed>k__BackingField: 8
+    <startSpeed>k__BackingField: 9.35
 --- !u!114 &3502215169130941852
 MonoBehaviour:
   m_ObjectHideFlags: 0
