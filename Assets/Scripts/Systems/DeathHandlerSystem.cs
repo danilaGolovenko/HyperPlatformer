@@ -39,10 +39,13 @@ namespace Systems
 
         public void CommandReact(EventStateAnimationCommand command)
         {
-            if (command.StateId == AnimatorStateIdentifierMap.SpitterDeath || command.StateId == AnimatorStateIdentifierMap.Ellen_Death || command.StateId == AnimatorStateIdentifierMap.ChomperDeath)
+            if (command.AnimationId == AnimationEventIdentifierMap.EndClip && (command.StateId == AnimatorStateIdentifierMap.SpitterDeath || command.StateId == AnimatorStateIdentifierMap.Ellen_Death || command.StateId == AnimatorStateIdentifierMap.ChomperDeath ||
+                command.StateId == AnimatorStateIdentifierMap.Boss_Death))
             {
-                DestroyEntityWorldCommand destroyEntityWorldCommand = new DestroyEntityWorldCommand();
-                destroyEntityWorldCommand.Entity = Owner;
+                var destroyEntityWorldCommand = new DestroyEntityWorldCommand
+                {
+                    Entity = Owner
+                };
                 Owner.World.Command(destroyEntityWorldCommand);
             }
             // todo переделать. 1) это не ответственность данной системы. 2) при смерти одного спавняться все

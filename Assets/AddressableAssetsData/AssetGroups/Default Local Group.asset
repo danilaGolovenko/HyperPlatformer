@@ -65,6 +65,14 @@ MonoBehaviour:
     m_Address: Assets/Prefabs/Warhead.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 932e8b0759468d94fb1efaba61c94db6
+    m_Address: Assets/Prefabs/Boss.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6bf694f025970054780eee1b1232be50
+    m_Address: Assets/Prefabs/SkyRock.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: abedd1e511a06564789dce519587c8e2, type: 2}
   m_SchemaSet:

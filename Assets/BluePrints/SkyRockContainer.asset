@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8016846958340556281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2acde6a27e2fa9541ad29c553078ea5b, type: 3}
+  m_Name: AdditionalSceneObjectTagComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &-4877027487428299381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b49203a7729634a9fa2c03ab751b15, type: 3}
+  m_Name: SkyRockTouchSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &-3017250416491480197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72e7cb80865400343ace5549ece2d39b, type: 3}
+  m_Name: RemoveEntityAfterDelaySystem
+  m_EditorClassIdentifier: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: SkyRockContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: -8016846958340556281}
+    - {fileID: 8106832288920972215}
+    - {fileID: 4858653916086760331}
+    - {fileID: 6586967944317982132}
+    - {fileID: 3922286772089184947}
+    systems:
+    - {fileID: -3017250416491480197}
+    - {fileID: 3751448837345207745}
+    - {fileID: -4877027487428299381}
+    Parent: {fileID: 11400000}
+  containerIndex: 842218753
+--- !u!114 &3751448837345207745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b06b310479257ec4dbb32ad66bcb5f99, type: 3}
+  m_Name: SkyRockMovingSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &3922286772089184947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94e81f7a1b6443441918722ef9357e65, type: 3}
+  m_Name: SkyRockComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    <AttackPower>k__BackingField: 1
+    <EnemyLayerMask>k__BackingField:
+      serializedVersion: 2
+      m_Bits: 8192
+    <PlatformLayerMask>k__BackingField:
+      serializedVersion: 2
+      m_Bits: 2147483648
+--- !u!114 &4858653916086760331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d4dea159ccad543afdd93db81c3768, type: 3}
+  m_Name: ViewReferenceComponent
+  m_EditorClassIdentifier: 
+  component:
+    ViewReference:
+      m_AssetGUID: 6bf694f025970054780eee1b1232be50
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+--- !u!114 &6586967944317982132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6af5e8d05789346429dc7ef270cc9b9f, type: 3}
+  m_Name: WaitComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    waitMonoComponent: {fileID: 0}
+--- !u!114 &8106832288920972215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f8e1572ab9eae4458b630d22f800f52, type: 3}
+  m_Name: SpeedCoeffComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    <coefficient>k__BackingField: 2.5
+    <defaultCoefficient>k__BackingField: 2.5

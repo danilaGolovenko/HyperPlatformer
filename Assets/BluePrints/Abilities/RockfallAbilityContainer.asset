@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1284856410566716527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9fb4713fa89b0d4083b6919c8f318d5, type: 3}
+  m_Name: AbilityTagComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &-396520601916064267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26dc220a409c2a243b8afd75d2060816, type: 3}
+  m_Name: AbilityPredicateComponent
+  m_EditorClassIdentifier: 
+  component:
+    AbilityPredicates:
+      savePredicates: 
+      predicatesBP: []
+    TargetPredicates:
+      savePredicates: 
+      predicatesBP: []
+    AbilityOwnerPredicates:
+      savePredicates: 
+      predicatesBP: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a5e038b5badff449ac512e06e5a50e, type: 3}
+  m_Name: RockfallAbilityContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: -1284856410566716527}
+    - {fileID: -396520601916064267}
+    - {fileID: 1136546036746377998}
+    - {fileID: 8689251530062874320}
+    systems:
+    - {fileID: 7371364520257636252}
+    Parent: {fileID: 11400000}
+  containerIndex: 1823668180
+--- !u!114 &1136546036746377998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c61a8cdeb5f1a1c4ebe11881a4b5cead, type: 3}
+  m_Name: AbilityOwnerComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &7371364520257636252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1cd73457388654b9e9c77219a6c474, type: 3}
+  m_Name: RockfallAbilitySystem
+  m_EditorClassIdentifier: 
+--- !u!114 &8689251530062874320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43e14a441b2ada479124938b5267681, type: 3}
+  m_Name: AbilityCooldownAmountComponent
+  m_EditorClassIdentifier: 
+  component:
+    <TimeInSeconds>k__BackingField: 6

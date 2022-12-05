@@ -10,7 +10,6 @@ namespace Systems
     public sealed class WarheadMovingSystem : BaseSystem, IHaveActor
     {
         [Required] private SpeedCoeffComponent speedCoeffComponent;
-        //todo dir
         private Vector2 dir = Vector2.left;
         private Rigidbody2D rb;
         

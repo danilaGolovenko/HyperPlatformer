@@ -80,11 +80,10 @@ namespace Systems
                 }
                 return;
             }
-            else
-            {
-                var newPosition = Vector2.Lerp(currentPoint, goalPoint, t);
-                rb.position = newPosition;
-            }
+
+            var newPosition = Vector2.Lerp(currentPoint, goalPoint, t);
+            rb.position = newPosition;
+            
             currentSpeed.speed = speedCoeffComponent.coefficient * dir;
             
         }

@@ -9,19 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55c47178422e64b41bba99050866ba67, type: 3}
+  m_Script: {fileID: 0}
   m_Name: EntityWithHealthComponentBluePrint
   m_EditorClassIdentifier: 
-  <IsOverride>k__BackingField: 0
-  <IsColorNeeded>k__BackingField: 0
-  component:
-    <IsAlive>k__BackingField: 1
-    <IsRegistered>k__BackingField: 0
-    <healthComponent>k__BackingField:
-      <IsAlive>k__BackingField: 1
-      <IsRegistered>k__BackingField: 0
-      <maxHealth>k__BackingField: 7
-      currentHealth: 7
 --- !u!114 &-4895332416686945981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,21 +71,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 092c341286e975d439f491f459d8aea7, type: 3}
   m_Name: DrawPickUpUISystem
   m_EditorClassIdentifier: 
---- !u!114 &-78603686563500936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6a5da7b16b415043a2311454897bbc1, type: 3}
-  m_Name: EnemyContainerComponent
-  m_EditorClassIdentifier: 
-  component:
-    <ActorContainer>k__BackingField: {fileID: 11400000, guid: 4d5daba583fc27d44bcce5707b83919d,
-      type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,7 +86,6 @@ MonoBehaviour:
   holder:
     components:
     - {fileID: 4415592826704701022}
-    - {fileID: -78603686563500936}
     - {fileID: 2274584069426935205}
     - {fileID: 3226168835309615732}
     systems:
@@ -125,6 +99,7 @@ MonoBehaviour:
     - {fileID: -485191530088583923}
     - {fileID: 1365853468946053553}
     - {fileID: 5228808718565561455}
+    - {fileID: 7231644961058088100}
     Parent: {fileID: 11400000}
   containerIndex: 503398846
 --- !u!114 &163667382468224473
@@ -259,6 +234,18 @@ MonoBehaviour:
   system:
     itemsOnSceneComponent:
       ItemsOnScene: []
+--- !u!114 &7231644961058088100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c864e8e42832cb4eab858597fc25113, type: 3}
+  m_Name: CooldownProcessingSystem
+  m_EditorClassIdentifier: 
 --- !u!114 &7563921348140066073
 MonoBehaviour:
   m_ObjectHideFlags: 0

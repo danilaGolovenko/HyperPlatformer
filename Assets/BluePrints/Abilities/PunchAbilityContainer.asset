@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4617726408756151259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87d0675f28c91b848bad8fe833f34fc5, type: 3}
+  m_Name: PunchAbilitySystem
+  m_EditorClassIdentifier: 
+--- !u!114 &-928265262162876091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43e14a441b2ada479124938b5267681, type: 3}
+  m_Name: AbilityCooldownAmountComponent
+  m_EditorClassIdentifier: 
+  component:
+    <TimeInSeconds>k__BackingField: 3
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a5e038b5badff449ac512e06e5a50e, type: 3}
+  m_Name: PunchAbilityContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: 7504550226174974309}
+    - {fileID: 4522983505151917075}
+    - {fileID: 8796635019895927886}
+    - {fileID: 1135137825912398770}
+    - {fileID: -928265262162876091}
+    systems:
+    - {fileID: -4617726408756151259}
+    Parent: {fileID: 11400000}
+  containerIndex: 246505
+--- !u!114 &1135137825912398770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 547721a43677c3e41a8b66679d7bed0a, type: 3}
+  m_Name: PunchAbilityComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    <AttackPower>k__BackingField: 1
+--- !u!114 &4522983505151917075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26dc220a409c2a243b8afd75d2060816, type: 3}
+  m_Name: AbilityPredicateComponent
+  m_EditorClassIdentifier: 
+  component:
+    AbilityPredicates:
+      savePredicates: 
+      predicatesBP: []
+    TargetPredicates:
+      savePredicates: 
+      predicatesBP: []
+    AbilityOwnerPredicates:
+      savePredicates: 
+      predicatesBP: []
+--- !u!114 &7504550226174974309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9fb4713fa89b0d4083b6919c8f318d5, type: 3}
+  m_Name: AbilityTagComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &8796635019895927886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c61a8cdeb5f1a1c4ebe11881a4b5cead, type: 3}
+  m_Name: AbilityOwnerComponent
+  m_EditorClassIdentifier: 
