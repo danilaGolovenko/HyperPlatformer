@@ -27,7 +27,8 @@ MonoBehaviour:
   component:
     AbilityPredicates:
       savePredicates: 
-      predicatesBP: []
+      predicatesBP:
+      - {fileID: 11400000, guid: ad7ccbc2865082a48913bc0ef5483a1e, type: 2}
     TargetPredicates:
       savePredicates: 
       predicatesBP: []
@@ -93,4 +94,4 @@ MonoBehaviour:
   m_Name: AbilityCooldownAmountComponent
   m_EditorClassIdentifier: 
   component:
-    <TimeInSeconds>k__BackingField: 6
+    <TimeInSeconds>k__BackingField: 9

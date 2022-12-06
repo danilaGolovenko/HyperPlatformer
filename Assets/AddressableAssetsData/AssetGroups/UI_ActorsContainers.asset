@@ -45,6 +45,10 @@ MonoBehaviour:
     m_Address: Assets/Prefabs/UI/PlayerInventoryUI/PlayerInventoryUIContainer.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: fe0cc69d1c7154743abdcea4467a2b5f
+    m_Address: Assets/Prefabs/UI/GameOverUI/GameOverUIContainer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: abedd1e511a06564789dce519587c8e2, type: 2}
   m_SchemaSet:

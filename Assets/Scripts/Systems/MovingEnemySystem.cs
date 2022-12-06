@@ -3,11 +3,13 @@ using HECSFramework.Unity;
 using HECSFramework.Core;
 using UnityEngine;
 using Components;
+using Commands;
 
 namespace Systems
 {
 	[Serializable][Documentation(Doc.NONE, "")]
-    public sealed class MovingEnemySystem : BaseSystem, IAfterEntityInit, IFixedUpdatable, IHaveActor, IReactComponentLocal<StopMovingComponent>
+    public sealed class MovingEnemySystem : BaseSystem, IAfterEntityInit, IFixedUpdatable, IHaveActor, 
+        IReactComponentLocal<StopMovingComponent>, IReactCommand<Commands.EventStateAnimationCommand>, IReactCommand<Trigger2dEnterCommand>
     {
         [Required] private CurrentSpeedComponent currentSpeed;
         [Required] private WayComponent wayComponent;
@@ -103,6 +105,22 @@ namespace Systems
                 speedCoeffComponent.coefficient = speedCoeffComponent.defaultCoefficient;
                 isStoped = false;
             }
+        }
+
+
+        public void CommandReact(EventStateAnimationCommand command)
+        {
+            if (command.StateId == AnimatorStateIdentifierMap.Boss_Charge && (command.AnimationId == AnimationEventIdentifierMap.Shooting))
+            {
+                t = 0;
+                currentPoint = rb.position;
+            }
+        }
+
+        public void CommandReact(Trigger2dEnterCommand command)
+        {
+            t = 0;
+            currentPoint = rb.position;
         }
     }
 }

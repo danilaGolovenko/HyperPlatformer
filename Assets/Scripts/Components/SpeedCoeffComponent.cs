@@ -8,6 +8,6 @@ namespace Components
     public class SpeedCoeffComponent : BaseComponent
     {
         [field: SerializeField] public float coefficient { get; set; } = 2;
-        [field: SerializeField] public float defaultCoefficient { get; private set; } = 2;
+        [field: SerializeField] public float defaultCoefficient { get; set; } = 2;
     }
 }

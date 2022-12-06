@@ -4,12 +4,11 @@ using HECSFramework.Unity;
 using HECSFramework.Core;
 using UnityEngine;
 using Components;
-
 namespace Systems
 {
 	[Serializable][Documentation(Doc.NONE, "")]
     public sealed class BossAnimationSystem : BaseSystem, IFixedUpdatable, IHaveActor,
-    IReactCommand<Commands.DamageCommand>, IReactCommand<Commands.EventStateAnimationCommand>
+    IReactCommand<Commands.DamageCommand>, IReactCommand<Commands.EventStateAnimationCommand>, IReactCommand<Commands.StartChargeCommand>
     {
         [Required] private CurrentSpeedComponent currentSpeedComponent;
         [Required] private SpeedCoeffComponent speedCoeffComponent;
@@ -50,12 +49,11 @@ namespace Systems
         public void CommandReact(DamageCommand command)
         {
             if (command.authorEntity.Equals(Owner)) return;
-            var commandIsDamaging = new BoolAnimationCommand
+            /*Owner?.Command(new BoolAnimationCommand
             {
                 Index = AnimParametersMap.isDamaging,
                 Value = true
-            };
-            Owner.Command(commandIsDamaging);
+            });*/
         }
 
         public void CommandReact(EventStateAnimationCommand command)
@@ -67,7 +65,7 @@ namespace Systems
                     Index = AnimParametersMap.isPunchAttacking,
                     Value = false
                 };
-                Owner.Command(commandIsNotAttacking);
+                Owner?.Command(commandIsNotAttacking);
             }
             if (command.StateId == AnimatorStateIdentifierMap.Boss_Death && command.AnimationId == AnimationEventIdentifierMap.StartClip)
             {
@@ -83,10 +81,35 @@ namespace Systems
                 }
                 if (command.AnimationId == AnimationEventIdentifierMap.EndClip)
                 {
-                    Owner.RemoveHecsSystem<SpawnSkyRocksSystem>();
+                    var commandIsNotRockfalling = new BoolAnimationCommand
+                    {
+                        Index = AnimParametersMap.isRockfalling,
+                        Value = false
+                    };
+                    Owner?.Command(commandIsNotRockfalling);
+                    Owner?.RemoveHecsSystem<SpawnSkyRocksSystem>();
                 }
             }
-
+            if (command.StateId == AnimatorStateIdentifierMap.Boss_Charge)
+            {
+                if (command.AnimationId == AnimationEventIdentifierMap.Shooting)
+                {
+                    AbilitiesMap.AbilitiesToIdentifiersMap.TryGetValue(AbilitiesMap.ChargeAbilityContainer_string, out int abilityContaierId);
+                    Owner.GetAbilitiesHolderComponent().IndexToAbility.TryGetValue(abilityContaierId, out IEntity ability);
+                    ability.Command(new ChargeDamageCommand());
+                }
+                if (command.AnimationId == AnimationEventIdentifierMap.EndClip)
+                {
+                    var commandIsNotCharging = new BoolAnimationCommand
+                    {
+                        Index = AnimParametersMap.isCharging,
+                        Value = false
+                    };
+                    Owner?.Command(commandIsNotCharging);
+                    Owner?.RemoveHecsSystem<ChargeMovingSystem>();
+                }
+            }
+            
             // if (command.StateId != AnimatorStateIdentifierMap.ChomperHit) return;
             // var commandIsNotDamaging = new BoolAnimationCommand
             // {
@@ -94,6 +117,16 @@ namespace Systems
             //     Value = false
             // };
             // Owner.Command(commandIsNotDamaging);
+        }
+
+        public void CommandReact(StartChargeCommand command)
+        {
+            var commandIsCharging = new BoolAnimationCommand
+            {
+                Index = AnimParametersMap.isCharging,
+                Value = true
+            };
+            Owner?.Command(commandIsCharging);
         }
     }
 }

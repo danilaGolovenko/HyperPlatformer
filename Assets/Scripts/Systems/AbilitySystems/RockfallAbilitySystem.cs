@@ -25,9 +25,12 @@ namespace Systems
             };
             owner?.Command(commandIsRockfalling);
             
-            var cooldownComponent = owner?.GetOrAddComponent<CooldownComponent>();
+            var cooldownComponent = Owner.GetOrAddComponent<CooldownComponent>();
             if (cooldownComponent != null) cooldownComponent.CurrentTime = cooldownAmountComponent.TimeInSeconds;
-            // Debug.Log("RockfallAbilitySystem");
+
+            var ownerCooldownComponent = owner.GetOrAddComponent<CooldownComponent>();
+            owner.TryGetHecsComponent(out AbilityCooldownAmountComponent ownerCooldownAmountComponent);
+            if (ownerCooldownComponent != null) ownerCooldownComponent.CurrentTime = ownerCooldownAmountComponent.TimeInSeconds;
         }
     }
 }

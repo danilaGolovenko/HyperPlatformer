@@ -47,11 +47,20 @@ namespace Systems
                     Entity = Owner
                 };
                 Owner.World.Command(destroyEntityWorldCommand);
+
+                if (command.StateId == AnimatorStateIdentifierMap.Ellen_Death)
+                {
+                    Owner.World.Command(new ShowUICommand()
+                    {
+                        UIViewType = UIIdentifierMap.GameOverCanvas_UIIdentifier
+                    });
+                }
+
             }
-            // todo переделать. 1) это не ответственность данной системы. 2) при смерти одного спавняться все
+            // todo переделать. 1) это не ответственность данной системы
             if (command.StateId == AnimatorStateIdentifierMap.SpitterDeath || command.StateId == AnimatorStateIdentifierMap.ChomperDeath)
             {
-                Owner.World.Command(new EnemySpawnCommand());
+                Owner.Command(new EnemySpawnCommand());
             }
         }
     }

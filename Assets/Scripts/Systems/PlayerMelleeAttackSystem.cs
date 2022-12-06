@@ -34,7 +34,7 @@ namespace Systems
                 authorEntity = Owner
             };
             hit.collider.gameObject.TryGetComponent(out Actor victim);
-            victim.Command(damageCommand);
+            victim?.Command(damageCommand);
         }
 
         public IActor Actor { get; set; }

@@ -41,8 +41,12 @@ namespace Systems
                 authorEntity = owner
             });
             
-            var cooldownComponent = owner?.GetOrAddComponent<CooldownComponent>();
+            var cooldownComponent = Owner.GetOrAddComponent<CooldownComponent>();
             if (cooldownComponent != null) cooldownComponent.CurrentTime = cooldownAmountComponent.TimeInSeconds;
+
+            var ownerCooldownComponent = owner.GetOrAddComponent<CooldownComponent>();
+            owner.TryGetHecsComponent(out AbilityCooldownAmountComponent ownerCooldownAmountComponent);
+            if (ownerCooldownComponent != null) ownerCooldownComponent.CurrentTime = ownerCooldownAmountComponent.TimeInSeconds;
         }
     }
 }

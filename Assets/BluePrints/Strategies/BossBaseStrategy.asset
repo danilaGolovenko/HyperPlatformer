@@ -16,7 +16,7 @@ MonoBehaviour:
   parent: {fileID: 5927757401278468938}
   Next: {fileID: 6668927093929001066}
   AbilityId: -1151373918
-  IgnorePredicates: 1
+  IgnorePredicates: 0
   Target: {fileID: 623077726770699452}
 --- !u!114 &-6941730367446839439
 MonoBehaviour:
@@ -78,7 +78,7 @@ MonoBehaviour:
   parent: {fileID: 3891637239427801082}
   Next: {fileID: 34137995618094943}
   AbilityId: 246505
-  IgnorePredicates: 1
+  IgnorePredicates: 0
   Target: {fileID: -1856745291779456885}
 --- !u!114 &-1856745291779456885
 MonoBehaviour:
@@ -142,7 +142,7 @@ MonoBehaviour:
   parent: {fileID: 7045785692376451185}
   Next: {fileID: -6570118777698013886}
   AbilityId: 1823668180
-  IgnorePredicates: 1
+  IgnorePredicates: 0
   Target: {fileID: 90381874627548212}
 --- !u!114 &11400000
 MonoBehaviour:

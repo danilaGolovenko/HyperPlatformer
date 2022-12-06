@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Name: HealthComponent
   m_EditorClassIdentifier: 
   component:
-    <maxHealth>k__BackingField: 20
+    <maxHealth>k__BackingField: 40
 --- !u!114 &-5150739542963464661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,6 +215,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3168f00db331734fb0c0a2c74c0bf95, type: 3}
   m_Name: TakeDamageSystem
   m_EditorClassIdentifier: 
+--- !u!114 &-340676114524223104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43e14a441b2ada479124938b5267681, type: 3}
+  m_Name: AbilityCooldownAmountComponent
+  m_EditorClassIdentifier: 
+  component:
+    <TimeInSeconds>k__BackingField: 4
 --- !u!114 &-197099116124685758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,9 +245,10 @@ MonoBehaviour:
     <EnemyLayerMask>k__BackingField:
       serializedVersion: 2
       m_Bits: 8192
-    <PunchRangeRadius>k__BackingField: 3
-    <ChargeRangeRadius>k__BackingField: 9
+    <PunchRangeRadius>k__BackingField: 2.66
+    <ChargeRangeRadius>k__BackingField: 9.5
     <RockfallRangeRadius>k__BackingField: 5
+    <HeightOfRockSpawn>k__BackingField: 7
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,6 +278,7 @@ MonoBehaviour:
     - {fileID: -3656221459651331661}
     - {fileID: -3714516147195856110}
     - {fileID: 6895140634309674647}
+    - {fileID: -340676114524223104}
     systems:
     - {fileID: -713666383543286367}
     - {fileID: -7294858324015607296}
@@ -272,6 +288,7 @@ MonoBehaviour:
     - {fileID: -1903906208418546553}
     - {fileID: -498641927810496258}
     - {fileID: 6378971303767472416}
+    - {fileID: 3945903595124328244}
     Parent: {fileID: 11400000}
   containerIndex: 856311741
 --- !u!114 &1342726688814499493
@@ -289,6 +306,21 @@ MonoBehaviour:
   component:
     <coefficient>k__BackingField: 0.1
     <defaultCoefficient>k__BackingField: 0.1
+--- !u!114 &3945903595124328244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b56ce296dfd94fe459406d4b69d68d9d, type: 3}
+  m_Name: IncreaseSpeedAfterHalfLifeSystem
+  m_EditorClassIdentifier: 
+  system:
+    healthComponent:
+      <maxHealth>k__BackingField: 7
 --- !u!114 &6100481739738672531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,4 +412,4 @@ MonoBehaviour:
   m_Name: HealthBarHeightComponent
   m_EditorClassIdentifier: 
   component:
-    <height>k__BackingField: 370
+    <height>k__BackingField: 340

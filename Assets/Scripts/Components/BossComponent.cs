@@ -12,6 +12,9 @@ namespace Components
         [field: SerializeField] public float PunchRangeRadius { get; private set; }
         [field: SerializeField] public float ChargeRangeRadius { get; private set; }
         [field: SerializeField] public float RockfallRangeRadius { get; private set; }
+        [field: SerializeField] public float HeightOfRockSpawn { get; private set; }
+        /*        [field: SerializeField] public int SkyRocksOnOneWaveAmount { get; private set; }
+        */
         public bool IsDamaging { get; set; } = false;
     }
 }

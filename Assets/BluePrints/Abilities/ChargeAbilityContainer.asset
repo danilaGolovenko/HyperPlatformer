@@ -16,7 +16,7 @@ MonoBehaviour:
     AbilityPredicates:
       savePredicates: 
       predicatesBP:
-      - {fileID: 11400000, guid: 416f4b92f2d9a054a95539eb782362ab, type: 2}
+      - {fileID: 11400000, guid: ad7ccbc2865082a48913bc0ef5483a1e, type: 2}
     TargetPredicates:
       savePredicates: 
       predicatesBP: []
@@ -53,7 +53,6 @@ MonoBehaviour:
     - {fileID: 5967147283135339980}
     - {fileID: -1670642139864151256}
     - {fileID: -4103191963856831135}
-    - {fileID: 1658863847622950279}
     - {fileID: 858737106328977767}
     systems:
     - {fileID: 2219452734738739492}
@@ -72,21 +71,7 @@ MonoBehaviour:
   m_Name: AbilityCooldownAmountComponent
   m_EditorClassIdentifier: 
   component:
-    <TimeInSeconds>k__BackingField: 3
---- !u!114 &1658863847622950279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3f9bd14881beda41b691868bddf2926, type: 3}
-  m_Name: AbilityRangeRadiusComponent
-  m_EditorClassIdentifier: 
-  component:
-    <RangeRadius>k__BackingField: 0
+    <TimeInSeconds>k__BackingField: 5
 --- !u!114 &2069546845966045688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,6 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 202ca8c7e5282ff4fafee3172d1b2136, type: 3}
   m_Name: ChargeAbilitySystem
   m_EditorClassIdentifier: 
+  system:
+    chargeAbilityComponent:
+      <AttackPower>k__BackingField: 0
+      <ChargeSpeed>k__BackingField: 0
+      <AttackRangeRadius>k__BackingField: 0
 --- !u!114 &5967147283135339980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,3 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e595e1e544946f343b2bc039423b10be, type: 3}
   m_Name: ChargeAbilityComponent
   m_EditorClassIdentifier: 
+  component:
+    <AttackPower>k__BackingField: 3
+    <ChargeSpeed>k__BackingField: 5
+    <AttackRangeRadius>k__BackingField: 2.5

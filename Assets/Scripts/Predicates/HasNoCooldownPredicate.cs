@@ -10,7 +10,7 @@ namespace Predicates
     {
         public bool IsReady(IEntity target, IEntity owner = null)
         {
-            return owner != null && !owner.TryGetHecsComponent(HMasks.CooldownComponent, out CooldownComponent cooldown);
+            return !target.TryGetHecsComponent(HMasks.CooldownComponent, out CooldownComponent cooldown) || cooldown.CurrentTime <= 0;
         }
     }
 }
